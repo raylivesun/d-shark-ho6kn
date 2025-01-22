@@ -1,0 +1,4 @@
+1] 55131
+bash: shift: -p: numeric argument required
+[1]+  Exit 1                  shift $1 -p agent-zero
+bash: read: `agent-zero': not a valid identifier

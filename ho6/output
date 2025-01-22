@@ -1,0 +1,41 @@
+ALSA Information Script v 0.5.1
+--------------------------------
+
+This script visits the following commands/files to collect diagnostic
+information about your ALSA installation and sound related hardware.
+
+  dmesg
+  lspci
+  aplay
+  amixer
+  alsactl
+  rpm, dpkg
+  /proc/asound/
+  /sys/class/sound/
+  ~/.asoundrc (etc.)
+
+See '/usr/sbin/alsa-info --help' for command line options.
+
+alsa-info.sh version 0.5.1
+
+Available options:
+	--with-aplay (includes the output of aplay -l)
+	--with-amixer (includes the output of amixer)
+	--with-alsactl (includes the output of alsactl)
+	--with-configs (includes the output of ~/.asoundrc and
+	    /etc/asound.conf if they exist)
+	--with-devices (shows the device nodes in /dev/snd/)
+	--with-dmesg (shows the ALSA/HDA kernel messages)
+	--with-packages (includes known packages installed)
+
+	--output FILE (specify the file to output for no-upload mode)
+	--update (check server for script updates)
+	--upload (upload contents to remote server)
+	--no-upload (do not upload contents to remote server)
+	--pastebin (use https://pastebin.ca) as remote server
+	    instead www.alsa-project.org
+	--stdout (print alsa information to standard output
+	    instead of a file)
+	--about (show some information about the script)
+	--debug (will run the script as normal, but will not
+	     delete /tmp/alsa-info.omx7uxxwj6/alsa-info.txt)

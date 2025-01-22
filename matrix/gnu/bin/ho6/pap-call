@@ -1,0 +1,3289 @@
+[1] 44495
+bash: bg: no job control
+[1]+  Exit 1                  bg agent-zero
+________________
+> pulseaudio_ps_do
+admin      44498  0.0  0.0   3472  1792 pts/5    S+   18:02   0:00 grep pulseaudio
+________________
+> which pulseaudio
+________________
+> pidof pulseaudio
+________________
+> pulseaudio --version
+/usr/bin/pa-info: line 57: pulseaudio: command not found
+________________
+> pactl info
+Server String: /run/user/1000/pulse/native
+Library Protocol Version: 35
+Server Protocol Version: 35
+Is Local: yes
+Client Index: 206
+Tile Size: 65472
+User Name: admin
+Host Name: pop-os
+Server Name: PulseAudio (on PipeWire 1.0.3)
+Server Version: 15.0.0
+Default Sample Specification: float32le 2ch 48000Hz
+Default Channel Map: front-left,front-right
+Default Sink: alsa_output.pci-0000_00_1f.3.analog-stereo
+Default Source: alsa_input.pci-0000_00_1f.3.analog-stereo
+Cookie: fc54:71d9
+________________
+> pactl list
+Module #1
+	Name: libpipewire-module-rt
+	Argument: {
+            nice.level    = -11
+            #rt.prio      = 88
+            #rt.time.soft = -1
+            #rt.time.hard = -1
+            #uclamp.min = 0
+            #uclamp.max = 1024
+        }
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-rt"
+		object.id = "1"
+		object.serial = "1"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Use realtime thread scheduling, falling back to RTKit"
+		module.usage = "( nice.level=<priority: default 20(don't change)> ) ( rt.prio=<priority: default 88> ) ( rt.time.soft=<in usec: default -1> ) ( rt.time.hard=<in usec: default -1> ) ( rlimits.enabled=<default true> ) ( rtportal.enabled=<default true> ) ( rtkit.enabled=<default true> ) ( uclamp.min=<default 0> ) ( uclamp.max=<default 1024> )"
+		module.version = "1.0.3"
+		nice.level = "-11"
+
+Module #2
+	Name: libpipewire-module-protocol-native
+	Argument: {
+            # List of server Unix sockets, and optionally permissions
+            #sockets = [ { name = "pipewire-0" }, { name = "pipewire-0-manager" } ]
+        }
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-protocol-native"
+		object.id = "2"
+		object.serial = "2"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Native protocol using unix sockets"
+		module.version = "1.0.3"
+
+Module #3
+	Name: libpipewire-module-profiler
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-profiler"
+		object.id = "3"
+		object.serial = "3"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Generate Profiling data"
+		module.version = "1.0.3"
+
+Module #5
+	Name: libpipewire-module-metadata
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-metadata"
+		object.id = "5"
+		object.serial = "5"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create metadata store"
+		module.version = "1.0.3"
+
+Module #7
+	Name: libpipewire-module-spa-device-factory
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-spa-device-factory"
+		object.id = "7"
+		object.serial = "7"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Provide a factory to make SPA devices"
+		module.version = "1.0.3"
+
+Module #9
+	Name: libpipewire-module-spa-node-factory
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-spa-node-factory"
+		object.id = "9"
+		object.serial = "9"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Provide a factory to make SPA nodes"
+		module.version = "1.0.3"
+
+Module #11
+	Name: libpipewire-module-client-node
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-client-node"
+		object.id = "11"
+		object.serial = "11"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create and control remote nodes"
+		module.version = "1.0.3"
+
+Module #13
+	Name: libpipewire-module-client-device
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-client-device"
+		object.id = "13"
+		object.serial = "13"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create and control remote devices"
+		module.version = "1.0.3"
+
+Module #15
+	Name: libpipewire-module-portal
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-portal"
+		object.id = "15"
+		object.serial = "15"
+
+Module #16
+	Name: libpipewire-module-access
+	Argument: {
+            # Socket-specific access permissions
+            #access.socket = { pipewire-0 = "default", pipewire-0-manager = "unrestricted" }
+
+            # Deprecated legacy mode (not socket-based),
+            # for now enabled by default if access.socket is not specified
+            #access.legacy = true
+        }
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-access"
+		object.id = "16"
+		object.serial = "16"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Perform access check"
+		module.usage = "( access.socket={ <socket>=<access>, ... } ) ( access.legacy=true ) "
+		module.version = "1.0.3"
+
+Module #17
+	Name: libpipewire-module-adapter
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-adapter"
+		object.id = "17"
+		object.serial = "17"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Manage adapter nodes"
+		module.version = "1.0.3"
+
+Module #19
+	Name: libpipewire-module-link-factory
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-link-factory"
+		object.id = "19"
+		object.serial = "19"
+		module.author = "Wim Taymans <wim.taymans@gmail.com>"
+		module.description = "Allow clients to create links"
+		module.usage = "( allow.link.passive=<bool, default false> ) "
+		module.version = "1.0.3"
+
+Module #21
+	Name: libpipewire-module-session-manager
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-session-manager"
+		object.id = "21"
+		object.serial = "21"
+		module.author = "George Kiagiadakis <george.kiagiadakis@collabora.com>"
+		module.description = "Implements objects for session management"
+		module.version = "1.0.3"
+
+Module #29
+	Name: libpipewire-module-jackdbus-detect
+	Argument: {
+            #jack.library     = libjack.so.0
+            #jack.server      = null
+            #jack.client-name = PipeWire
+            #jack.connect     = true
+            #tunnel.mode      = duplex  # source|sink|duplex
+            source.props = {
+                #audio.channels = 2
+		#midi.ports = 1
+                #audio.position = [ FL FR ]
+                # extra sink properties
+            }
+            sink.props = {
+                #audio.channels = 2
+		#midi.ports = 1
+                #audio.position = [ FL FR ]
+                # extra sink properties
+            }
+        }
+	Usage counter: n/a
+	Properties:
+		module.name = "libpipewire-module-jackdbus-detect"
+		object.id = "28"
+		object.serial = "29"
+
+Module #536870912
+	Name: module-always-sink
+	Argument: 
+	Usage counter: n/a
+	Properties:
+		module.author = "Pauli Virtanen <pav@iki.fi>"
+		module.description = "Always keeps at least one sink loaded even if it's a null one"
+		module.usage = "sink_name=<name of sink>"
+		module.version = "1.0.3"
+
+Sink #48
+	State: RUNNING
+	Name: alsa_output.pci-0000_00_1f.3.analog-stereo
+	Description: Built-in Audio Analog Stereo
+	Driver: PipeWire
+	Sample Specification: s32le 2ch 44100Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 28974 /  44% / -21.27 dB,   front-right: 28974 /  44% / -21.27 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor Source: alsa_output.pci-0000_00_1f.3.analog-stereo.monitor
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE HW_MUTE_CTRL HW_VOLUME_CTRL DECIBEL_VOLUME LATENCY 
+	Properties:
+		alsa.card = "0"
+		alsa.card_name = "HDA Intel PCH"
+		alsa.class = "generic"
+		alsa.device = "0"
+		alsa.driver_name = "snd_hda_intel"
+		alsa.id = "ALC3246 Analog"
+		alsa.long_card_name = "HDA Intel PCH at 0xd1228000 irq 139"
+		alsa.name = "ALC3246 Analog"
+		alsa.resolution_bits = "16"
+		alsa.subclass = "generic-mix"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		api.alsa.card.longname = "HDA Intel PCH at 0xd1228000 irq 139"
+		api.alsa.card.name = "HDA Intel PCH"
+		api.alsa.path = "front:0"
+		api.alsa.pcm.card = "0"
+		api.alsa.pcm.stream = "playback"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		card.profile.device = "6"
+		device.api = "alsa"
+		device.class = "sound"
+		device.id = "46"
+		device.profile.description = "Analog Stereo"
+		device.profile.name = "analog-stereo"
+		device.routes = "2"
+		factory.name = "api.alsa.pcm.sink"
+		media.class = "Audio/Sink"
+		device.description = "Built-in Audio"
+		node.name = "alsa_output.pci-0000_00_1f.3.analog-stereo"
+		node.nick = "ALC3246 Analog"
+		node.pause-on-idle = "false"
+		object.path = "alsa:pcm:0:front:0:playback"
+		priority.driver = "1009"
+		priority.session = "1009"
+		factory.id = "18"
+		clock.quantum-limit = "8192"
+		client.id = "35"
+		node.driver = "true"
+		factory.mode = "merge"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "47"
+		object.serial = "48"
+		node.max-latency = "16384/44100"
+		api.alsa.period-size = "1024"
+		api.alsa.period-num = "32"
+		api.alsa.headroom = "0"
+		api.acp.auto-port = "false"
+		api.acp.auto-profile = "false"
+		api.alsa.card = "0"
+		api.alsa.use-acp = "true"
+		api.dbus.ReserveDevice1 = "Audio0"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:00:1f.3"
+		device.enum.api = "udev"
+		device.form_factor = "internal"
+		device.icon_name = "audio-card-analog-pci"
+		device.name = "alsa_card.pci-0000_00_1f.3"
+		device.nick = "HDA Intel PCH"
+		device.plugged.usec = "13953739"
+		device.product.id = "0x9d71"
+		device.product.name = "Sunrise Point-LP HD Audio"
+		device.subsystem = "sound"
+		sysfs.path = "/devices/pci0000:00/0000:00:1f.3/sound/card0"
+		device.vendor.id = "0x8086"
+		device.vendor.name = "Intel Corporation"
+		device.string = "0"
+	Ports:
+		analog-output-speaker: Speakers (type: Speaker, priority: 10000, availability group: Legacy 3, availability unknown)
+		analog-output-headphones: Headphones (type: Headphones, priority: 9900, availability group: Legacy 2, not available)
+	Active Port: analog-output-speaker
+	Formats:
+		pcm
+
+Source #48
+	State: RUNNING
+	Name: alsa_output.pci-0000_00_1f.3.analog-stereo.monitor
+	Description: Monitor of Built-in Audio Analog Stereo
+	Driver: PipeWire
+	Sample Specification: s32le 2ch 44100Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor of Sink: alsa_output.pci-0000_00_1f.3.analog-stereo
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE DECIBEL_VOLUME LATENCY 
+	Properties:
+		alsa.card = "0"
+		alsa.card_name = "HDA Intel PCH"
+		alsa.class = "generic"
+		alsa.device = "0"
+		alsa.driver_name = "snd_hda_intel"
+		alsa.id = "ALC3246 Analog"
+		alsa.long_card_name = "HDA Intel PCH at 0xd1228000 irq 139"
+		alsa.name = "ALC3246 Analog"
+		alsa.resolution_bits = "16"
+		alsa.subclass = "generic-mix"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		api.alsa.card.longname = "HDA Intel PCH at 0xd1228000 irq 139"
+		api.alsa.card.name = "HDA Intel PCH"
+		api.alsa.path = "front:0"
+		api.alsa.pcm.card = "0"
+		api.alsa.pcm.stream = "playback"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		card.profile.device = "6"
+		device.api = "alsa"
+		device.class = "monitor"
+		device.id = "46"
+		device.profile.description = "Analog Stereo"
+		device.profile.name = "analog-stereo"
+		device.routes = "2"
+		factory.name = "api.alsa.pcm.sink"
+		media.class = "Audio/Sink"
+		device.description = "Built-in Audio"
+		node.name = "alsa_output.pci-0000_00_1f.3.analog-stereo"
+		node.nick = "ALC3246 Analog"
+		node.pause-on-idle = "false"
+		object.path = "alsa:pcm:0:front:0:playback"
+		priority.driver = "1009"
+		priority.session = "1009"
+		factory.id = "18"
+		clock.quantum-limit = "8192"
+		client.id = "35"
+		node.driver = "true"
+		factory.mode = "merge"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "47"
+		object.serial = "48"
+		node.max-latency = "16384/44100"
+		api.alsa.period-size = "1024"
+		api.alsa.period-num = "32"
+		api.alsa.headroom = "0"
+		api.acp.auto-port = "false"
+		api.acp.auto-profile = "false"
+		api.alsa.card = "0"
+		api.alsa.use-acp = "true"
+		api.dbus.ReserveDevice1 = "Audio0"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:00:1f.3"
+		device.enum.api = "udev"
+		device.form_factor = "internal"
+		device.icon_name = "audio-card-analog-pci"
+		device.name = "alsa_card.pci-0000_00_1f.3"
+		device.nick = "HDA Intel PCH"
+		device.plugged.usec = "13953739"
+		device.product.id = "0x9d71"
+		device.product.name = "Sunrise Point-LP HD Audio"
+		device.subsystem = "sound"
+		sysfs.path = "/devices/pci0000:00/0000:00:1f.3/sound/card0"
+		device.vendor.id = "0x8086"
+		device.vendor.name = "Intel Corporation"
+		device.string = "0"
+	Ports:
+		analog-output-speaker: Speakers (type: Speaker, priority: 10000, availability group: Legacy 3, availability unknown)
+		analog-output-headphones: Headphones (type: Headphones, priority: 9900, availability group: Legacy 2, not available)
+	Active Port: analog-output-speaker
+	Formats:
+		pcm
+
+Source #49
+	State: SUSPENDED
+	Name: alsa_input.pci-0000_00_1f.3.analog-stereo
+	Description: Built-in Audio Analog Stereo
+	Driver: PipeWire
+	Sample Specification: s32le 2ch 48000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB
+	        balance 0.00
+	Base Volume: 6554 /  10% / -60.00 dB
+	Monitor of Sink: n/a
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE HW_MUTE_CTRL HW_VOLUME_CTRL DECIBEL_VOLUME LATENCY 
+	Properties:
+		alsa.card = "0"
+		alsa.card_name = "HDA Intel PCH"
+		alsa.class = "generic"
+		alsa.device = "0"
+		alsa.driver_name = "snd_hda_intel"
+		alsa.id = "ALC3246 Analog"
+		alsa.long_card_name = "HDA Intel PCH at 0xd1228000 irq 139"
+		alsa.name = "ALC3246 Analog"
+		alsa.resolution_bits = "16"
+		alsa.subclass = "generic-mix"
+		alsa.subdevice = "0"
+		alsa.subdevice_name = "subdevice #0"
+		api.alsa.card.longname = "HDA Intel PCH at 0xd1228000 irq 139"
+		api.alsa.card.name = "HDA Intel PCH"
+		api.alsa.path = "front:0"
+		api.alsa.pcm.card = "0"
+		api.alsa.pcm.stream = "capture"
+		audio.channels = "2"
+		audio.position = "FL,FR"
+		card.profile.device = "0"
+		device.api = "alsa"
+		device.class = "sound"
+		device.id = "46"
+		device.profile.description = "Analog Stereo"
+		device.profile.name = "analog-stereo"
+		device.routes = "3"
+		factory.name = "api.alsa.pcm.source"
+		media.class = "Audio/Source"
+		device.description = "Built-in Audio"
+		node.name = "alsa_input.pci-0000_00_1f.3.analog-stereo"
+		node.nick = "ALC3246 Analog"
+		node.pause-on-idle = "false"
+		object.path = "alsa:pcm:0:front:0:capture"
+		priority.driver = "2009"
+		priority.session = "2009"
+		factory.id = "18"
+		clock.quantum-limit = "8192"
+		client.id = "35"
+		node.driver = "true"
+		factory.mode = "split"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		object.id = "48"
+		object.serial = "49"
+		api.acp.auto-port = "false"
+		api.acp.auto-profile = "false"
+		api.alsa.card = "0"
+		api.alsa.use-acp = "true"
+		api.dbus.ReserveDevice1 = "Audio0"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:00:1f.3"
+		device.enum.api = "udev"
+		device.form_factor = "internal"
+		device.icon_name = "audio-card-analog-pci"
+		device.name = "alsa_card.pci-0000_00_1f.3"
+		device.nick = "HDA Intel PCH"
+		device.plugged.usec = "13953739"
+		device.product.id = "0x9d71"
+		device.product.name = "Sunrise Point-LP HD Audio"
+		device.subsystem = "sound"
+		sysfs.path = "/devices/pci0000:00/0000:00:1f.3/sound/card0"
+		device.vendor.id = "0x8086"
+		device.vendor.name = "Intel Corporation"
+		device.string = "0"
+	Ports:
+		analog-input-internal-mic: Internal Microphone (type: Mic, priority: 8900, availability group: Legacy 1, availability unknown)
+		analog-input-headphone-mic: Microphone (type: Mic, priority: 8700, availability group: Legacy 2, not available)
+		analog-input-headset-mic: Headset Microphone (type: Headset, priority: 8800, availability group: Legacy 2, not available)
+	Active Port: analog-input-internal-mic
+	Formats:
+		pcm
+
+Sink Input #61
+	Driver: PipeWire
+	Owner Module: n/a
+	Client: 60
+	Sink: 48
+	Sample Specification: s16le 1ch 44100Hz
+	Channel Map: mono
+	Format: pcm, format.sample_format = "\"s16le\""  format.rate = "44100"  format.channels = "1"  format.channel_map = "\"mono\""
+	Corked: no
+	Mute: no
+	Volume: mono: 65536 / 100% / 0.00 dB
+	        balance 0.00
+	Buffer Latency: 0 usec
+	Sink Latency: 0 usec
+	Resample method: PipeWire
+	Properties:
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "qrq"
+		application.process.id = "5372"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "qrq"
+		application.language = "C"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		media.name = "playback"
+		node.rate = "1/44100"
+		node.latency = "4630/44100"
+		stream.is-live = "true"
+		node.name = "qrq"
+		node.want-driver = "true"
+		node.autoconnect = "true"
+		media.class = "Stream/Output/Audio"
+		adapt.follower.spa-node = ""
+		object.register = "false"
+		factory.id = "6"
+		clock.quantum-limit = "8192"
+		factory.mode = "split"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		client.id = "54"
+		object.id = "55"
+		object.serial = "61"
+		pulse.attr.maxlength = "4194304"
+		pulse.attr.tlength = "12790"
+		pulse.attr.prebuf = "11028"
+		pulse.attr.minreq = "1764"
+		module-stream-restore.id = "sink-input-by-application-name:qrq"
+
+Sink Input #88
+	Driver: PipeWire
+	Owner Module: n/a
+	Client: 87
+	Sink: 48
+	Sample Specification: s16le 1ch 44100Hz
+	Channel Map: mono
+	Format: pcm, format.sample_format = "\"s16le\""  format.rate = "44100"  format.channels = "1"  format.channel_map = "\"mono\""
+	Corked: yes
+	Mute: no
+	Volume: mono: 65536 / 100% / 0.00 dB
+	        balance 0.00
+	Buffer Latency: 0 usec
+	Sink Latency: 0 usec
+	Resample method: PipeWire
+	Properties:
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "speech-dispatcher-dummy"
+		application.process.id = "11309"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "sd_dummy"
+		application.language = "C"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		pulse.min.req = "512/48000"
+		pulse.min.quantum = "512/48000"
+		pulse.idle.timeout = "5"
+		media.name = "playback"
+		node.rate = "1/44100"
+		node.latency = "471/44100"
+		stream.is-live = "true"
+		node.name = "speech-dispatcher-dummy"
+		node.want-driver = "true"
+		node.autoconnect = "true"
+		media.class = "Stream/Output/Audio"
+		adapt.follower.spa-node = ""
+		object.register = "false"
+		factory.id = "6"
+		clock.quantum-limit = "8192"
+		factory.mode = "split"
+		audio.adapt.follower = ""
+		library.name = "audioconvert/libspa-audioconvert"
+		client.id = "62"
+		object.id = "64"
+		object.serial = "88"
+		pulse.attr.maxlength = "4194304"
+		pulse.attr.tlength = "2826"
+		pulse.attr.prebuf = "1886"
+		pulse.attr.minreq = "942"
+		module-stream-restore.id = "sink-input-by-application-name:speech-dispatcher-dummy"
+
+Client #33
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "32"
+		object.serial = "33"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		application.name = "pipewire"
+		application.process.binary = "pipewire"
+		application.language = "en_US.UTF-8"
+		application.process.id = "2142"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #35
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2141"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "34"
+		object.serial = "35"
+		config.name = "/usr/share/wireplumber/wireplumber.conf"
+		application.name = "WirePlumber"
+		wireplumber.daemon = "true"
+		wireplumber.export-core = "true"
+		log.level = "2"
+		wireplumber.script-engine = "lua-scripting"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		application.process.binary = "wireplumber"
+		application.language = "en_US.UTF-8"
+		application.process.id = "2141"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2141"
+		pipewire.access = "unrestricted"
+
+Client #36
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2141"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "35"
+		object.serial = "36"
+		application.name = "WirePlumber [export]"
+		config.name = "/usr/share/wireplumber/wireplumber.conf"
+		wireplumber.daemon = "true"
+		wireplumber.export-core = "true"
+		log.level = "2"
+		wireplumber.script-engine = "lua-scripting"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		application.process.binary = "wireplumber"
+		application.language = "en_US.UTF-8"
+		application.process.id = "2141"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2141"
+		pipewire.access = "unrestricted"
+
+Client #56
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "50"
+		object.serial = "56"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "GNOME Volume Control Media Keys"
+		application.id = "org.gnome.VolumeControl"
+		application.icon_name = "multimedia-volume-control"
+		application.version = ""
+		application.process.id = "2495"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "gsd-media-keys"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #57
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "51"
+		object.serial = "57"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "GNOME Shell Volume Control"
+		application.id = "org.gnome.VolumeControl"
+		application.icon_name = "multimedia-volume-control"
+		application.version = "42.9"
+		application.process.id = "2307"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "gnome-shell"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #58
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2429"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "52"
+		object.serial = "58"
+		pipewire.access.portal.is_portal = "true"
+		portal.monitor = "Camera"
+		log.level = "0"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		application.name = "xdg-desktop-portal"
+		application.process.binary = "xdg-desktop-portal"
+		application.language = "en_US.UTF-8"
+		application.process.id = "2429"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		window.x11.display = ":1"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2429"
+		pipewire.access = "unrestricted"
+
+Client #59
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "1107"
+		pipewire.sec.uid = "0"
+		pipewire.sec.gid = "0"
+		module.id = "2"
+		object.id = "53"
+		object.serial = "59"
+		log.level = "0"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		application.name = "system76-scheduler"
+		application.process.binary = "system76-scheduler"
+		application.language = "en_US.UTF-8"
+		application.process.id = "1107"
+		application.process.user = "root"
+		application.process.host = "pop-os"
+		core.version = "1.0.3"
+		core.name = "pipewire-root-1107"
+		pipewire.access = "unrestricted"
+
+Client #60
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "54"
+		object.serial = "60"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "qrq"
+		application.process.id = "5372"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "qrq"
+		application.language = "C"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #66
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "60"
+		object.serial = "66"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "Firefox"
+		application.process.id = "6475"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "firefox-bin"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #72
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "61"
+		object.serial = "72"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		pipewire.access.portal.app_id = "com.discordapp.Discord"
+		media.category = "Manager"
+		pipewire.client.access = "flatpak"
+		application.name = "WEBRTC VoiceEngine"
+		application.process.id = "118"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "Discord"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "flatpak"
+
+Client #73
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "63"
+		object.serial = "73"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		pipewire.access.portal.app_id = "com.discordapp.Discord"
+		media.category = "Manager"
+		pipewire.client.access = "flatpak"
+		application.name = "WEBRTC VoiceEngine"
+		application.process.id = "118"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "Discord"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "flatpak"
+
+Client #74
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "65"
+		object.serial = "74"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		pipewire.access.portal.app_id = "com.discordapp.Discord"
+		media.category = "Manager"
+		pipewire.client.access = "flatpak"
+		application.name = "Chromium input"
+		application.process.id = "145"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "Discord"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "flatpak"
+
+Client #87
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "62"
+		object.serial = "87"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "speech-dispatcher-dummy"
+		application.process.id = "11309"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "sd_dummy"
+		application.language = "C"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		pulse.min.req = "512/48000"
+		pulse.min.quantum = "512/48000"
+		pulse.idle.timeout = "5"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #105
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "70"
+		object.serial = "105"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.name = "gsd-power"
+		window.x11.display = ":1"
+		window.x11.screen = "0"
+		application.process.id = "2496"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "gsd-power"
+		application.language = "en_US.UTF-8"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #143
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "71"
+		object.serial = "143"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.icon_name = "firefox"
+		application.name = "Firefox"
+		application.version = "133.0.3"
+		application.process.id = "6475"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "firefox-bin"
+		application.language = "en_US.UTF-8"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Client #207
+	Driver: PipeWire
+	Owner Module: 2
+	Properties:
+		pipewire.protocol = "protocol-native"
+		pipewire.sec.socket = "pipewire-0"
+		pipewire.sec.pid = "2142"
+		pipewire.sec.uid = "1000"
+		pipewire.sec.gid = "1000"
+		module.id = "2"
+		object.id = "75"
+		object.serial = "207"
+		client.api = "pipewire-pulse"
+		pulse.server.type = "unix"
+		application.process.id = "44503"
+		application.process.user = "admin"
+		application.process.host = "pop-os"
+		application.process.binary = "pactl"
+		application.name = "pactl"
+		application.language = "C"
+		window.x11.display = ":1"
+		application.process.machine_id = "a8a568f5dd13269e3bec720c67640fed"
+		config.name = "pipewire-pulse.conf"
+		cpu.max-align = "32"
+		default.clock.rate = "48000"
+		default.clock.quantum = "1024"
+		default.clock.min-quantum = "32"
+		default.clock.max-quantum = "2048"
+		default.clock.quantum-limit = "8192"
+		default.video.width = "640"
+		default.video.height = "480"
+		default.video.rate.num = "25"
+		default.video.rate.denom = "1"
+		log.level = "2"
+		clock.power-of-two-quantum = "true"
+		link.max-buffers = "64"
+		mem.warn-mlock = "false"
+		mem.allow-mlock = "true"
+		settings.check-quantum = "false"
+		settings.check-rate = "false"
+		core.version = "1.0.3"
+		core.name = "pipewire-admin-2142"
+		pipewire.access = "unrestricted"
+
+Card #47
+	Name: alsa_card.pci-0000_00_1f.3
+	Driver: alsa
+	Owner Module: n/a
+	Properties:
+		api.acp.auto-port = "false"
+		api.acp.auto-profile = "false"
+		api.alsa.card = "0"
+		api.alsa.card.longname = "HDA Intel PCH at 0xd1228000 irq 139"
+		api.alsa.card.name = "HDA Intel PCH"
+		api.alsa.path = "hw:0"
+		api.alsa.use-acp = "true"
+		api.dbus.ReserveDevice1 = "Audio0"
+		device.api = "alsa"
+		device.bus = "pci"
+		device.bus_path = "pci-0000:00:1f.3"
+		device.description = "Built-in Audio"
+		device.enum.api = "udev"
+		device.form_factor = "internal"
+		device.icon_name = "audio-card-analog-pci"
+		device.name = "alsa_card.pci-0000_00_1f.3"
+		device.nick = "HDA Intel PCH"
+		device.plugged.usec = "13953739"
+		device.product.id = "0x9d71"
+		device.product.name = "Sunrise Point-LP HD Audio"
+		device.subsystem = "sound"
+		sysfs.path = "/devices/pci0000:00/0000:00:1f.3/sound/card0"
+		device.vendor.id = "0x8086"
+		device.vendor.name = "Intel Corporation"
+		media.class = "Audio/Device"
+		factory.id = "14"
+		client.id = "35"
+		object.id = "46"
+		object.serial = "47"
+		object.path = "alsa:pcm:0"
+		alsa.card = "0"
+		alsa.card_name = "HDA Intel PCH"
+		alsa.long_card_name = "HDA Intel PCH at 0xd1228000 irq 139"
+		alsa.driver_name = "snd_hda_intel"
+		device.string = "0"
+	Profiles:
+		off: Off (sinks: 0, sources: 0, priority: 0, available: yes)
+		output:analog-stereo+input:analog-stereo: Analog Stereo Duplex (sinks: 1, sources: 1, priority: 6565, available: yes)
+		output:analog-stereo: Analog Stereo Output (sinks: 1, sources: 0, priority: 6500, available: yes)
+		output:hdmi-stereo+input:analog-stereo: Digital Stereo (HDMI) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 5965, available: no)
+		output:hdmi-stereo: Digital Stereo (HDMI) Output (sinks: 1, sources: 0, priority: 5900, available: no)
+		output:hdmi-stereo-extra1+input:analog-stereo: Digital Stereo (HDMI 2) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 5765, available: no)
+		output:hdmi-stereo-extra2+input:analog-stereo: Digital Stereo (HDMI 3) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 5765, available: no)
+		output:hdmi-stereo-extra1: Digital Stereo (HDMI 2) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+		output:hdmi-stereo-extra2: Digital Stereo (HDMI 3) Output (sinks: 1, sources: 0, priority: 5700, available: no)
+		output:hdmi-surround+input:analog-stereo: Digital Surround 5.1 (HDMI) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 865, available: no)
+		output:hdmi-surround71+input:analog-stereo: Digital Surround 7.1 (HDMI) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 865, available: no)
+		output:hdmi-surround: Digital Surround 5.1 (HDMI) Output (sinks: 1, sources: 0, priority: 800, available: no)
+		output:hdmi-surround71: Digital Surround 7.1 (HDMI) Output (sinks: 1, sources: 0, priority: 800, available: no)
+		output:hdmi-surround-extra1+input:analog-stereo: Digital Surround 5.1 (HDMI 2) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 665, available: no)
+		output:hdmi-surround71-extra1+input:analog-stereo: Digital Surround 7.1 (HDMI 2) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 665, available: no)
+		output:hdmi-surround-extra2+input:analog-stereo: Digital Surround 5.1 (HDMI 3) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 665, available: no)
+		output:hdmi-surround71-extra2+input:analog-stereo: Digital Surround 7.1 (HDMI 3) Output + Analog Stereo Input (sinks: 1, sources: 1, priority: 665, available: no)
+		output:hdmi-surround-extra1: Digital Surround 5.1 (HDMI 2) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround71-extra1: Digital Surround 7.1 (HDMI 2) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround-extra2: Digital Surround 5.1 (HDMI 3) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		output:hdmi-surround71-extra2: Digital Surround 7.1 (HDMI 3) Output (sinks: 1, sources: 0, priority: 600, available: no)
+		input:analog-stereo: Analog Stereo Input (sinks: 0, sources: 1, priority: 65, available: yes)
+		pro-audio: Pro Audio (sinks: 4, sources: 1, priority: 1, available: yes)
+	Active Profile: output:analog-stereo+input:analog-stereo
+	Ports:
+		analog-input-internal-mic: Internal Microphone (type: Mic, priority: 8900, latency offset: 0 usec, availability group: Legacy 1, availability unknown)
+			Properties:
+				port.type = "mic"
+				port.availability-group = "Legacy 1"
+				device.icon_name = "audio-input-microphone"
+				card.profile.port = "0"
+			Part of profile(s): input:analog-stereo, output:analog-stereo+input:analog-stereo, output:hdmi-stereo+input:analog-stereo, output:hdmi-surround+input:analog-stereo, output:hdmi-surround71+input:analog-stereo, output:hdmi-stereo-extra1+input:analog-stereo, output:hdmi-surround-extra1+input:analog-stereo, output:hdmi-surround71-extra1+input:analog-stereo, output:hdmi-stereo-extra2+input:analog-stereo, output:hdmi-surround-extra2+input:analog-stereo, output:hdmi-surround71-extra2+input:analog-stereo
+		analog-input-headphone-mic: Microphone (type: Mic, priority: 8700, latency offset: 0 usec, availability group: Legacy 2, not available)
+			Properties:
+				port.type = "mic"
+				port.availability-group = "Legacy 2"
+				device.icon_name = "audio-input-microphone"
+				card.profile.port = "1"
+			Part of profile(s): input:analog-stereo, output:analog-stereo+input:analog-stereo, output:hdmi-stereo+input:analog-stereo, output:hdmi-surround+input:analog-stereo, output:hdmi-surround71+input:analog-stereo, output:hdmi-stereo-extra1+input:analog-stereo, output:hdmi-surround-extra1+input:analog-stereo, output:hdmi-surround71-extra1+input:analog-stereo, output:hdmi-stereo-extra2+input:analog-stereo, output:hdmi-surround-extra2+input:analog-stereo, output:hdmi-surround71-extra2+input:analog-stereo
+		analog-input-headset-mic: Headset Microphone (type: Headset, priority: 8800, latency offset: 0 usec, availability group: Legacy 2, not available)
+			Properties:
+				port.type = "headset"
+				port.availability-group = "Legacy 2"
+				device.icon_name = "audio-input-microphone"
+				card.profile.port = "2"
+			Part of profile(s): input:analog-stereo, output:analog-stereo+input:analog-stereo, output:hdmi-stereo+input:analog-stereo, output:hdmi-surround+input:analog-stereo, output:hdmi-surround71+input:analog-stereo, output:hdmi-stereo-extra1+input:analog-stereo, output:hdmi-surround-extra1+input:analog-stereo, output:hdmi-surround71-extra1+input:analog-stereo, output:hdmi-stereo-extra2+input:analog-stereo, output:hdmi-surround-extra2+input:analog-stereo, output:hdmi-surround71-extra2+input:analog-stereo
+		analog-output-speaker: Speakers (type: Speaker, priority: 10000, latency offset: 0 usec, availability group: Legacy 3, availability unknown)
+			Properties:
+				port.type = "speaker"
+				port.availability-group = "Legacy 3"
+				device.icon_name = "audio-speakers"
+				card.profile.port = "3"
+			Part of profile(s): output:analog-stereo, output:analog-stereo+input:analog-stereo
+		analog-output-headphones: Headphones (type: Headphones, priority: 9900, latency offset: 0 usec, availability group: Legacy 2, not available)
+			Properties:
+				port.type = "headphones"
+				port.availability-group = "Legacy 2"
+				device.icon_name = "audio-headphones"
+				card.profile.port = "4"
+			Part of profile(s): output:analog-stereo, output:analog-stereo+input:analog-stereo
+		hdmi-output-0: HDMI / DisplayPort (type: HDMI, priority: 5900, latency offset: 0 usec, availability group: Legacy 4, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 4"
+				device.icon_name = "video-display"
+				card.profile.port = "5"
+			Part of profile(s): output:hdmi-stereo, output:hdmi-stereo+input:analog-stereo, output:hdmi-surround, output:hdmi-surround+input:analog-stereo, output:hdmi-surround71, output:hdmi-surround71+input:analog-stereo
+		hdmi-output-1: HDMI / DisplayPort 2 (type: HDMI, priority: 5800, latency offset: 0 usec, availability group: Legacy 5, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 5"
+				device.icon_name = "video-display"
+				card.profile.port = "6"
+			Part of profile(s): output:hdmi-stereo-extra1, output:hdmi-stereo-extra1+input:analog-stereo, output:hdmi-surround-extra1, output:hdmi-surround-extra1+input:analog-stereo, output:hdmi-surround71-extra1, output:hdmi-surround71-extra1+input:analog-stereo
+		hdmi-output-2: HDMI / DisplayPort 3 (type: HDMI, priority: 5700, latency offset: 0 usec, availability group: Legacy 6, not available)
+			Properties:
+				port.type = "hdmi"
+				port.availability-group = "Legacy 6"
+				device.icon_name = "video-display"
+				card.profile.port = "7"
+			Part of profile(s): output:hdmi-stereo-extra2, output:hdmi-stereo-extra2+input:analog-stereo, output:hdmi-surround-extra2, output:hdmi-surround-extra2+input:analog-stereo, output:hdmi-surround71-extra2, output:hdmi-surround71-extra2+input:analog-stereo
+________________
+> cat /etc/pulse/daemon.conf
+cat: /etc/pulse/daemon.conf: No such file or directory
+________________
+> cat /etc/pulse/client.conf
+# This file is part of PulseAudio.
+#
+# PulseAudio is free software; you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+#
+# PulseAudio is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with PulseAudio; if not, see <http://www.gnu.org/licenses/>.
+
+## Configuration file for PulseAudio clients. See pulse-client.conf(5) for
+## more information. Default values are commented out.  Use either ; or # for
+## commenting.
+
+; default-sink =
+; default-source =
+; default-server =
+; default-dbus-server =
+
+; autospawn = yes
+; daemon-binary = /usr/bin/pulseaudio
+; extra-arguments = --log-target=syslog
+
+; cookie-file =
+
+; enable-shm = yes
+; shm-size-bytes = 0 # setting this 0 will use the system-default, usually 64 MiB
+
+; auto-connect-localhost = no
+; auto-connect-display = no
+________________
+> cat /etc/pulse/default.pa
+cat: /etc/pulse/default.pa: No such file or directory
+________________
+> cat /etc/pulse/system.pa
+cat: /etc/pulse/system.pa: No such file or directory
+________________
+> ls -alt /dev/snd/*
+crw-rw----+ 1 root audio 116,  2 Jan 19 09:49 /dev/snd/pcmC0D0p
+crw-rw----+ 1 root audio 116,  3 Jan 19 09:42 /dev/snd/pcmC0D0c
+crw-rw----+ 1 root audio 116,  6 Jan 19 09:42 /dev/snd/pcmC0D8p
+crw-rw----+ 1 root audio 116,  5 Jan 19 09:42 /dev/snd/pcmC0D7p
+crw-rw----+ 1 root audio 116,  4 Jan 19 09:42 /dev/snd/pcmC0D3p
+crw-rw----+ 1 root audio 116,  8 Jan 19 09:42 /dev/snd/hwC0D2
+crw-rw----+ 1 root audio 116,  9 Jan 19 09:42 /dev/snd/controlC0
+crw-rw----+ 1 root audio 116,  7 Jan 19 09:42 /dev/snd/hwC0D0
+crw-rw----+ 1 root audio 116,  1 Jan 19 09:42 /dev/snd/seq
+crw-rw----+ 1 root audio 116, 33 Jan 19 09:42 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Jan 19 09:42 .
+drwxr-xr-x 3 root root 260 Jan 19 09:42 ..
+lrwxrwxrwx 1 root root  12 Jan 19 09:42 pci-0000:00:1f.3 -> ../controlC0
+________________
+> lsof /dev/snd/*
+COMMAND    PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+pipewire  2138 admin  mem    CHR  116,2           743 /dev/snd/pcmC0D0p
+pipewire  2138 admin   59u   CHR  116,1      0t0  461 /dev/snd/seq
+pipewire  2138 admin   60u   CHR  116,1      0t0  461 /dev/snd/seq
+pipewire  2138 admin   61u   CHR  116,9      0t0  754 /dev/snd/controlC0
+pipewire  2138 admin   63u   CHR  116,2      0t0  743 /dev/snd/pcmC0D0p
+wireplumb 2141 admin   35u   CHR  116,9      0t0  754 /dev/snd/controlC0
+________________
+> jacks_do
+card=0
+numid=20,iface=CARD,name='HDMI/DP,pcm=3 Jack'
+  ; type=BOOLEAN,access=r-------,values=1
+  : values=off
+numid=26,iface=CARD,name='HDMI/DP,pcm=7 Jack'
+  ; type=BOOLEAN,access=r-------,values=1
+  : values=off
+numid=32,iface=CARD,name='HDMI/DP,pcm=8 Jack'
+  ; type=BOOLEAN,access=r-------,values=1
+  : values=off
+numid=15,iface=CARD,name='Headphone Mic Jack'
+  ; type=BOOLEAN,access=r-------,values=1
+  : values=off
+numid=14,iface=CARD,name='Headset Mic Phantom Jack'
+  ; type=BOOLEAN,access=r-------,values=1
+  : values=on
+numid=16,iface=CARD,name='Internal Mic Phantom Jack'
+  ; type=BOOLEAN,access=r-------,values=1
+  : values=on
+numid=17,iface=CARD,name='Speaker Phantom Jack'
+  ; type=BOOLEAN,access=r-------,values=1
+  : values=on
+________________
+> aplay -L
+null
+    Discard all samples (playback) or generate zero samples (capture)
+samplerate
+    Rate Converter Plugin Using Samplerate Library
+speexrate
+    Rate Converter Plugin Using Speex Resampler
+jack
+    JACK Audio Connection Kit
+oss
+    Open Sound System
+pipewire
+    PipeWire Sound Server
+pulse
+    PulseAudio Sound Server
+upmix
+    Plugin for channel upmix (4,6,8)
+vdownmix
+    Plugin for channel downmix (stereo) with a simple spacialization
+default
+    Default ALSA Output (currently PulseAudio Sound Server)
+hw:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Direct hardware device without any conversions
+hw:CARD=PCH,DEV=3
+    HDA Intel PCH, HDMI 0
+    Direct hardware device without any conversions
+hw:CARD=PCH,DEV=7
+    HDA Intel PCH, HDMI 1
+    Direct hardware device without any conversions
+hw:CARD=PCH,DEV=8
+    HDA Intel PCH, HDMI 2
+    Direct hardware device without any conversions
+plughw:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Hardware device with all software conversions
+plughw:CARD=PCH,DEV=3
+    HDA Intel PCH, HDMI 0
+    Hardware device with all software conversions
+plughw:CARD=PCH,DEV=7
+    HDA Intel PCH, HDMI 1
+    Hardware device with all software conversions
+plughw:CARD=PCH,DEV=8
+    HDA Intel PCH, HDMI 2
+    Hardware device with all software conversions
+sysdefault:CARD=PCH
+    HDA Intel PCH, ALC3246 Analog
+    Default Audio Device
+front:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Front output / input
+surround21:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    2.1 Surround output to Front and Subwoofer speakers
+surround40:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    4.0 Surround output to Front and Rear speakers
+surround41:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    4.1 Surround output to Front, Rear and Subwoofer speakers
+surround50:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    5.0 Surround output to Front, Center and Rear speakers
+surround51:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    5.1 Surround output to Front, Center, Rear and Subwoofer speakers
+surround71:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    7.1 Surround output to Front, Center, Side, Rear and Woofer speakers
+hdmi:CARD=PCH,DEV=0
+    HDA Intel PCH, HDMI 0
+    HDMI Audio Output
+hdmi:CARD=PCH,DEV=1
+    HDA Intel PCH, HDMI 1
+    HDMI Audio Output
+hdmi:CARD=PCH,DEV=2
+    HDA Intel PCH, HDMI 2
+    HDMI Audio Output
+dmix:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Direct sample mixing device
+dmix:CARD=PCH,DEV=3
+    HDA Intel PCH, HDMI 0
+    Direct sample mixing device
+dmix:CARD=PCH,DEV=7
+    HDA Intel PCH, HDMI 1
+    Direct sample mixing device
+dmix:CARD=PCH,DEV=8
+    HDA Intel PCH, HDMI 2
+    Direct sample mixing device
+usbstream:CARD=PCH
+    HDA Intel PCH
+    USB Stream Output
+________________
+> arecord -L
+null
+    Discard all samples (playback) or generate zero samples (capture)
+samplerate
+    Rate Converter Plugin Using Samplerate Library
+speexrate
+    Rate Converter Plugin Using Speex Resampler
+jack
+    JACK Audio Connection Kit
+oss
+    Open Sound System
+pipewire
+    PipeWire Sound Server
+pulse
+    PulseAudio Sound Server
+upmix
+    Plugin for channel upmix (4,6,8)
+vdownmix
+    Plugin for channel downmix (stereo) with a simple spacialization
+default
+    Default ALSA Output (currently PulseAudio Sound Server)
+hw:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Direct hardware device without any conversions
+plughw:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Hardware device with all software conversions
+sysdefault:CARD=PCH
+    HDA Intel PCH, ALC3246 Analog
+    Default Audio Device
+front:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Front output / input
+dsnoop:CARD=PCH,DEV=0
+    HDA Intel PCH, ALC3246 Analog
+    Direct sample snooping device
+usbstream:CARD=PCH
+    HDA Intel PCH
+    USB Stream Output
+________________
+> alsa_info_do
+dmesg: read kernel buffer failed: Operation not permitted
+upload=true&script=true&cardinfo=
+!!################################
+!!ALSA Information Script v 0.5.1
+!!################################
+
+!!Script ran on: Mon Jan 20 21:02:54 UTC 2025
+
+
+!!Linux Distribution
+!!------------------
+
+ID_LIKE="ubuntu debian" UBUNTU_CODENAME=jammy
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      Dell Inc.
+Product Name:      Inspiron 15-3567
+Product Version:   
+Firmware Version:  2.9.0
+System SKU:        078B
+Board Vendor:      Dell Inc.
+Board Name:        03JX14
+
+
+!!ACPI Device Status Information
+!!---------------
+
+/sys/bus/acpi/devices/ACPI0003:00/status 	 15
+/sys/bus/acpi/devices/ACPI000C:00/status 	 15
+/sys/bus/acpi/devices/DELL078B:00/status 	 15
+/sys/bus/acpi/devices/DLLK078A:00/status 	 15
+/sys/bus/acpi/devices/INT33A1:00/status 	 15
+/sys/bus/acpi/devices/INT33D0:00/status 	 15
+/sys/bus/acpi/devices/INT33D5:00/status 	 15
+/sys/bus/acpi/devices/INT3400:00/status 	 15
+/sys/bus/acpi/devices/INT340E:00/status 	 15
+/sys/bus/acpi/devices/INT344B:00/status 	 15
+/sys/bus/acpi/devices/INT3F0D:00/status 	 15
+/sys/bus/acpi/devices/PNP0103:00/status 	 15
+/sys/bus/acpi/devices/PNP0C02:03/status 	 3
+/sys/bus/acpi/devices/PNP0C02:05/status 	 3
+/sys/bus/acpi/devices/PNP0C02:06/status 	 15
+/sys/bus/acpi/devices/PNP0C09:00/status 	 15
+/sys/bus/acpi/devices/PNP0C0A:00/status 	 31
+/sys/bus/acpi/devices/PNP0C0F:00/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:01/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:02/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:03/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:04/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:05/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:06/status 	 11
+/sys/bus/acpi/devices/PNP0C0F:07/status 	 11
+/sys/bus/acpi/devices/device:09/status 	 15
+/sys/bus/acpi/devices/device:5a/status 	 15
+/sys/bus/acpi/devices/device:6b/status 	 11
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    6.9.3-76060903-generic
+Operating System:  GNU/Linux
+Architecture:      x86_64
+Processor:         x86_64
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     k6.9.3-76060903-generic
+Library version:    1.2.8
+Utilities version:  1.2.8
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+snd_hda_intel (card 0)
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+PipeWire:
+      Installed - Yes (/usr/bin/pipewire)
+      Running - Yes
+
+No sound servers found.
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [PCH            ]: HDA-Intel - HDA Intel PCH
+                      HDA Intel PCH at 0xd1228000 irq 139
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+00:1f.3 Audio device [0403]: Intel Corporation Sunrise Point-LP HD Audio [8086:9d71] (rev 21)
+	Subsystem: Dell Sunrise Point-LP HD Audio [1028:078b]
+
+
+!!Modprobe options (Sound related)
+!!--------------------------------
+
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_atiixp_modem: index=-2
+snd_intel8x0m: index=-2
+snd_via82xx_modem: index=-2
+snd_usb_audio: index=-2
+snd_usb_caiaq: index=-2
+snd_usb_ua101: index=-2
+snd_usb_us122l: index=-2
+snd_usb_usx2y: index=-2
+snd_cmipci: mpu_port=0x330 fm_port=0x388
+snd_pcsp: index=-2
+snd_usb_audio: index=-2
+
+
+!!Loaded sound module options
+!!---------------------------
+
+!!Module: snd_hda_intel
+	align_buffer_size : -1
+	bdl_pos_adj : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	beep_mode : N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N,N
+	ctl_dev_id : N
+	dmic_detect : Y
+	enable : Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+	enable_msi : -1
+	id : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	index : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	jackpoll_ms : 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	model : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	patch : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	pm_blacklist : Y
+	position_fix : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	power_save : 1
+	power_save_controller : Y
+	probe_mask : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	probe_only : 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	single_cmd : -1
+	snoop : -1
+
+
+!!Sysfs card info
+!!---------------
+
+!!Card: /sys/class/sound/card0
+Driver: /sys/bus/pci/drivers/snd_hda_intel
+Tree:
+	/sys/class/sound/card0
+	|-- controlC0
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- led-mic -> ../../../../../virtual/sound/ctl-led/mic/card0
+	|   |-- led-speaker -> ../../../../../virtual/sound/ctl-led/speaker/card0
+	|   |-- power
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   `-- uevent
+	|-- device -> ../../../0000:00:1f.3
+	|-- hwC0D0
+	|   |-- afg
+	|   |-- chip_name
+	|   |-- clear
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- driver_pin_configs
+	|   |-- hints
+	|   |-- init_pin_configs
+	|   |-- init_verbs
+	|   |-- mfg
+	|   |-- modelname
+	|   |-- power
+	|   |-- power_off_acct
+	|   |-- power_on_acct
+	|   |-- reconfig
+	|   |-- revision_id
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   |-- subsystem_id
+	|   |-- uevent
+	|   |-- user_pin_configs
+	|   |-- vendor_id
+	|   `-- vendor_name
+	|-- hwC0D2
+	|   |-- afg
+	|   |-- chip_name
+	|   |-- clear
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- driver_pin_configs
+	|   |-- hints
+	|   |-- init_pin_configs
+	|   |-- init_verbs
+	|   |-- mfg
+	|   |-- modelname
+	|   |-- power
+	|   |-- power_off_acct
+	|   |-- power_on_acct
+	|   |-- reconfig
+	|   |-- revision_id
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   |-- subsystem_id
+	|   |-- uevent
+	|   |-- user_pin_configs
+	|   |-- vendor_id
+	|   `-- vendor_name
+	|-- id
+	|-- input14
+	|   |-- capabilities
+	|   |-- device -> ../../card0
+	|   |-- event9
+	|   |-- id
+	|   |-- inhibited
+	|   |-- modalias
+	|   |-- name
+	|   |-- phys
+	|   |-- power
+	|   |-- properties
+	|   |-- subsystem -> ../../../../../../class/input
+	|   |-- uevent
+	|   `-- uniq
+	|-- input15
+	|   |-- capabilities
+	|   |-- device -> ../../card0
+	|   |-- event10
+	|   |-- id
+	|   |-- inhibited
+	|   |-- modalias
+	|   |-- name
+	|   |-- phys
+	|   |-- power
+	|   |-- properties
+	|   |-- subsystem -> ../../../../../../class/input
+	|   |-- uevent
+	|   `-- uniq
+	|-- input16
+	|   |-- capabilities
+	|   |-- device -> ../../card0
+	|   |-- event11
+	|   |-- id
+	|   |-- inhibited
+	|   |-- modalias
+	|   |-- name
+	|   |-- phys
+	|   |-- power
+	|   |-- properties
+	|   |-- subsystem -> ../../../../../../class/input
+	|   |-- uevent
+	|   `-- uniq
+	|-- input17
+	|   |-- capabilities
+	|   |-- device -> ../../card0
+	|   |-- event12
+	|   |-- id
+	|   |-- inhibited
+	|   |-- modalias
+	|   |-- name
+	|   |-- phys
+	|   |-- power
+	|   |-- properties
+	|   |-- subsystem -> ../../../../../../class/input
+	|   |-- uevent
+	|   `-- uniq
+	|-- number
+	|-- pcmC0D0c
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- pcm_class
+	|   |-- power
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   `-- uevent
+	|-- pcmC0D0p
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- pcm_class
+	|   |-- power
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   `-- uevent
+	|-- pcmC0D3p
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- pcm_class
+	|   |-- power
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   `-- uevent
+	|-- pcmC0D7p
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- pcm_class
+	|   |-- power
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   `-- uevent
+	|-- pcmC0D8p
+	|   |-- dev
+	|   |-- device -> ../../card0
+	|   |-- pcm_class
+	|   |-- power
+	|   |-- subsystem -> ../../../../../../class/sound
+	|   `-- uevent
+	|-- power
+	|   |-- async
+	|   |-- autosuspend_delay_ms
+	|   |-- control
+	|   |-- runtime_active_kids
+	|   |-- runtime_active_time
+	|   |-- runtime_enabled
+	|   |-- runtime_status
+	|   |-- runtime_suspended_time
+	|   `-- runtime_usage
+	|-- subsystem -> ../../../../../class/sound
+	`-- uevent
+
+
+!!HDA-Intel Codec information
+!!---------------------------
+--startcollapse--
+
+Codec: Realtek ALC3246
+Address: 0
+AFG Function Id: 0x1 (unsol 1)
+Vendor Id: 0x10ec0256
+Subsystem Id: 0x1028078b
+Revision Id: 0x100002
+No Modem Function Group found
+Default PCM:
+    rates [0x560]: 44100 48000 96000 192000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+Default Amp-In caps: N/A
+Default Amp-Out caps: N/A
+State of AFG node 0x01:
+  Power states:  D0 D1 D2 D3 D3cold CLKSTOP EPSS
+  Power: setting=D0, actual=D0
+GPIO: io=3, o=0, i=0, unsolicited=1, wake=0
+  IO[0]: enable=0, dir=0, wake=0, sticky=0, data=0, unsol=0
+  IO[1]: enable=0, dir=0, wake=0, sticky=0, data=0, unsol=0
+  IO[2]: enable=0, dir=0, wake=0, sticky=0, data=0, unsol=0
+Node 0x02 [Audio Output] wcaps 0x41d: Stereo Amp-Out
+  Control: name="Speaker Playback Volume", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x57, nsteps=0x57, stepsize=0x02, mute=0
+  Amp-Out vals:  [0x3b 0x3b]
+  Converter: stream=1, channel=0
+  PCM:
+    rates [0x60]: 44100 48000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x03 [Audio Output] wcaps 0x41d: Stereo Amp-Out
+  Control: name="Headphone Playback Volume", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Device: name="ALC3246 Analog", type="Audio", device=0
+  Amp-Out caps: ofs=0x57, nsteps=0x57, stepsize=0x02, mute=0
+  Amp-Out vals:  [0x00 0x00]
+  Converter: stream=1, channel=0
+  PCM:
+    rates [0x60]: 44100 48000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x04 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x05 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x06 [Audio Output] wcaps 0x611: Stereo Digital
+  Converter: stream=0, channel=0
+  Digital:
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x5e0]: 44100 48000 88200 96000 192000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x07 [Audio Input] wcaps 0x10051b: Stereo Amp-In
+  Amp-In caps: ofs=0x17, nsteps=0x3f, stepsize=0x02, mute=1
+  Amp-In vals:  [0x97 0x97]
+  Converter: stream=0, channel=0
+  SDI-Select: 0
+  PCM:
+    rates [0x560]: 44100 48000 96000 192000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x24
+Node 0x08 [Audio Input] wcaps 0x10051b: Stereo Amp-In
+  Control: name="Capture Volume", index=0, device=0
+    ControlAmp: chs=3, dir=In, idx=0, ofs=0
+  Control: name="Capture Switch", index=0, device=0
+    ControlAmp: chs=3, dir=In, idx=0, ofs=0
+  Device: name="ALC3246 Analog", type="Audio", device=0
+  Amp-In caps: ofs=0x17, nsteps=0x3f, stepsize=0x02, mute=1
+  Amp-In vals:  [0x3f 0x3f]
+  Converter: stream=0, channel=0
+  SDI-Select: 0
+  PCM:
+    rates [0x560]: 44100 48000 96000 192000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x23
+Node 0x09 [Audio Input] wcaps 0x10051b: Stereo Amp-In
+  Amp-In caps: ofs=0x17, nsteps=0x3f, stepsize=0x02, mute=1
+  Amp-In vals:  [0x97 0x97]
+  Converter: stream=0, channel=0
+  SDI-Select: 0
+  PCM:
+    rates [0x560]: 44100 48000 96000 192000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x22
+Node 0x0a [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x0b [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x0c [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x0d [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x0e [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x0f [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x10 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x11 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x12 [Pin Complex] wcaps 0x40040b: Stereo Amp-In
+  Control: name="Internal Mic Boost Volume", index=0, device=0
+    ControlAmp: chs=3, dir=In, idx=0, ofs=0
+  Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-In vals:  [0x03 0x03]
+  Pincap 0x00000020: IN
+  Pin Default 0x90a60160: [Fixed] Mic at Int N/A
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x6, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x20: IN
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x13 [Pin Complex] wcaps 0x40040b: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-In vals:  [0x00 0x00]
+  Pincap 0x00000020: IN
+  Pin Default 0x40000000: [N/A] Line Out at Ext N/A
+    Conn = Unknown, Color = Unknown
+    DefAssociation = 0x0, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x14 [Pin Complex] wcaps 0x40058d: Stereo Amp-Out
+  Control: name="Speaker Playback Switch", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x00010014: OUT EAPD Detect
+  EAPD 0x2: EAPD
+  Pin Default 0x90170120: [Fixed] Speaker at Int N/A
+    Conn = Analog, Color = Unknown
+    DefAssociation = 0x2, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x40: OUT
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x02
+Node 0x15 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x16 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x17 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x18 [Pin Complex] wcaps 0x40048b: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-In vals:  [0x00 0x00]
+  Pincap 0x00003724: IN Detect
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x411111f0: [N/A] Speaker at Ext Rear
+    Conn = 1/8, Color = Black
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x20: IN VREF_HIZ
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x19 [Pin Complex] wcaps 0x40048b: Stereo Amp-In
+  Control: name="Headset Mic Boost Volume", index=0, device=0
+    ControlAmp: chs=3, dir=In, idx=0, ofs=0
+  Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-In vals:  [0x00 0x00]
+  Pincap 0x00003724: IN Detect
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x411111f0: [N/A] Speaker at Ext Rear
+    Conn = 1/8, Color = Black
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x24: IN VREF_80
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x1a [Pin Complex] wcaps 0x40048b: Stereo Amp-In
+  Control: name="Headphone Mic Boost Volume", index=0, device=0
+    ControlAmp: chs=3, dir=In, idx=0, ofs=0
+  Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-In vals:  [0x00 0x00]
+  Pincap 0x00003724: IN Detect
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x411111f0: [N/A] Speaker at Ext Rear
+    Conn = 1/8, Color = Black
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x20: IN VREF_HIZ
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x1b [Pin Complex] wcaps 0x40058f: Stereo Amp-In Amp-Out
+  Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-In vals:  [0x00 0x00]
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x80 0x80]
+  Pincap 0x00013734: IN OUT EAPD Detect
+    Vref caps: HIZ 50 GRD 80 100
+  EAPD 0x2: EAPD
+  Pin Default 0x411111f0: [N/A] Speaker at Ext Rear
+    Conn = 1/8, Color = Black
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x20: IN VREF_HIZ
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+  Connection: 2
+     0x02* 0x03
+Node 0x1c [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x1d [Pin Complex] wcaps 0x400400: Mono
+  Pincap 0x00000020: IN
+  Pin Default 0x40779a2d: [N/A] Modem Hand at Ext N/A
+    Conn = Analog, Color = Pink
+    DefAssociation = 0x2, Sequence = 0xd
+  Pin-ctls: 0x20: IN
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x1e [Pin Complex] wcaps 0x400781: Stereo Digital
+  Pincap 0x00000014: OUT Detect
+  Pin Default 0x411111f0: [N/A] Speaker at Ext Rear
+    Conn = 1/8, Color = Black
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x40: OUT
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x06
+Node 0x1f [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x20 [Vendor Defined Widget] wcaps 0xf00040: Mono
+  Processing caps: benign=0, ncoeff=91
+Node 0x21 [Pin Complex] wcaps 0x40058d: Stereo Amp-Out
+  Control: name="Headphone Playback Switch", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x80 0x80]
+  Pincap 0x0001001c: OUT HP EAPD Detect
+  EAPD 0x2: EAPD
+  Pin Default 0x02211030: [Jack] HP Out at Ext Front
+    Conn = 1/8, Color = Black
+    DefAssociation = 0x3, Sequence = 0x0
+  Pin-ctls: 0xc0: OUT HP
+  Unsolicited: tag=01, enabled=1
+  Power states:  D0 D1 D2 D3 EPSS
+  Power: setting=D0, actual=D0
+  Connection: 2
+     0x02 0x03*
+Node 0x22 [Audio Mixer] wcaps 0x20010b: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80]
+  Connection: 5
+     0x18 0x19 0x1a 0x1b 0x1d
+Node 0x23 [Audio Mixer] wcaps 0x20010b: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x00 0x00]
+  Connection: 6
+     0x18 0x19 0x1a 0x1b 0x1d 0x12
+Node 0x24 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 2
+     0x12* 0x13
+Codec: Intel Kabylake HDMI
+Address: 2
+AFG Function Id: 0x1 (unsol 0)
+Vendor Id: 0x8086280b
+Subsystem Id: 0x80860101
+Revision Id: 0x100000
+No Modem Function Group found
+Default PCM:
+    rates [0x0]:
+    bits [0x0]:
+    formats [0x0]:
+Default Amp-In caps: N/A
+Default Amp-Out caps: N/A
+State of AFG node 0x01:
+  Power states:  D0 D3 CLKSTOP EPSS
+  Power: setting=D0, actual=D0, Clock-stop-OK
+GPIO: io=0, o=0, i=0, unsolicited=0, wake=0
+Node 0x02 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x03 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x04 [Audio Output] wcaps 0x6611: 8-Channels Digital
+  Converter: stream=0, channel=0
+  Digital: Enabled KAE
+  Digital category: 0x0
+  IEC Coding Type: 0x0
+  PCM:
+    rates [0x7f0]: 32000 44100 48000 88200 96000 176400 192000
+    bits [0x1a]: 16 24 32
+    formats [0x5]: PCM AC3
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+Node 0x05 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x06 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x07 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0b000094: OUT Detect HBR HDMI DP
+  Pin Default 0x18560010: [Jack] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Power states:  D0 D3 EPSS
+  Power: setting=D0, actual=D0
+  Devices: 0
+  Connection: 0
+Node 0x08 [Vendor Defined Widget] wcaps 0xf00000: Mono
+--endcollapse--
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw----+ 1 root audio 116,  9 Jan 19 09:42 /dev/snd/controlC0
+crw-rw----+ 1 root audio 116,  7 Jan 19 09:42 /dev/snd/hwC0D0
+crw-rw----+ 1 root audio 116,  8 Jan 19 09:42 /dev/snd/hwC0D2
+crw-rw----+ 1 root audio 116,  3 Jan 19 09:42 /dev/snd/pcmC0D0c
+crw-rw----+ 1 root audio 116,  2 Jan 19 09:49 /dev/snd/pcmC0D0p
+crw-rw----+ 1 root audio 116,  4 Jan 19 09:42 /dev/snd/pcmC0D3p
+crw-rw----+ 1 root audio 116,  5 Jan 19 09:42 /dev/snd/pcmC0D7p
+crw-rw----+ 1 root audio 116,  6 Jan 19 09:42 /dev/snd/pcmC0D8p
+crw-rw----+ 1 root audio 116,  1 Jan 19 09:42 /dev/snd/seq
+crw-rw----+ 1 root audio 116, 33 Jan 19 09:42 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Jan 19 09:42 .
+drwxr-xr-x 3 root root 260 Jan 19 09:42 ..
+lrwxrwxrwx 1 root root  12 Jan 19 09:42 pci-0000:00:1f.3 -> ../controlC0
+
+
+!!Aplay/Arecord output
+!!--------------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: PCH [HDA Intel PCH], device 0: ALC3246 Analog [ALC3246 Analog]
+  Subdevices: 0/1
+  Subdevice #0: subdevice #0
+card 0: PCH [HDA Intel PCH], device 3: HDMI 0 [HDMI 0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: PCH [HDA Intel PCH], device 7: HDMI 1 [HDMI 1]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: PCH [HDA Intel PCH], device 8: HDMI 2 [HDMI 2]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: PCH [HDA Intel PCH], device 0: ALC3246 Analog [ALC3246 Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card PCH
+
+Card sysdefault:0 'PCH'/'HDA Intel PCH at 0xd1228000 irq 139'
+  Mixer name	: 'Realtek ALC3246'
+  Components	: 'HDA:10ec0256,1028078b,00100002 HDA:8086280b,80860101,00100000'
+  Controls      : 41
+  Simple ctrls  : 15
+Simple mixer control 'Master',0
+  Capabilities: pvolume pvolume-joined pswitch pswitch-joined
+  Playback channels: Mono
+  Limits: Playback 0 - 87
+  Mono: Playback 59 [68%] [-21.00dB] [on]
+Simple mixer control 'Headphone',0
+  Capabilities: pvolume pswitch
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 87
+  Mono:
+  Front Left: Playback 0 [0%] [-65.25dB] [off]
+  Front Right: Playback 0 [0%] [-65.25dB] [off]
+Simple mixer control 'Headphone Mic',0
+  Capabilities: cswitch cswitch-joined cswitch-exclusive
+  Capture exclusive group: 0
+  Capture channels: Mono
+  Mono: Capture [off]
+Simple mixer control 'Headphone Mic Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%] [0.00dB]
+  Front Right: 0 [0%] [0.00dB]
+Simple mixer control 'Speaker',0
+  Capabilities: pvolume pswitch
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 87
+  Mono:
+  Front Left: Playback 87 [100%] [0.00dB] [on]
+  Front Right: Playback 87 [100%] [0.00dB] [on]
+Simple mixer control 'PCM',0
+  Capabilities: pvolume
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 255
+  Mono:
+  Front Left: Playback 254 [100%] [-0.20dB]
+  Front Right: Playback 254 [100%] [-0.20dB]
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [off]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'Capture',0
+  Capabilities: cvolume cswitch
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 63
+  Front Left: Capture 63 [100%] [30.00dB] [on]
+  Front Right: Capture 63 [100%] [30.00dB] [on]
+Simple mixer control 'Auto-Mute Mode',0
+  Capabilities: enum
+  Items: 'Disabled' 'Enabled'
+  Item0: 'Disabled'
+Simple mixer control 'Headset Mic',0
+  Capabilities: cswitch cswitch-joined cswitch-exclusive
+  Capture exclusive group: 0
+  Capture channels: Mono
+  Mono: Capture [off]
+Simple mixer control 'Headset Mic Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%] [0.00dB]
+  Front Right: 0 [0%] [0.00dB]
+Simple mixer control 'Internal Mic',0
+  Capabilities: cswitch cswitch-joined cswitch-exclusive
+  Capture exclusive group: 0
+  Capture channels: Mono
+  Mono: Capture [on]
+Simple mixer control 'Internal Mic Boost',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 3 [100%] [30.00dB]
+  Front Right: 3 [100%] [30.00dB]
+
+
+!!Alsactl output
+!!--------------
+
+--startcollapse--
+state.PCH {
+	control.1 {
+		iface MIXER
+		name 'Headphone Playback Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 87'
+			dbmin -6525
+			dbmax 0
+			dbvalue.0 -6525
+			dbvalue.1 -6525
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Headphone Playback Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Speaker Playback Volume'
+		value.0 87
+		value.1 87
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 87'
+			dbmin -6525
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'Speaker Playback Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'Auto-Mute Mode'
+		value Disabled
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 Disabled
+			item.1 Enabled
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'Capture Source'
+		value 'Internal Mic'
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 1
+			item.0 'Headset Mic'
+			item.1 'Headphone Mic'
+			item.2 'Internal Mic'
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'Capture Volume'
+		value.0 63
+		value.1 63
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 63'
+			dbmin -1725
+			dbmax 3000
+			dbvalue.0 3000
+			dbvalue.1 3000
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'Headset Mic Boost Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'Headphone Mic Boost Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'Internal Mic Boost Volume'
+		value.0 3
+		value.1 3
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 3000
+			dbvalue.1 3000
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'Master Playback Volume'
+		value 59
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 87'
+			dbmin -6525
+			dbmax 0
+			dbvalue.0 -2100
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'Master Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.14 {
+		iface CARD
+		name 'Headset Mic Phantom Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.15 {
+		iface CARD
+		name 'Headphone Mic Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.16 {
+		iface CARD
+		name 'Internal Mic Phantom Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface CARD
+		name 'Speaker Phantom Jack'
+		value true
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.18 {
+		iface PCM
+		name 'Playback Channel Map'
+		value.0 3
+		value.1 4
+		comment {
+			access read
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.19 {
+		iface PCM
+		name 'Capture Channel Map'
+		value.0 0
+		value.1 0
+		comment {
+			access read
+			type INTEGER
+			count 2
+			range '0 - 36'
+		}
+	}
+	control.20 {
+		iface CARD
+		name 'HDMI/DP,pcm=3 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.21 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.22 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.23 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.24 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.25 {
+		iface PCM
+		device 3
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.26 {
+		iface CARD
+		name 'HDMI/DP,pcm=7 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.27 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 1
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.28 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 1
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.29 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 1
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.30 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 1
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.31 {
+		iface PCM
+		device 7
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.32 {
+		iface CARD
+		name 'HDMI/DP,pcm=8 Jack'
+		value false
+		comment {
+			access read
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.33 {
+		iface MIXER
+		name 'IEC958 Playback Con Mask'
+		index 2
+		value '0fff000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.34 {
+		iface MIXER
+		name 'IEC958 Playback Pro Mask'
+		index 2
+		value '0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access read
+			type IEC958
+			count 1
+		}
+	}
+	control.35 {
+		iface MIXER
+		name 'IEC958 Playback Default'
+		index 2
+		value '0400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000'
+		comment {
+			access 'read write'
+			type IEC958
+			count 1
+		}
+	}
+	control.36 {
+		iface MIXER
+		name 'IEC958 Playback Switch'
+		index 2
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.37 {
+		iface PCM
+		device 8
+		name ELD
+		value ''
+		comment {
+			access 'read volatile'
+			type BYTES
+			count 0
+		}
+	}
+	control.38 {
+		iface PCM
+		device 3
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.39 {
+		iface PCM
+		device 7
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.40 {
+		iface PCM
+		device 8
+		name 'Playback Channel Map'
+		value.0 0
+		value.1 0
+		value.2 0
+		value.3 0
+		value.4 0
+		value.5 0
+		value.6 0
+		value.7 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 8
+			range '0 - 36'
+		}
+	}
+	control.41 {
+		iface MIXER
+		name 'PCM Playback Volume'
+		value.0 254
+		value.1 254
+		comment {
+			access 'read write user'
+			type INTEGER
+			count 2
+			range '0 - 255'
+			tlv '0000000100000008ffffec1400000014'
+			dbmin -5100
+			dbmax 0
+			dbvalue.0 -20
+			dbvalue.1 -20
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+ac97_bus
+acpi_pad
+acpi_thermal_rel
+aesni_intel
+af_alg
+ahci
+algif_hash
+algif_skcipher
+async_memcpy
+async_pq
+async_raid6_recov
+async_tx
+async_xor
+ath
+ath3k
+ath9k
+ath9k_common
+ath9k_hw
+autofs4
+bfq
+binfmt_misc
+bluetooth
+bnep
+btbcm
+btintel
+btmtk
+btrtl
+btusb
+ccm
+cec
+cfg80211
+cmac
+coretemp
+crc32_pclmul
+crct10dif_pclmul
+cryptd
+crypto_simd
+dcdbas
+dell_laptop
+dell_smbios
+dell_smm_hwmon
+dell_wmi
+dell_wmi_descriptor
+dm_crypt
+drm_buddy
+drm_display_helper
+ecc
+ecdh_generic
+ee1004
+efi_pstore
+ghash_clmulni_intel
+hid
+hid_generic
+hid_rmi
+i2c_algo_bit
+i2c_hid
+i2c_hid_acpi
+i2c_i801
+i2c_smbus
+i915
+idma64
+input_leds
+int3400_thermal
+int340x_thermal_zone
+intel_cstate
+intel_hid
+intel_lpss
+intel_lpss_pci
+intel_pch_thermal
+intel_pmc_core
+intel_powerclamp
+intel_rapl_common
+intel_rapl_msr
+intel_soc_dts_iosf
+intel_tcc_cooling
+intel_uncore_frequency
+intel_uncore_frequency_common
+intel_vsec
+intel_xhci_usb_role_switch
+ip_tables
+joydev
+kvm
+kvm_intel
+kyber_iosched
+ledtrig_audio
+libahci
+libarc4
+libcrc32c
+lp
+mac80211
+mac_hid
+mc
+mei
+mei_hdcp
+mei_me
+mei_pxp
+memstick
+msr
+nfnetlink
+nfnetlink_log
+nfnetlink_queue
+parport
+parport_pc
+pinctrl_sunrisepoint
+pmt_class
+pmt_telemetry
+polyval_clmulni
+polyval_generic
+ppdev
+processor_thermal_device
+processor_thermal_device_pci_legacy
+processor_thermal_mbox
+processor_thermal_power_floor
+processor_thermal_rapl
+processor_thermal_rfim
+processor_thermal_wt_hint
+processor_thermal_wt_req
+psmouse
+r8169
+raid0
+raid1
+raid10
+raid456
+raid6_pq
+rapl
+rc_core
+realtek
+rfcomm
+rmi_core
+rtsx_usb
+rtsx_usb_ms
+rtsx_usb_sdmmc
+sch_fq_codel
+serio_raw
+sha1_ssse3
+sha256_ssse3
+snd
+snd_compress
+snd_ctl_led
+snd_hda_codec
+snd_hda_codec_generic
+snd_hda_codec_hdmi
+snd_hda_codec_realtek
+snd_hda_core
+snd_hda_ext_core
+snd_hda_intel
+snd_hda_scodec_component
+snd_hrtimer
+snd_hwdep
+snd_intel_dspcfg
+snd_intel_sdw_acpi
+snd_pcm
+snd_pcm_dmaengine
+snd_rawmidi
+snd_seq
+snd_seq_device
+snd_seq_dummy
+snd_seq_midi
+snd_seq_midi_event
+snd_soc_acpi
+snd_soc_acpi_intel_match
+snd_soc_avs
+snd_soc_core
+snd_soc_hda_codec
+snd_soc_hdac_hda
+snd_soc_skl
+snd_soc_sst_dsp
+snd_soc_sst_ipc
+snd_sof
+snd_sof_intel_hda
+snd_sof_intel_hda_common
+snd_sof_intel_hda_mlink
+snd_sof_pci
+snd_sof_pci_intel_skl
+snd_sof_utils
+snd_sof_xtensa_dsp
+snd_timer
+soundcore
+soundwire_bus
+soundwire_cadence
+soundwire_generic_allocation
+soundwire_intel
+sparse_keymap
+system76_acpi
+system76_io
+ttm
+uvc
+uvcvideo
+video
+videobuf2_common
+videobuf2_memops
+videobuf2_v4l2
+videobuf2_vmalloc
+videodev
+wmi
+wmi_bmof
+x86_pkg_temp_thermal
+x_tables
+xhci_pci
+xhci_pci_renesas
+xor
+zram
+zstd
+
+
+!!Sysfs Files
+!!-----------
+
+/sys/class/sound/hwC0D0/init_pin_configs:
+0x12 0x90a60160
+0x13 0x40000000
+0x14 0x90170120
+0x18 0x411111f0
+0x19 0x411111f0
+0x1a 0x411111f0
+0x1b 0x411111f0
+0x1d 0x40779a2d
+0x1e 0x411111f0
+0x21 0x02211030
+
+/sys/class/sound/hwC0D0/driver_pin_configs:
+0x19 0x01a1913c
+0x1a 0x01a1913d
+
+/sys/class/sound/hwC0D0/user_pin_configs:
+
+/sys/class/sound/hwC0D0/init_verbs:
+
+/sys/class/sound/hwC0D0/hints:
+
+/sys/class/sound/hwC0D2/init_pin_configs:
+0x05 0x18560010
+0x06 0x18560010
+0x07 0x18560010
+
+/sys/class/sound/hwC0D2/driver_pin_configs:
+
+/sys/class/sound/hwC0D2/user_pin_configs:
+
+/sys/class/sound/hwC0D2/init_verbs:
+
+/sys/class/sound/hwC0D2/hints:
+
+
+!!ALSA/HDA dmesg
+!!--------------
+
+
+
+!!Packages installed
+!!--------------------
+
+ii  alsa-topology-conf                      1.2.5.1-2                                                    all          ALSA topology configuration files
+ii  alsa-ucm-conf                           1.2.8-1pop1~1709769747~22.04~16ff971                         all          ALSA Use Case Manager configuration files
+ii  alsa-utils                              1.2.8-1pop1~1676755497~22.04~a0d6eed                         amd64        Utilities for configuring and using ALSA
+

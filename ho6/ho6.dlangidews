@@ -1,0 +1,9 @@
+{
+    "name": "ho6",
+    "description": null,
+    "projects": {
+        "kn": "kn/dub.json"
+    },
+    "includePath": {
+    }
+}

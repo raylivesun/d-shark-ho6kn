@@ -1,0 +1,16 @@
+{
+    "startupProject": "kn",
+    "expandedItems": [
+        "/home/admin/app/dlang-komodo/d-shark-ho6kn/ho6/kn/source/frame/bytes",
+        "/home/admin/app/dlang-komodo/d-shark-ho6kn/ho6/kn/source/frame/systemmd",
+        "/home/admin/app/dlang-komodo/d-shark-ho6kn/ho6/kn/source/frame/systemmd/om3rwb",
+        "/home/admin/app/dlang-komodo/d-shark-ho6kn/ho6/kn/source",
+        "/home/admin/app/dlang-komodo/d-shark-ho6kn/ho6/kn/source/frame",
+        "/home/admin/app/dlang-komodo/d-shark-ho6kn/ho6/kn/dub.json"
+    ],
+    "selectedWorkspaceItem": "/home/admin/app/dlang-komodo/d-shark-ho6kn/ho6/kn/source/app.d",
+    "breakpoints": [
+    ],
+    "files": [
+    ]
+}

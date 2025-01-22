@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+my_function() {
+    local B1="some_value"  # Declare a local variable
+    echo "Local B1 is: $B1"
+}
+

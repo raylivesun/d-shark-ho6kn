@@ -1,0 +1,19 @@
+=================================================================================================================================================================
+ASAP Statistics - Loopback: lo:
+ASAP Message Type  Messages   Messages Share (%)  Bytes (B)  Bytes Share (%)   First Seen (s)  Last Seen (s)  Interval (s)  Message Rate (Msg/s)  Byte Rate (B/s)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ASAP Server Announce          0                   0
+ASAP Registration Response          0                   0
+ASAP Registration          0                   0
+ASAP Handle Resolution Response          0                   0
+ASAP Handle Resolution          0                   0
+ASAP Error                 0                   0
+ASAP Endpoint Unreachable          0                   0
+ASAP Endpoint Keep-Alive Acknowledgement          0                   0
+ASAP Endpoint Keep-Alive          0                   0
+ASAP Deregistration Response          0                   0
+ASAP Deregistration          0                   0
+ASAP Cookie Echo           0                   0
+ASAP Cookie                0                   0
+ASAP Business Card          0                   0
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------

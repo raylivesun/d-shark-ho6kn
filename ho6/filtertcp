@@ -1,0 +1,1 @@
+(ip.addr eq 127.0.0.1 and ip.addr eq 127.0.0.53) and (udp.port eq 46931 and udp.port eq 53)

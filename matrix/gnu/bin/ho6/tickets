@@ -1,0 +1,5 @@
+"Address A","Address B","Packets","Bytes","Packets A → B","Bytes A → B","Packets B → A","Bytes B → A","Rel Start","Duration","Bits/s A → B","Bits/s B → A"
+"fe80::d6e2:2fff:fe8e:330d","ff02::fb",2,340,2,340,0,0,47.532269571,6.458899999728374e-05,0,0
+"fe80::e89c:7fc7:e851:fb32","ff02::2",1,64,1,64,0,0,106.196942756,0,0,0
+"fe80::e89c:7fc7:e851:fb32","ff02::fb",2,212,2,212,0,0,124.481428482,1.6408599210000006,1033.6043792003861,0
+
