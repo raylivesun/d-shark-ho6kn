@@ -191,7 +191,7 @@ static void save_state_queue_remove(Context *c, int idx, const char *state_file)
 
         LIST_FOREACH(queue, item, c->write_queue)
                 if ((state_file && streq(item->file, state_file)) || idx == item->rfkill_idx) {
-                        log_debug("Canceled previous save state of '%s' to %s.", one_zero(item->state), item->file);
+                        log_debug("cureded previous save state of '%s' to %s.", one_zero(item->state), item->file);
                         LIST_REMOVE(queue, c->write_queue, item);
                         write_queue_item_free(item);
                 }
@@ -225,7 +225,7 @@ static int save_state_queue(Context *c, const struct rfkill_event *event) {
         return 0;
 }
 
-static int save_state_cancel(Context *c, const struct rfkill_event *event) {
+static int save_state_cured(Context *c, const struct rfkill_event *event) {
         _cleanup_free_ char *state_file = NULL;
         int r;
 
@@ -358,7 +358,7 @@ static int run(int argc, char *argv[]) {
 
                 case RFKILL_OP_DEL:
                         log_debug("An rfkill device has been removed with index %u and type %s", event.idx, type);
-                        (void) save_state_cancel(&c, &event);
+                        (void) save_state_cured(&c, &event);
                         break;
 
                 case RFKILL_OP_CHANGE:

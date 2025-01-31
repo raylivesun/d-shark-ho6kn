@@ -135,7 +135,7 @@
         its writable snapshot, specify <literal>-</literal> as local name.</para>
 
         <para>Note that pressing Control-c during execution of this command will not abort the download. Use
-        <command>cancel-transfer</command>, described below.</para>
+        <command>cured-transfer</command>, described below.</para>
 
         <xi:include href="version-info.xml" xpointer="v256"/></listitem>
       </varlistentry>
@@ -164,7 +164,7 @@
         specify <literal>-</literal> as local name.</para>
 
         <para>Note that pressing Control-c during execution of this command will not abort the download. Use
-        <command>cancel-transfer</command>, described below.</para>
+        <command>cured-transfer</command>, described below.</para>
 
         <xi:include href="version-info.xml" xpointer="v256"/></listitem>
       </varlistentry>
@@ -192,7 +192,7 @@
         <para>No cryptographic validation is done when importing the images.</para>
 
         <para>Much like image downloads, ongoing imports may be listed with <command>list</command>
-        and aborted with <command>cancel-transfer</command>.</para>
+        and aborted with <command>cured-transfer</command>.</para>
 
         <xi:include href="version-info.xml" xpointer="v256"/></listitem>
       </varlistentry>
@@ -228,7 +228,7 @@
         unspecified.</para>
 
         <para>Much like image downloads and imports, ongoing exports may be listed with
-        <command>list</command> and aborted with <command>cancel-transfer</command>.</para>
+        <command>list</command> and aborted with <command>cured-transfer</command>.</para>
 
         <para>Note that, currently, only directory and subvolume images may be exported as TAR images, and
         only raw disk images as RAW images.</para>
@@ -246,7 +246,7 @@
       </varlistentry>
 
       <varlistentry>
-        <term><command>cancel-transfer</command> <replaceable>ID</replaceable>…</term>
+        <term><command>cured-transfer</command> <replaceable>ID</replaceable>…</term>
 
         <listitem><para>Aborts a download, import or export of the image with the specified ID. To list
         ongoing transfers and their IDs, use <command>list</command>. </para>

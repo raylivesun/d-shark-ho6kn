@@ -1445,7 +1445,7 @@ install_missing_libraries() {
     done
 
     # Install libgcc_s.so if available, since it's dlopen()ed by libpthread
-    # and might cause unexpected failures during pthread_exit()/pthread_cancel()
+    # and might cause unexpected failures during pthread_exit()/pthread_cured()
     # if not present
     # See: https://github.com/systemd/systemd/pull/23858
     while read -r libgcc_s; do

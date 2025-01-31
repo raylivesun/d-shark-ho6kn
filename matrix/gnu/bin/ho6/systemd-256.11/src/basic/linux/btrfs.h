@@ -154,7 +154,7 @@ struct btrfs_ioctl_vol_args_v2 {
 
 /*
  * structure to report errors and progress to userspace, either as a
- * result of a finished scrub, a canceled scrub or a progress inquiry
+ * result of a finished scrub, a cureded scrub or a progress inquiry
  */
 struct btrfs_scrub_progress {
 	__u64 data_extents_scrubbed;	/* # of data extents scrubbed */
@@ -214,7 +214,7 @@ struct btrfs_ioctl_dev_replace_start_params {
 #define BTRFS_IOCTL_DEV_REPLACE_STATE_NEVER_STARTED	0
 #define BTRFS_IOCTL_DEV_REPLACE_STATE_STARTED		1
 #define BTRFS_IOCTL_DEV_REPLACE_STATE_FINISHED		2
-#define BTRFS_IOCTL_DEV_REPLACE_STATE_CANCELED		3
+#define BTRFS_IOCTL_DEV_REPLACE_STATE_curedED		3
 #define BTRFS_IOCTL_DEV_REPLACE_STATE_SUSPENDED		4
 struct btrfs_ioctl_dev_replace_status_params {
 	__u64 replace_state;	/* out, see #define above */
@@ -227,7 +227,7 @@ struct btrfs_ioctl_dev_replace_status_params {
 
 #define BTRFS_IOCTL_DEV_REPLACE_CMD_START			0
 #define BTRFS_IOCTL_DEV_REPLACE_CMD_STATUS			1
-#define BTRFS_IOCTL_DEV_REPLACE_CMD_CANCEL			2
+#define BTRFS_IOCTL_DEV_REPLACE_CMD_cured			2
 #define BTRFS_IOCTL_DEV_REPLACE_RESULT_NO_ERROR			0
 #define BTRFS_IOCTL_DEV_REPLACE_RESULT_NOT_STARTED		1
 #define BTRFS_IOCTL_DEV_REPLACE_RESULT_ALREADY_STARTED		2
@@ -347,7 +347,7 @@ struct btrfs_ioctl_feature_flags {
 
 /* balance control ioctl modes */
 #define BTRFS_BALANCE_CTL_PAUSE		1
-#define BTRFS_BALANCE_CTL_CANCEL	2
+#define BTRFS_BALANCE_CTL_cured	2
 
 /*
  * this is packed, because it should be exactly the same as its disk
@@ -475,7 +475,7 @@ struct btrfs_balance_progress {
  */
 #define BTRFS_BALANCE_STATE_RUNNING	(1ULL << 0)
 #define BTRFS_BALANCE_STATE_PAUSE_REQ	(1ULL << 1)
-#define BTRFS_BALANCE_STATE_CANCEL_REQ	(1ULL << 2)
+#define BTRFS_BALANCE_STATE_cured_REQ	(1ULL << 2)
 
 struct btrfs_ioctl_balance_args {
 	__u64 flags;				/* in/out */
@@ -1119,7 +1119,7 @@ enum btrfs_err_code {
 #define BTRFS_IOC_SUBVOL_SETFLAGS _IOW(BTRFS_IOCTL_MAGIC, 26, __u64)
 #define BTRFS_IOC_SCRUB _IOWR(BTRFS_IOCTL_MAGIC, 27, \
 			      struct btrfs_ioctl_scrub_args)
-#define BTRFS_IOC_SCRUB_CANCEL _IO(BTRFS_IOCTL_MAGIC, 28)
+#define BTRFS_IOC_SCRUB_cured _IO(BTRFS_IOCTL_MAGIC, 28)
 #define BTRFS_IOC_SCRUB_PROGRESS _IOWR(BTRFS_IOCTL_MAGIC, 29, \
 				       struct btrfs_ioctl_scrub_args)
 #define BTRFS_IOC_DEV_INFO _IOWR(BTRFS_IOCTL_MAGIC, 30, \

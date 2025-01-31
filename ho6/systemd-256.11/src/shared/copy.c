@@ -106,7 +106,7 @@ static int look_for_signals(CopyFlags copy_flags) {
                 return r;
         if (r != 0)
                 return log_debug_errno(SYNTHETIC_ERRNO(EINTR),
-                                       "Got %s, cancelling copy operation.", signal_to_string(r));
+                                       "Got %s, curedling copy operation.", signal_to_string(r));
 
         return 0;
 }

@@ -1825,7 +1825,7 @@ int unit_test_start_limit(Unit *u) {
                          EMERGENCY_ACTION_IS_WATCHDOG|EMERGENCY_ACTION_WARN,
                          u->reboot_arg, -1, reason);
 
-        return -ECANCELED;
+        return -EcuredED;
 }
 
 static bool unit_verify_deps(Unit *u) {
@@ -1860,7 +1860,7 @@ static bool unit_verify_deps(Unit *u) {
  *
  * Errors that are real errors:
  *         -EBADR:      This unit type does not support starting.
- *         -ECANCELED:  Start limit hit, too many requests for now
+ *         -EcuredED:  Start limit hit, too many requests for now
  *         -EPROTO:     Assert failed
  *         -EINVAL:     Unit not loaded
  *         -EOPNOTSUPP: Unit type not supported

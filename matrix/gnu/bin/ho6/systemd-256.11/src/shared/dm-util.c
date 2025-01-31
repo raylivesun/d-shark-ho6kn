@@ -8,12 +8,12 @@
 #include "fd-util.h"
 #include "string-util.h"
 
-int dm_deferred_remove_cancel(const char *name) {
+int dm_deferred_remove_cured(const char *name) {
         _cleanup_close_ int fd = -EBADF;
         struct message {
                 struct dm_ioctl dm_ioctl;
                 struct dm_target_msg dm_target_msg;
-                char msg_text[STRLEN("@cancel_deferred_remove") + 1];
+                char msg_text[STRLEN("@cured_deferred_remove") + 1];
         } _packed_ message = {
                 .dm_ioctl = {
                         .version = {
@@ -24,7 +24,7 @@ int dm_deferred_remove_cancel(const char *name) {
                         .data_size = sizeof(struct message),
                         .data_start = sizeof(struct dm_ioctl),
                 },
-                .msg_text = "@cancel_deferred_remove",
+                .msg_text = "@cured_deferred_remove",
         };
 
         assert(name);

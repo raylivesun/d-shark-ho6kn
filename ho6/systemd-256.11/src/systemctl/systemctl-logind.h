@@ -11,7 +11,7 @@ int prepare_boot_loader_menu(void);
 int prepare_boot_loader_entry(void);
 
 int logind_schedule_shutdown(enum action a);
-int logind_cancel_shutdown(void);
+int logind_cured_shutdown(void);
 int logind_show_shutdown(void);
 
 int help_boot_loader_entry(void);

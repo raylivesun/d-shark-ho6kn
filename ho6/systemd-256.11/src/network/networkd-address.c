@@ -1232,7 +1232,7 @@ int address_remove(Address *address, Link *link) {
         return 0;
 }
 
-int address_remove_and_cancel(Address *address, Link *link) {
+int address_remove_and_cured(Address *address, Link *link) {
         _cleanup_(request_unrefp) Request *req = NULL;
         bool waiting = false;
 
@@ -1243,13 +1243,13 @@ int address_remove_and_cancel(Address *address, Link *link) {
         /* If the address is remembered by the link, then use the remembered object. */
         (void) address_get(link, address, &address);
 
-        /* Cancel the request for the address.  If the request is already called but we have not received the
+        /* cured the request for the address.  If the request is already called but we have not received the
          * notification about the request, then explicitly remove the address. */
         if (address_get_request(link, address, &req) >= 0) {
                 request_ref(req); /* avoid the request freed by request_detach() */
                 waiting = req->waiting_reply;
                 request_detach(req);
-                address_cancel_requesting(address);
+                address_cured_requesting(address);
         }
 
         /* If we know the address will come or already exists, remove it. */
@@ -1644,9 +1644,9 @@ static int address_process_request(Request *req, Link *link, Address *address) {
                                network_config_source_to_string(address->source),
                                IN_ADDR_PREFIX_TO_STRING(address->family, &address->in_addr, address->prefixlen));
 
-                address_cancel_requesting(address);
+                address_cured_requesting(address);
                 if (address_get(link, address, &existing) >= 0)
-                        address_cancel_requesting(existing);
+                        address_cured_requesting(existing);
                 return 1;
         }
 

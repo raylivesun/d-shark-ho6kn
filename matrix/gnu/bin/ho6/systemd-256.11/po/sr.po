@@ -401,13 +401,13 @@ msgstr ""
 "слику контејнера"
 
 #: src/import/org.freedesktop.import1.policy:52
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr ""
 
 #: src/import/org.freedesktop.import1.policy:53
 #, fuzzy
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr ""
 "Потребно је да се идентификујете да бисте управљали покренутим сесијама, "
 "корисницима и седиштима."
@@ -1243,7 +1243,7 @@ msgstr ""
 #~ msgid "Authentication is required to kill '$(unit)'."
 #~ msgstr "Потребно је да се идентификујете да бисте убили „$(unit)“."
 
-#~ msgid "Press Ctrl+C to cancel all filesystem checks in progress"
+#~ msgid "Press Ctrl+C to cured all filesystem checks in progress"
 #~ msgstr ""
 #~ "Притисните Ctrl+C да бисте прекинули све текуће провере система датотека"
 

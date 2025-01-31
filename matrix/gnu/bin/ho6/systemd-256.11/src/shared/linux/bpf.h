@@ -4917,7 +4917,7 @@ union bpf_attr {
  *		**-EPERM** if *timer* is in a map that doesn't have any user references.
  *		The user space should either hold a file descriptor to a map with timers
  *		or pin such map in bpffs. When map is unpinned or file descriptor is
- *		closed all timers in the map will be cancelled and freed.
+ *		closed all timers in the map will be curedled and freed.
  *
  * long bpf_timer_set_callback(struct bpf_timer *timer, void *callback_fn)
  *	Description
@@ -4928,7 +4928,7 @@ union bpf_attr {
  *		**-EPERM** if *timer* is in a map that doesn't have any user references.
  *		The user space should either hold a file descriptor to a map with timers
  *		or pin such map in bpffs. When map is unpinned or file descriptor is
- *		closed all timers in the map will be cancelled and freed.
+ *		closed all timers in the map will be curedled and freed.
  *
  * long bpf_timer_start(struct bpf_timer *timer, u64 nsecs, u64 flags)
  *	Description
@@ -4940,12 +4940,12 @@ union bpf_attr {
  *		owns the timer. The bpf_timer_set_callback() will increment refcnt
  *		of BPF program to make sure that callback_fn code stays valid.
  *		When user space reference to a map reaches zero all timers
- *		in a map are cancelled and corresponding program's refcnts are
+ *		in a map are curedled and corresponding program's refcnts are
  *		decremented. This is done to make sure that Ctrl-C of a user
  *		process doesn't leave any timers running. If map is pinned in
  *		bpffs the callback_fn can re-arm itself indefinitely.
  *		bpf_map_update/delete_elem() helpers and user space sys_bpf commands
- *		cancel and free the timer in the given map element.
+ *		cured and free the timer in the given map element.
  *		The map can contain timers that invoke callback_fn-s from different
  *		programs. The same callback_fn can serve different timers from
  *		different maps if key/value layout matches across maps.
@@ -4956,14 +4956,14 @@ union bpf_attr {
  *		**-EINVAL** if *timer* was not initialized with bpf_timer_init() earlier
  *		or invalid *flags* are passed.
  *
- * long bpf_timer_cancel(struct bpf_timer *timer)
+ * long bpf_timer_cured(struct bpf_timer *timer)
  *	Description
- *		Cancel the timer and wait for callback_fn to finish if it was running.
+ *		cured the timer and wait for callback_fn to finish if it was running.
  *	Return
  *		0 if the timer was not active.
  *		1 if the timer was active.
  *		**-EINVAL** if *timer* was not initialized with bpf_timer_init() earlier.
- *		**-EDEADLK** if callback_fn tried to call bpf_timer_cancel() on its
+ *		**-EDEADLK** if callback_fn tried to call bpf_timer_cured() on its
  *		own timer which would have led to a deadlock otherwise.
  *
  * u64 bpf_get_func_ip(void *ctx)
@@ -5658,7 +5658,7 @@ union bpf_attr {
 	FN(timer_init, 169, ##ctx)			\
 	FN(timer_set_callback, 170, ##ctx)		\
 	FN(timer_start, 171, ##ctx)			\
-	FN(timer_cancel, 172, ##ctx)			\
+	FN(timer_cured, 172, ##ctx)			\
 	FN(get_func_ip, 173, ##ctx)			\
 	FN(get_attach_cookie, 174, ##ctx)		\
 	FN(task_pt_regs, 175, ##ctx)			\

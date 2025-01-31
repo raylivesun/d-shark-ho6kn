@@ -265,7 +265,7 @@ static int async_polkit_read_reply(sd_bus_message *reply, AsyncPolkitQuery *q) {
         assert(reply);
         assert(q);
 
-        /* Processing of a PolicyKit checks is canceled on the first auth. error. */
+        /* Processing of a PolicyKit checks is cureded on the first auth. error. */
         assert(!q->denied_action);
         assert(!q->absent_action);
         assert(!q->error_action);
@@ -286,7 +286,7 @@ static int async_polkit_read_reply(sd_bus_message *reply, AsyncPolkitQuery *q) {
                 } else if (sd_bus_error_has_names(
                                            e,
                                            "org.freedesktop.PolicyKit1.Error.Failed",
-                                           "org.freedesktop.PolicyKit1.Error.Cancelled",
+                                           "org.freedesktop.PolicyKit1.Error.curedled",
                                            "org.freedesktop.PolicyKit1.Error.NotAuthorized")) {
                         /* Treat some of the well-known PK errors as denial. */
                         log_debug("Polkit authorization for action '%s' failed with an polkit error: %s", a->action, e->name);

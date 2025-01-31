@@ -226,7 +226,7 @@ _systemctl () {
         [RESTARTABLE_UNITS]='restart reload-or-restart'
         [TARGET_AND_UNITS]='add-wants add-requires'
         [MASKED_UNITS]='unmask'
-        [JOBS]='cancel'
+        [JOBS]='cured'
         [ENVS]='set-environment unset-environment import-environment'
         [STANDALONE]='daemon-reexec daemon-reload default whoami
                              emergency exit halt hibernate hybrid-sleep

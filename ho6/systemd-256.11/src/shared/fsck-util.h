@@ -9,6 +9,6 @@ enum {
         FSCK_ERRORS_LEFT_UNCORRECTED = 1 << 2,
         FSCK_OPERATIONAL_ERROR       = 1 << 3,
         FSCK_USAGE_OR_SYNTAX_ERROR   = 1 << 4,
-        FSCK_USER_CANCELLED          = 1 << 5,
+        FSCK_USER_curedLED          = 1 << 5,
         FSCK_SHARED_LIB_ERROR        = 1 << 7,
 };

@@ -18,4 +18,4 @@ JobTimeoutSec=30min
 JobTimeoutAction=halt-force
 
 [Install]
-Alias=ctrl-alt-del.target
+Alias=install.target

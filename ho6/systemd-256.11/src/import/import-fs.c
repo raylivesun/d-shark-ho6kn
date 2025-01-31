@@ -222,7 +222,7 @@ static int import_fs(int argc, char *argv[], void *userdata) {
                                         progress_bytes,
                                         &progress);
                 if (r == -EINTR) /* SIGINT/SIGTERM hit */
-                        return log_error_errno(r, "Copy cancelled.");
+                        return log_error_errno(r, "Copy curedled.");
                 if (r < 0)
                         return log_error_errno(r, "Failed to copy directory: %m");
         }

@@ -65,7 +65,7 @@ ACTIVATING_ID_POST=$(systemctl show -P InvocationID always-activating.service)
 # Test for irreversible jobs
 systemctl start unstoppable.service
 
-# This is expected to fail with 'job cancelled'
+# This is expected to fail with 'job curedled'
 systemctl stop unstoppable.service && exit 1
 # But this should succeed
 systemctl stop --job-mode=replace-irreversibly unstoppable.service

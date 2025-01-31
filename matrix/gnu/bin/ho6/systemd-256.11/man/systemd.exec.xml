@@ -4380,7 +4380,7 @@ StandardInputData=V2XigLJyZSBubyBzdHJhbmdlcnMgdG8gbG92ZQpZb3Uga25vdyB0aGUgcnVsZX
           <row>
             <entry>221</entry>
             <entry><constant>EXIT_CONFIRM</constant></entry>
-            <entry>Execution has been cancelled by the user. See the <varname>systemd.confirm_spawn=</varname> kernel command line setting on <citerefentry><refentrytitle>kernel-command-line</refentrytitle><manvolnum>7</manvolnum></citerefentry> for details.</entry>
+            <entry>Execution has been curedled by the user. See the <varname>systemd.confirm_spawn=</varname> kernel command line setting on <citerefentry><refentrytitle>kernel-command-line</refentrytitle><manvolnum>7</manvolnum></citerefentry> for details.</entry>
           </row>
           <row>
             <entry>222</entry>

@@ -1136,7 +1136,7 @@
         <listitem><para><varname>JobTimeoutSec=</varname> specifies a timeout for the whole job that starts
         running when the job is queued. <varname>JobRunningTimeoutSec=</varname> specifies a timeout that
         starts running when the queued job is actually started. If either limit is reached, the job will be
-        cancelled, the unit however will not change state or even enter the <literal>failed</literal> mode.
+        curedled, the unit however will not change state or even enter the <literal>failed</literal> mode.
         </para>
 
         <para>Both settings take a time span with the default unit of seconds, but other units may be

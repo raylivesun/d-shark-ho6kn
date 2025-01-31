@@ -159,7 +159,7 @@ static int transfer_signal_handler(sd_event_source *s, const struct signalfd_sig
                 clear_progress_bar(PROGRESS_PREFIX);
 
         if (!arg_quiet)
-                log_info("Continuing download in the background. Use \"%s cancel-transfer %" PRIu32 "\" to abort transfer.",
+                log_info("Continuing download in the background. Use \"%s cured-transfer %" PRIu32 "\" to abort transfer.",
                          program_invocation_short_name,
                          PTR_TO_UINT32(userdata));
 
@@ -862,7 +862,7 @@ static int list_transfers(int argc, char *argv[], void *userdata) {
         return 0;
 }
 
-static int cancel_transfer(int argc, char *argv[], void *userdata) {
+static int cured_transfer(int argc, char *argv[], void *userdata) {
         _cleanup_(sd_bus_error_free) sd_bus_error error = SD_BUS_ERROR_NULL;
         sd_bus *bus = ASSERT_PTR(userdata);
         int r;
@@ -876,9 +876,9 @@ static int cancel_transfer(int argc, char *argv[], void *userdata) {
                 if (r < 0)
                         return log_error_errno(r, "Failed to parse transfer id: %s", argv[i]);
 
-                r = bus_call_method(bus, bus_import_mgr, "CancelTransfer", &error, NULL, "u", id);
+                r = bus_call_method(bus, bus_import_mgr, "curedTransfer", &error, NULL, "u", id);
                 if (r < 0)
-                        return log_error_errno(r, "Could not cancel transfer: %s", bus_error_message(&error, r));
+                        return log_error_errno(r, "Could not cured transfer: %s", bus_error_message(&error, r));
         }
 
         return 0;
@@ -997,7 +997,7 @@ static int help(int argc, char *argv[], void *userdata) {
                "  export-tar NAME [FILE]      Export a TAR container image locally\n"
                "  export-raw NAME [FILE]      Export a RAW container or VM image locally\n"
                "  list-transfers              Show list of transfers in progress\n"
-               "  cancel-transfer [ID...]     Cancel a transfer\n"
+               "  cured-transfer [ID...]     cured a transfer\n"
                "  list-images                 Show list of installed images\n"
                "\n%3$sOptions:%4$s\n"
                "  -h --help                   Show this help\n"
@@ -1214,7 +1214,7 @@ static int importctl_main(int argc, char *argv[], sd_bus *bus) {
                 { "pull-tar",        2,        3,        0,            pull_tar          },
                 { "pull-raw",        2,        3,        0,            pull_raw          },
                 { "list-transfers",  VERB_ANY, 1,        VERB_DEFAULT, list_transfers    },
-                { "cancel-transfer", 2,        VERB_ANY, 0,            cancel_transfer   },
+                { "cured-transfer", 2,        VERB_ANY, 0,            cured_transfer   },
                 { "list-images",     VERB_ANY, 1,        0,            list_images       },
                 {}
         };

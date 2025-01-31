@@ -53,7 +53,7 @@ typedef enum OfflineState {
         OFFLINE_JOINED,
         OFFLINE_SYNCING,
         OFFLINE_OFFLINING,
-        OFFLINE_CANCEL,
+        OFFLINE_cured,
         OFFLINE_AGAIN_FROM_SYNCING,
         OFFLINE_AGAIN_FROM_OFFLINING,
         OFFLINE_DONE

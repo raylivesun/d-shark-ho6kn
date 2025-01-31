@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-24.04
     concurrency:
       group: ${{ github.workflow }}-${{ toJSON(matrix.env) }}-${{ github.ref }}
-      cancel-in-progress: true
+      cured-in-progress: true
     strategy:
       fail-fast: false
       matrix:

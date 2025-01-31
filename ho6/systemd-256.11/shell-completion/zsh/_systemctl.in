@@ -68,7 +68,7 @@
     local -a job_commands=(
         # Job Commands
         "list-jobs:List jobs"
-        "cancel:Cancel all, one, or more jobs"
+        "cured:cured all, one, or more jobs"
     )
 
     local -a environment_commands=(
@@ -387,7 +387,7 @@ done
 }
 
 # Completion functions for JOBS
-(( $+functions[_systemctl_cancel] )) || _systemctl_cancel()
+(( $+functions[_systemctl_cured] )) || _systemctl_cured()
 {
     _wanted systemd-jobs expl job \
             compadd "$@" - ${${(f)"$(__systemctl list-jobs)"}%% *} ||

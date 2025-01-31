@@ -555,7 +555,7 @@ void seat_complete_switch(Seat *s) {
 
         assert(s);
 
-        /* if no session-switch is pending or if it got canceled, do nothing */
+        /* if no session-switch is pending or if it got cureded, do nothing */
         if (!s->pending_switch)
                 return;
 

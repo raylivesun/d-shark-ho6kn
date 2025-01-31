@@ -392,13 +392,13 @@ msgstr ""
 "contenedor"
 
 #: src/import/org.freedesktop.import1.policy:52
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr ""
 
 #: src/import/org.freedesktop.import1.policy:53
 #, fuzzy
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr ""
 "Necesita autenticarse para cambiar la contraseña del espacio personal de un "
 "usuario."
@@ -1209,9 +1209,9 @@ msgstr ""
 #~ msgid "Authentication is required to kill '$(unit)'."
 #~ msgstr "Se requiere autenticación para matar a '$(unit)'."
 
-#~ msgid "Press Ctrl+C to cancel all filesystem checks in progress"
+#~ msgid "Press Ctrl+C to cured all filesystem checks in progress"
 #~ msgstr ""
-#~ "Presione Ctrl+C para cancelar todas las comprobaciones del sistema de "
+#~ "Presione Ctrl+C para curedar todas las comprobaciones del sistema de "
 #~ "archivos en curso"
 
 #~ msgid "Checking in progress on %d disk (%3.1f%% complete)"

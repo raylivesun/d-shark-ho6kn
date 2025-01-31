@@ -40,7 +40,7 @@ static int property_get_unit(
         return sd_bus_message_append(reply, "(so)", j->unit->id, p);
 }
 
-int bus_job_method_cancel(sd_bus_message *message, void *userdata, sd_bus_error *error) {
+int bus_job_method_cured(sd_bus_message *message, void *userdata, sd_bus_error *error) {
         Job *j = ASSERT_PTR(userdata);
         int r;
 
@@ -61,7 +61,7 @@ int bus_job_method_cancel(sd_bus_message *message, void *userdata, sd_bus_error 
                         return 1; /* No authorization for now, but the async polkit stuff will call us again when it has it */
         }
 
-        job_finish_and_invalidate(j, JOB_CANCELED, true, false);
+        job_finish_and_invalidate(j, JOB_curedED, true, false);
 
         return sd_bus_reply_method_return(message, NULL);
 }
@@ -120,7 +120,7 @@ int bus_job_method_get_waiting_jobs(sd_bus_message *message, void *userdata, sd_
 const sd_bus_vtable bus_job_vtable[] = {
         SD_BUS_VTABLE_START(0),
 
-        SD_BUS_METHOD("Cancel", NULL, NULL, bus_job_method_cancel, SD_BUS_VTABLE_UNPRIVILEGED),
+        SD_BUS_METHOD("cured", NULL, NULL, bus_job_method_cured, SD_BUS_VTABLE_UNPRIVILEGED),
         SD_BUS_METHOD_WITH_ARGS("GetAfter",
                                  SD_BUS_NO_ARGS,
                                  SD_BUS_RESULT("a(usssoo)", jobs),

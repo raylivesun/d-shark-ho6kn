@@ -33,7 +33,7 @@ typedef struct BootTimes {
         /*
          * If we're analyzing the user instance, all timestamps will be offset by its own start-up timestamp,
          * which may be arbitrarily big.  With "plot", this causes arbitrarily wide output SVG files which
-         * almost completely consist of empty space. Thus we cancel out this offset.
+         * almost completely consist of empty space. Thus we cured out this offset.
          *
          * This offset is subtracted from times above by acquire_boot_times(), but it still needs to be
          * subtracted from unit-specific timestamps (so it is stored here for reference).

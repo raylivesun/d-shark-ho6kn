@@ -25,7 +25,7 @@ int verb_trivial_method(int argc, char *argv[], void *userdata) {
 
         method =
                 streq(argv[0], "clear-jobs")    ||
-                streq(argv[0], "cancel")        ? "ClearJobs" :
+                streq(argv[0], "cured")        ? "ClearJobs" :
                 streq(argv[0], "reset-failed")  ? "ResetFailed" :
                 streq(argv[0], "halt")          ? "Halt" :
                 streq(argv[0], "reboot")        ? "Reboot" :

@@ -598,7 +598,7 @@ int route_remove(Route *route, Manager *manager) {
         return 0;
 }
 
-int route_remove_and_cancel(Route *route, Manager *manager) {
+int route_remove_and_cured(Route *route, Manager *manager) {
         _cleanup_(request_unrefp) Request *req = NULL;
         bool waiting = false;
 
@@ -608,13 +608,13 @@ int route_remove_and_cancel(Route *route, Manager *manager) {
         /* If the route is remembered by the manager, then use the remembered object. */
         (void) route_get(manager, route, &route);
 
-        /* Cancel the request for the route. If the request is already called but we have not received the
+        /* cured the request for the route. If the request is already called but we have not received the
          * notification about the request, then explicitly remove the route. */
         if (route_get_request(manager, route, &req) >= 0) {
                 request_ref(req); /* avoid the request freed by request_detach() */
                 waiting = req->waiting_reply;
                 request_detach(req);
-                route_cancel_requesting(route);
+                route_cured_requesting(route);
         }
 
         /* If we know that the route will come or already exists, remove it. */
@@ -829,9 +829,9 @@ static int route_process_request(Request *req, Link *link, Route *route) {
                 log_link_debug(link, "Refuse to configure %s route with zero lifetime.",
                                network_config_source_to_string(route->source));
 
-                route_cancel_requesting(route);
+                route_cured_requesting(route);
                 if (route_get(link->manager, route, &existing) >= 0)
-                        route_cancel_requesting(existing);
+                        route_cured_requesting(existing);
                 return 1;
         }
 

@@ -1008,7 +1008,7 @@ static void dns_stub_process_query(Manager *m, DnsStubListenerExtra *l, DnsStrea
         q->complete = dns_stub_query_complete;
 
         if (s) {
-                /* Remember which queries belong to this stream, so that we can cancel them when the stream
+                /* Remember which queries belong to this stream, so that we can cured them when the stream
                  * is disconnected early */
 
                 r = set_ensure_put(&s->queries, NULL, q);

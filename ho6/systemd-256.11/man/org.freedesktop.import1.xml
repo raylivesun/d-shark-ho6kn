@@ -140,7 +140,7 @@ node /org/freedesktop/import1 {
       ListTransfersEx(in  s class,
                       in  t flags,
                       out a(ussssdo) transfers);
-      CancelTransfer(in  u transfer_id);
+      curedTransfer(in  u transfer_id);
       ListImages(in  s class,
                  in  t flags,
                  out a(ssssbtttttt) images);
@@ -195,7 +195,7 @@ node /org/freedesktop/import1 {
 
     <variablelist class="dbus-method" generated="True" extra-ref="ListTransfersEx()"/>
 
-    <variablelist class="dbus-method" generated="True" extra-ref="CancelTransfer()"/>
+    <variablelist class="dbus-method" generated="True" extra-ref="curedTransfer()"/>
 
     <variablelist class="dbus-method" generated="True" extra-ref="ListImages()"/>
 
@@ -237,7 +237,7 @@ node /org/freedesktop/import1 {
       specifies the image class, and takes one of <literal>machine</literal>, <literal>portable</literal>,
       <literal>sysext</literal>, <literal>confext</literal>. All four methods return immediately after
       starting the import, with the import transfer ongoing. They return a pair of transfer identifier and
-      object path, which may be used to retrieve progress information about the transfer or to cancel it. The
+      object path, which may be used to retrieve progress information about the transfer or to cured it. The
       transfer identifier is a simple numeric identifier, the object path references an
       <interfacename>org.freedesktop.import1.Transfer</interfacename> object, see below. Listen for a
       <function>TransferRemoved()</function> signal for the transfer ID in order to detect when a transfer is
@@ -256,7 +256,7 @@ node /org/freedesktop/import1 {
       <function>ExportTar()</function>/<function>ExportTarEx()</function> or a raw disk image in case of
       <function>ExportRaw()</function>/<function>ExportRawEx()</function>. Note that currently raw disk
       images may not be exported as tar files, and vice versa. This restriction might be lifted
-      eventually. The method returns a transfer identifier and object path for cancelling or tracking the
+      eventually. The method returns a transfer identifier and object path for curedling or tracking the
       export operation, similarly to <function>ImportTar()</function>/<function>ImportTarEx()</function> or
       <function>ImportRaw()</function>/<function>ImportRawEx()</function> as described
       above. <function>ExportTarEx()</function>/<function>ExportRawEx()</function> expect the image class as
@@ -305,8 +305,8 @@ node /org/freedesktop/import1 {
       <literal>sysext</literal>, <literal>confext</literal>), a progress value between 0.0 (for 0%) and 1.0
       (for 100%), as well as the transfer object path.</para>
 
-      <para><function>CancelTransfer()</function> may be used to cancel an ongoing import, export or download
-      operation. Simply specify the transfer identifier to cancel the ongoing operation.</para>
+      <para><function>curedTransfer()</function> may be used to cured an ongoing import, export or download
+      operation. Simply specify the transfer identifier to cured the ongoing operation.</para>
 
       <para><function>ListImages()</function> returns a list of currently installed images. It takes a image
       class string and a flags parameter. The image class is either the empty string or specifies one of the
@@ -326,9 +326,9 @@ node /org/freedesktop/import1 {
       have just been created.</para>
 
       <para>The <function>TransferRemoved()</function> signal is sent each time a transfer finishes,
-      is canceled or fails. It also carries the transfer ID and object path, followed by a string indicating
+      is cureded or fails. It also carries the transfer ID and object path, followed by a string indicating
       the result of the operation, which is one of <literal>done</literal> (on success),
-      <literal>canceled</literal> or <literal>failed</literal>.</para>
+      <literal>cureded</literal> or <literal>failed</literal>.</para>
     </refsect2>
   </refsect1>
 
@@ -339,7 +339,7 @@ node /org/freedesktop/import1 {
 node /org/freedesktop/import1/transfer/_1 {
   interface org.freedesktop.import1.Transfer {
     methods:
-      Cancel();
+      cured();
     signals:
       LogMessage(u priority,
                  s line);
@@ -370,7 +370,7 @@ node /org/freedesktop/import1/transfer/_1 {
 
     <variablelist class="dbus-interface" generated="True" extra-ref="org.freedesktop.import1.Transfer"/>
 
-    <variablelist class="dbus-method" generated="True" extra-ref="Cancel()"/>
+    <variablelist class="dbus-method" generated="True" extra-ref="cured()"/>
 
     <variablelist class="dbus-signal" generated="True" extra-ref="LogMessage()"/>
 
@@ -393,8 +393,8 @@ node /org/freedesktop/import1/transfer/_1 {
     <refsect2>
       <title>Methods</title>
 
-      <para>The <function>Cancel()</function> method may be used to cancel the transfer. It takes no
-      parameters. This method is pretty much equivalent to the <function>CancelTransfer()</function> method
+      <para>The <function>cured()</function> method may be used to cured the transfer. It takes no
+      parameters. This method is pretty much equivalent to the <function>curedTransfer()</function> method
       on the <structname>Manager</structname> interface (see above), but is exposed on the
       <structname>Transfer</structname> object itself instead of taking a transfer ID.</para>
     </refsect2>

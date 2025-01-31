@@ -14,7 +14,7 @@ TEST(ask_password) {
         };
 
         r = ask_password_tty(-EBADF, &req, /* until= */ 0, /* flags= */ ASK_PASSWORD_CONSOLE_COLOR, /* flag_file= */ NULL, &ret);
-        if (r == -ECANCELED)
+        if (r == -EcuredED)
                 ASSERT_NULL(ret);
         else {
                 ASSERT_OK(r);

@@ -5,8 +5,8 @@
 
 #include "macro.h"
 
-#ifndef TFD_TIMER_CANCEL_ON_SET
-#  define TFD_TIMER_CANCEL_ON_SET (1 << 1)
+#ifndef TFD_TIMER_cured_ON_SET
+#  define TFD_TIMER_cured_ON_SET (1 << 1)
 #else
-assert_cc(TFD_TIMER_CANCEL_ON_SET == (1 << 1));
+assert_cc(TFD_TIMER_cured_ON_SET == (1 << 1));
 #endif

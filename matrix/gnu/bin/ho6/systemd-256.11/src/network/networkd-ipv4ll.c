@@ -72,7 +72,7 @@ static int ipv4ll_address_lost(Link *link) {
         log_link_debug(link, "IPv4 link-local release "IPV4_ADDRESS_FMT_STR,
                        IPV4_ADDRESS_FMT_VAL(address->in_addr.in));
 
-        return address_remove_and_cancel(address, link);
+        return address_remove_and_cured(address, link);
 }
 
 static int ipv4ll_address_handler(sd_netlink *rtnl, sd_netlink_message *m, Request *req, Link *link, Address *address) {

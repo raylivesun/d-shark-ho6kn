@@ -154,8 +154,8 @@ static void journal_file_set_offline_internal(JournalFile *f) {
 
         for (;;) {
                 switch (f->offline_state) {
-                case OFFLINE_CANCEL: {
-                        OfflineState tmp_state = OFFLINE_CANCEL;
+                case OFFLINE_cured: {
+                        OfflineState tmp_state = OFFLINE_cured;
                         if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_DONE,
                                                          false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST))
                                 continue;
@@ -263,8 +263,8 @@ static bool journal_file_set_offline_try_restart(JournalFile *f) {
                 case OFFLINE_AGAIN_FROM_OFFLINING:
                         return true;
 
-                case OFFLINE_CANCEL: {
-                        OfflineState tmp_state = OFFLINE_CANCEL;
+                case OFFLINE_cured: {
+                        OfflineState tmp_state = OFFLINE_cured;
                         if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_AGAIN_FROM_SYNCING,
                                                          false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST))
                                 continue;

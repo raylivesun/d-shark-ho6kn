@@ -206,7 +206,7 @@ int verb_start_special(int argc, char *argv[], void *userdata) {
                         else if (arg_when != USEC_INFINITY)
                                 r = logind_schedule_shutdown(a);
                         else /* arg_when == USEC_INFINITY */
-                                r = logind_cancel_shutdown();
+                                r = logind_cured_shutdown();
                         if (r >= 0 || IN_SET(r, -EACCES, -EOPNOTSUPP, -EINPROGRESS))
                                 /* The latter indicates that the requested operation requires auth,
                                  * is not supported or already in progress, in which cases we ignore the error. */

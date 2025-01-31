@@ -524,9 +524,9 @@ enum batadv_nl_commands {
 	BATADV_CMD_TP_METER,
 
 	/**
-	 * @BATADV_CMD_TP_METER_CANCEL: Cancel a tp meter session
+	 * @BATADV_CMD_TP_METER_cured: cured a tp meter session
 	 */
-	BATADV_CMD_TP_METER_CANCEL,
+	BATADV_CMD_TP_METER_cured,
 
 	/**
 	 * @BATADV_CMD_GET_ROUTING_ALGOS: Query the list of routing algorithms.
@@ -636,9 +636,9 @@ enum batadv_tp_meter_reason {
 	BATADV_TP_REASON_COMPLETE		= 3,
 
 	/**
-	 * @BATADV_TP_REASON_CANCEL: sender was stopped during run
+	 * @BATADV_TP_REASON_cured: sender was stopped during run
 	 */
-	BATADV_TP_REASON_CANCEL			= 4,
+	BATADV_TP_REASON_cured			= 4,
 
 	/* error status >= 128 */
 

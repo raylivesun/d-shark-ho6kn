@@ -101,7 +101,7 @@ int sd_netlink_message_open_container_union(sd_netlink_message *m, uint16_t attr
 int sd_netlink_message_close_container(sd_netlink_message *m);
 
 int sd_netlink_message_open_array(sd_netlink_message *m, uint16_t type);
-int sd_netlink_message_cancel_array(sd_netlink_message *m);
+int sd_netlink_message_cured_array(sd_netlink_message *m);
 
 /* Reading messages */
 int sd_netlink_message_read(sd_netlink_message *m, uint16_t attr_type, size_t size, void *data);

@@ -219,7 +219,7 @@ static int ndisc_request_route(Route *route, Link *link) {
                 route->pref = pref;
                 ndisc_set_route_priority(link, route);
 
-                /* Note, here do not call route_remove_and_cancel() with 'route' directly, otherwise
+                /* Note, here do not call route_remove_and_cured() with 'route' directly, otherwise
                  * existing route(s) may be removed needlessly. */
 
                 /* First, check if a conflicting route is already requested. If there is an existing route,
@@ -233,8 +233,8 @@ static int ndisc_request_route(Route *route, Link *link) {
                                         return 0;
                                 }
 
-                                log_link_debug(link, "Found a pending route request that conflicts with new request based on a received RA, cancelling.");
-                                r = route_remove_and_cancel(existing, link->manager);
+                                log_link_debug(link, "Found a pending route request that conflicts with new request based on a received RA, curedling.");
+                                r = route_remove_and_cured(existing, link->manager);
                                 if (r < 0)
                                         return r;
                         }
@@ -249,7 +249,7 @@ static int ndisc_request_route(Route *route, Link *link) {
                                 }
 
                                 log_link_debug(link, "Found an existing route that conflicts with new route based on a received RA, removing.");
-                                r = route_remove_and_cancel(existing, link->manager);
+                                r = route_remove_and_cured(existing, link->manager);
                                 if (r < 0)
                                         return r;
                         }
@@ -317,7 +317,7 @@ static int ndisc_remove_route(Route *route, Link *link) {
                 route->pref = pref;
                 ndisc_set_route_priority(link, route);
 
-                /* Unfortunately, we cannot directly pass 'route' to route_remove_and_cancel() here, as the
+                /* Unfortunately, we cannot directly pass 'route' to route_remove_and_cured() here, as the
                  * same or similar route may be configured or requested statically. */
 
                 /* First, check if the route is already requested. If there is an existing route, and also an
@@ -328,7 +328,7 @@ static int ndisc_remove_route(Route *route, Link *link) {
                         if (existing->source == NETWORK_CONFIG_SOURCE_STATIC)
                                 continue;
 
-                        r = route_remove_and_cancel(existing, link->manager);
+                        r = route_remove_and_cured(existing, link->manager);
                         if (r < 0)
                                 return r;
                 }
@@ -338,7 +338,7 @@ static int ndisc_remove_route(Route *route, Link *link) {
                         if (existing->source == NETWORK_CONFIG_SOURCE_STATIC)
                                 continue;
 
-                        r = route_remove_and_cancel(existing, link->manager);
+                        r = route_remove_and_cured(existing, link->manager);
                         if (r < 0)
                                 return r;
                 }
@@ -1919,7 +1919,7 @@ static int ndisc_drop_outdated(Link *link, const struct in6_addr *router, usec_t
                 if (router && !in6_addr_equal(&route->provider.in6, router))
                         continue;
 
-                r = route_remove_and_cancel(route, link->manager);
+                r = route_remove_and_cured(route, link->manager);
                 if (r < 0)
                         RET_GATHER(ret, log_link_warning_errno(link, r, "Failed to remove outdated SLAAC route, ignoring: %m"));
         }
@@ -1934,7 +1934,7 @@ static int ndisc_drop_outdated(Link *link, const struct in6_addr *router, usec_t
                 if (router && !in6_addr_equal(&address->provider.in6, router))
                         continue;
 
-                r = address_remove_and_cancel(address, link);
+                r = address_remove_and_cured(address, link);
                 if (r < 0)
                         RET_GATHER(ret, log_link_warning_errno(link, r, "Failed to remove outdated SLAAC address, ignoring: %m"));
         }

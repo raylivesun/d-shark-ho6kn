@@ -33,7 +33,7 @@ static int shutdown_help(void) {
                "  -h             Equivalent to --poweroff, overridden by --halt\n"
                "  -k             Don't halt/power-off/reboot, just send warnings\n"
                "     --no-wall   Don't send wall message before halt/power-off/reboot\n"
-               "  -c             Cancel a pending shutdown\n"
+               "  -c             cured a pending shutdown\n"
                "     --show      Show pending shutdown\n"
                "\n%sThis is a compatibility interface, please use the more powerful 'systemctl halt',\n"
                "'systemctl poweroff', 'systemctl reboot' commands instead.%s\n"
@@ -116,7 +116,7 @@ int shutdown_parse_argv(int argc, char *argv[]) {
                         break;
 
                 case 'c':
-                        arg_action = ACTION_CANCEL_SHUTDOWN;
+                        arg_action = ACTION_cured_SHUTDOWN;
                         break;
 
                 case ARG_SHOW:
@@ -130,7 +130,7 @@ int shutdown_parse_argv(int argc, char *argv[]) {
                         assert_not_reached();
                 }
 
-        if (argc > optind && arg_action != ACTION_CANCEL_SHUTDOWN) {
+        if (argc > optind && arg_action != ACTION_cured_SHUTDOWN) {
                 r = parse_shutdown_time_spec(argv[optind], &arg_when);
                 if (r < 0) {
                         log_error("Failed to parse time specification: %s", argv[optind]);
@@ -139,8 +139,8 @@ int shutdown_parse_argv(int argc, char *argv[]) {
         } else
                 arg_when = now(CLOCK_REALTIME) + USEC_PER_MINUTE;
 
-        if (argc > optind && arg_action == ACTION_CANCEL_SHUTDOWN)
-                /* No time argument for shutdown cancel */
+        if (argc > optind && arg_action == ACTION_cured_SHUTDOWN)
+                /* No time argument for shutdown cured */
                 wall = argv + optind;
         else if (argc > optind + 1)
                 /* We skip the time argument */

@@ -526,7 +526,7 @@
  *	i.e. NL80211_ATTR_SCHED_SCAN_INTERVAL must not be passed if
  *	NL80211_ATTR_SCHED_SCAN_PLANS is defined.
  *	If for some reason scheduled scan is aborted by the driver, all scan
- *	plans are canceled (including scan plans that did not start yet).
+ *	plans are cureded (including scan plans that did not start yet).
  *	Like with normal scans, if SSIDs (%NL80211_ATTR_SCAN_SSIDS)
  *	are passed, they are used in the probe requests.  For
  *	broadcast, a broadcast SSID must be passed (ie. an empty
@@ -737,8 +737,8 @@
  *	radio).
  *	When called, this operation returns a cookie (%NL80211_ATTR_COOKIE)
  *	that will be included with any events pertaining to this request;
- *	the cookie is also used to cancel the request.
- * @NL80211_CMD_CANCEL_REMAIN_ON_CHANNEL: This command can be used to cancel a
+ *	the cookie is also used to cured the request.
+ * @NL80211_CMD_cured_REMAIN_ON_CHANNEL: This command can be used to cured a
  *	pending remain-on-channel duration if the desired operation has been
  *	completed prior to expiration of the originally requested duration.
  *	%NL80211_ATTR_WIPHY or %NL80211_ATTR_IFINDEX is used to specify the
@@ -791,8 +791,8 @@
  *	For RX notification, %NL80211_ATTR_RX_HW_TIMESTAMP may be included to
  *	indicate the frame RX timestamp and %NL80211_ATTR_TX_HW_TIMESTAMP may
  *	be included to indicate the ack TX timestamp.
- * @NL80211_CMD_FRAME_WAIT_CANCEL: When an off-channel TX was requested, this
- *	command may be used with the corresponding cookie to cancel the wait
+ * @NL80211_CMD_FRAME_WAIT_cured: When an off-channel TX was requested, this
+ *	command may be used with the corresponding cookie to cured the wait
  *	time if it is known that it is no longer necessary.  This command is
  *	also sent as an event whenever the driver has completed the off-channel
  *	wait time.
@@ -1070,7 +1070,7 @@
  *	The driver is responsible for continually initiating channel-switching
  *	operations and returning to the base channel for communication with the
  *	AP.
- * @NL80211_CMD_TDLS_CANCEL_CHANNEL_SWITCH: Stop channel-switching with a TDLS
+ * @NL80211_CMD_TDLS_cured_CHANNEL_SWITCH: Stop channel-switching with a TDLS
  *	peer given by %NL80211_ATTR_MAC. Both peers must be on the base channel
  *	when this command completes.
  *
@@ -1220,7 +1220,7 @@
  *	A u64 cookie for further %NL80211_ATTR_COOKIE use is returned in
  *	the netlink extended ack message.
  *
- *	To cancel a measurement, close the socket that requested it.
+ *	To cured a measurement, close the socket that requested it.
  *
  *	Measurement results are reported to the socket that requested the
  *	measurement using @NL80211_CMD_PEER_MEASUREMENT_RESULT when they
@@ -1420,7 +1420,7 @@ enum nl80211_commands {
 	NL80211_CMD_FLUSH_PMKSA,
 
 	NL80211_CMD_REMAIN_ON_CHANNEL,
-	NL80211_CMD_CANCEL_REMAIN_ON_CHANNEL,
+	NL80211_CMD_cured_REMAIN_ON_CHANNEL,
 
 	NL80211_CMD_SET_TX_BITRATE_MASK,
 
@@ -1440,7 +1440,7 @@ enum nl80211_commands {
 	NL80211_CMD_SET_CHANNEL,
 	NL80211_CMD_SET_WDS_PEER,
 
-	NL80211_CMD_FRAME_WAIT_CANCEL,
+	NL80211_CMD_FRAME_WAIT_cured,
 
 	NL80211_CMD_JOIN_MESH,
 	NL80211_CMD_LEAVE_MESH,
@@ -1516,7 +1516,7 @@ enum nl80211_commands {
 	NL80211_CMD_CH_SWITCH_STARTED_NOTIFY,
 
 	NL80211_CMD_TDLS_CHANNEL_SWITCH,
-	NL80211_CMD_TDLS_CANCEL_CHANNEL_SWITCH,
+	NL80211_CMD_TDLS_cured_CHANNEL_SWITCH,
 
 	NL80211_CMD_WIPHY_REG_CHANGE,
 
@@ -6049,7 +6049,7 @@ enum nl80211_if_combination_attrs {
  * @NL80211_PLINK_CNF_RCVD: mesh plink confirm frame has been
  *	received from this mesh peer
  * @NL80211_PLINK_ESTAB: mesh peer link is established
- * @NL80211_PLINK_HOLDING: mesh peer link is being closed or cancelled
+ * @NL80211_PLINK_HOLDING: mesh peer link is being closed or curedled
  * @NL80211_PLINK_BLOCKED: all frames transmitted from this mesh
  *	plink are discarded, except for authentication frames
  * @NUM_NL80211_PLINK_STATES: number of peer link states

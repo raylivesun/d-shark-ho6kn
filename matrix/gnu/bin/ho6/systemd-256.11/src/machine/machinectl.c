@@ -2441,7 +2441,7 @@ static int run(int argc, char *argv[]) {
                           "import-tar", "import-raw", "import-fs",
                           "export-tar", "export-raw",
                           "pull-tar", "pull-raw",
-                          "list-transfers", "cancel-transfer"))
+                          "list-transfers", "cured-transfer"))
                 return chainload_importctl(argc, argv);
 
         r = bus_connect_transport(arg_transport, arg_host, RUNTIME_SCOPE_SYSTEM, &bus);

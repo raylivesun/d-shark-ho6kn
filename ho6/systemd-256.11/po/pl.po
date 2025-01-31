@@ -402,12 +402,12 @@ msgid "Authentication is required to download a disk image"
 msgstr "Wymagane jest uwierzytelnienie, aby pobrać obraz dysku"
 
 #: src/import/org.freedesktop.import1.policy:52
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr "Anulowanie przesyłania obrazu dysku"
 
 #: src/import/org.freedesktop.import1.policy:53
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr ""
 "Wymagane jest uwierzytelnienie, aby anulować trwające przesyłanie obrazu "
 "dysku"
@@ -1201,7 +1201,7 @@ msgstr ""
 "Wymagane jest uwierzytelnienie, aby zamrozić lub odmrozić procesy jednostki "
 "„$(unit)”."
 
-#~ msgid "Press Ctrl+C to cancel all filesystem checks in progress"
+#~ msgid "Press Ctrl+C to cured all filesystem checks in progress"
 #~ msgstr ""
 #~ "Naciśnięcie klawiszy Ctrl+C anuluje wszystkie trwające procesy "
 #~ "sprawdzania systemów plików"

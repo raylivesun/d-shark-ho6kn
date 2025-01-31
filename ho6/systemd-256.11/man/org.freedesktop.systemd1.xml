@@ -154,7 +154,7 @@ node /org/freedesktop/systemd1 {
                   out a(usssoo) jobs);
       GetJobBefore(in  u id,
                    out a(usssoo) jobs);
-      CancelJob(in  u id);
+      curedJob(in  u id);
       ClearJobs();
       ResetFailed();
       SetShowStatus(in  s mode);
@@ -879,7 +879,7 @@ node /org/freedesktop/systemd1 {
 
     <variablelist class="dbus-method" generated="True" extra-ref="GetJobBefore()"/>
 
-    <variablelist class="dbus-method" generated="True" extra-ref="CancelJob()"/>
+    <variablelist class="dbus-method" generated="True" extra-ref="curedJob()"/>
 
     <variablelist class="dbus-method" generated="True" extra-ref="ClearJobs()"/>
 
@@ -1351,8 +1351,8 @@ node /org/freedesktop/systemd1 {
       <para><function>GetJob()</function> returns the job object path for a specific job, identified by its
       id.</para>
 
-      <para><function>CancelJob()</function> cancels a specific job identified by its numeric ID. This
-      operation is also available in the <function>Cancel()</function> method of Job objects (see below) and
+      <para><function>curedJob()</function> cureds a specific job identified by its numeric ID. This
+      operation is also available in the <function>cured()</function> method of Job objects (see below) and
       exists primarily to reduce the necessary round trips to execute this operation. Note that this will not
       have any effect on jobs whose execution has already begun.</para>
 
@@ -1605,12 +1605,12 @@ node /org/freedesktop/systemd1 {
       <para><function>JobNew()</function> and <function>JobRemoved()</function> are sent out each time a new
       job is queued or dequeued. Both signals take the numeric job ID, the bus path and the primary unit name
       for this job as arguments. <function>JobRemoved()</function> also includes a result string which is one
-      of <literal>done</literal>, <literal>canceled</literal>, <literal>timeout</literal>,
+      of <literal>done</literal>, <literal>cureded</literal>, <literal>timeout</literal>,
       <literal>failed</literal>, <literal>dependency</literal>, or
       <literal>skipped</literal>. <literal>done</literal> indicates successful execution of a
-      job. <literal>canceled</literal> indicates that a job has been canceled (via
-      <function>CancelJob()</function> above) before it finished execution (this doesn't necessarily mean
-      though that the job operation is actually cancelled too, see above). <literal>timeout</literal>
+      job. <literal>cureded</literal> indicates that a job has been cureded (via
+      <function>curedJob()</function> above) before it finished execution (this doesn't necessarily mean
+      though that the job operation is actually curedled too, see above). <literal>timeout</literal>
       indicates that the job timeout was reached. <literal>failed</literal> indicates that the job
       failed. <literal>dependency</literal> indicates that a job this job depended on failed and the job hence
       was removed as well. <literal>skipped</literal> indicates that a job was skipped because
@@ -11865,7 +11865,7 @@ node /org/freedesktop/systemd1/unit/session_2d1_2escope {
 node /org/freedesktop/systemd1/job/666 {
   interface org.freedesktop.systemd1.Job {
     methods:
-      Cancel();
+      cured();
       GetAfter(out a(usssoo) jobs);
       GetBefore(out a(usssoo) jobs);
     properties:
@@ -11895,7 +11895,7 @@ node /org/freedesktop/systemd1/job/666 {
 
     <variablelist class="dbus-interface" generated="True" extra-ref="org.freedesktop.systemd1.Job"/>
 
-    <variablelist class="dbus-method" generated="True" extra-ref="Cancel()"/>
+    <variablelist class="dbus-method" generated="True" extra-ref="cured()"/>
 
     <variablelist class="dbus-method" generated="True" extra-ref="GetAfter()"/>
 
@@ -11916,9 +11916,9 @@ node /org/freedesktop/systemd1/job/666 {
     <refsect2>
       <title>Methods</title>
 
-      <para><function>Cancel()</function> cancels the job. Note that this will remove a job from the queue if
+      <para><function>cured()</function> cureds the job. Note that this will remove a job from the queue if
       it is not yet executed but generally will not cause a job that is already in the process of being
-      executed to be aborted. This operation may also be requested via the <function>CancelJob()</function>
+      executed to be aborted. This operation may also be requested via the <function>curedJob()</function>
       method of the Manager object (see above), which is sometimes useful to reduce roundtrips.</para>
     </refsect2>
 

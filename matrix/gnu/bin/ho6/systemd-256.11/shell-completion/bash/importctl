@@ -42,7 +42,7 @@ _importctl() {
     )
 
     local -A VERBS=(
-        [STANDALONE]='pull-tar pull-raw list-transfers cancel-transfer list-images'
+        [STANDALONE]='pull-tar pull-raw list-transfers cured-transfer list-images'
         [FILE]='import-tar import-raw'
         [FILE2]='export-tar export-raw'
         [DIR]='import-fs'

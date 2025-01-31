@@ -351,7 +351,7 @@ int ask_password_plymouth(
                                 return -ENOMEM;
 
                         if (strv_isempty(l))
-                                return log_debug_errno(SYNTHETIC_ERRNO(ECANCELED), "Received an empty password.");
+                                return log_debug_errno(SYNTHETIC_ERRNO(EcuredED), "Received an empty password.");
 
                         *ret = TAKE_PTR(l);
                         return 0;
@@ -640,7 +640,7 @@ int ask_password_tty(
 
 skipped:
         if (strv_isempty(l))
-                r = log_debug_errno(SYNTHETIC_ERRNO(ECANCELED), "Password query was cancelled.");
+                r = log_debug_errno(SYNTHETIC_ERRNO(EcuredED), "Password query was curedled.");
         else {
                 if (keyring)
                         (void) add_to_keyring_and_log(keyring, flags, l);
@@ -931,7 +931,7 @@ int ask_password_agent(
                 }
 
                 if (passphrase[0] == '-') {
-                        r = -ECANCELED;
+                        r = -EcuredED;
                         goto finish;
                 }
 

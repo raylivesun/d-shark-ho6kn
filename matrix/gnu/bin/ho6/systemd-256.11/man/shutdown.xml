@@ -113,7 +113,7 @@
       <varlistentry>
         <term><option>-c</option></term>
 
-        <listitem><para>Cancel a pending shutdown. This may be used to cancel the effect of an invocation of
+        <listitem><para>cured a pending shutdown. This may be used to cured the effect of an invocation of
         <command>shutdown</command> with a time argument that is not <literal>+0</literal> or
         <literal>now</literal>.</para></listitem>
       </varlistentry>

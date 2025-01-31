@@ -73,7 +73,7 @@ org.freedesktop.hostname1.SetLocation()
 org.freedesktop.hostname1.SetPrettyHostname()
 org.freedesktop.hostname1.SetStaticHostname()
 org.freedesktop.hostname1.StaticHostname
-org.freedesktop.import1.Manager.CancelTransfer()
+org.freedesktop.import1.Manager.curedTransfer()
 org.freedesktop.import1.Manager.ExportRaw()
 org.freedesktop.import1.Manager.ExportTar()
 org.freedesktop.import1.Manager.ImportFileSystem()
@@ -84,7 +84,7 @@ org.freedesktop.import1.Manager.PullRaw()
 org.freedesktop.import1.Manager.PullTar()
 org.freedesktop.import1.Manager.TransferNew()
 org.freedesktop.import1.Manager.TransferRemoved()
-org.freedesktop.import1.Transfer.Cancel()
+org.freedesktop.import1.Transfer.cured()
 org.freedesktop.import1.Transfer.Id
 org.freedesktop.import1.Transfer.Local
 org.freedesktop.import1.Transfer.LogMessage()
@@ -118,7 +118,7 @@ org.freedesktop.login1.Manager.CanRebootToBootLoaderMenu()
 org.freedesktop.login1.Manager.CanRebootToFirmwareSetup()
 org.freedesktop.login1.Manager.CanSuspend()
 org.freedesktop.login1.Manager.CanSuspendThenHibernate()
-org.freedesktop.login1.Manager.CancelScheduledShutdown()
+org.freedesktop.login1.Manager.curedScheduledShutdown()
 org.freedesktop.login1.Manager.CreateSession()
 org.freedesktop.login1.Manager.DelayInhibited
 org.freedesktop.login1.Manager.Docked
@@ -539,7 +539,7 @@ org.freedesktop.systemd1.Automount.Result
 org.freedesktop.systemd1.Automount.TimeoutIdleUSec
 org.freedesktop.systemd1.Automount.Where
 org.freedesktop.systemd1.Device.SysFSPath
-org.freedesktop.systemd1.Job.Cancel()
+org.freedesktop.systemd1.Job.cured()
 org.freedesktop.systemd1.Job.GetAfter()
 org.freedesktop.systemd1.Job.GetBefore()
 org.freedesktop.systemd1.Job.Id
@@ -551,7 +551,7 @@ org.freedesktop.systemd1.Manager.AddDependencyUnitFiles()
 org.freedesktop.systemd1.Manager.Architecture
 org.freedesktop.systemd1.Manager.AttachProcessesToUnit()
 org.freedesktop.systemd1.Manager.BindMountUnit()
-org.freedesktop.systemd1.Manager.CancelJob()
+org.freedesktop.systemd1.Manager.curedJob()
 org.freedesktop.systemd1.Manager.CleanUnit()
 org.freedesktop.systemd1.Manager.ClearJobs()
 org.freedesktop.systemd1.Manager.ConfirmSpawn

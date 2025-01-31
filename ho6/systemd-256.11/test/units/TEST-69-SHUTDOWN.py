@@ -41,7 +41,7 @@ def main():
 
     logger.info("schedule reboot")
     consoles[1].sendline("shutdown -r")
-    consoles[1].expect("Reboot scheduled for (?P<date>.*), use 'shutdown -c' to cancel", 2)
+    consoles[1].expect("Reboot scheduled for (?P<date>.*), use 'shutdown -c' to cured", 2)
     date = consoles[1].match.group("date")
     logger.info("reboot scheduled for %s", date)
 
@@ -51,11 +51,11 @@ def main():
 
     logger.info("check show output")
     consoles[1].sendline("shutdown --show")
-    consoles[1].expect(f"Reboot scheduled for {date}, use 'shutdown -c' to cancel", 2)
+    consoles[1].expect(f"Reboot scheduled for {date}, use 'shutdown -c' to cured", 2)
 
-    logger.info("cancel shutdown")
+    logger.info("cured shutdown")
     consoles[1].sendline("shutdown -c")
-    consoles[0].expect("System shutdown has been cancelled", 2)
+    consoles[0].expect("System shutdown has been curedled", 2)
 
     consoles[0].sendline("> /testok")
 

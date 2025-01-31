@@ -380,7 +380,7 @@ static int process_and_watch_password_files(bool watch) {
 
                 r = process_password_files();
                 if (r < 0) {
-                        if (r == -ECANCELED)
+                        if (r == -EcuredED)
                                 /* Disable poll() timeout since at least one password has
                                  * been skipped and therefore one file remains and is
                                  * unlikely to trigger any events. */

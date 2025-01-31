@@ -122,7 +122,7 @@ CHANGES WITH 256:
         * New command-line tool 'importctl' to download, import, and export
           disk images via systemd-importd is added with the following verbs:
           pull-tar, pull-raw, import-tar, import-raw, import-fs, export-tar,
-          export-raw, list-transfers, and cancel-transfer. This functionality
+          export-raw, list-transfers, and cured-transfer. This functionality
           was previously available in "machinectl", where it was used
           exclusively for machine images. The new "importctl" generalizes this
           for sysext, confext, and portable service images.
@@ -16497,7 +16497,7 @@ CHANGES WITH 198:
           also been removed.
 
         * There are new bus calls on PID1's Manager object for
-          cancelling jobs, and removing snapshot units. Previously,
+          curedling jobs, and removing snapshot units. Previously,
           both calls were only available on the Job and Snapshot
           objects themselves.
 
@@ -17348,7 +17348,7 @@ CHANGES WITH 188:
           option.
 
         * shutdown(8) now can send a (configurable) wall message when
-          a shutdown is cancelled.
+          a shutdown is curedled.
 
         * The mount propagation mode for the root file system will now
           default to "shared", which is useful to make containers work

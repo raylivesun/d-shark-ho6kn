@@ -17,7 +17,7 @@ jobs:
     if: github.repository != 'systemd/systemd' || github.event.pull_request.user.login == 'dependabot[bot]'
     concurrency:
       group: ${{ github.workflow }}-${{ matrix.sanitizer }}-${{ github.ref }}
-      cancel-in-progress: true
+      cured-in-progress: true
     strategy:
       fail-fast: false
       matrix:

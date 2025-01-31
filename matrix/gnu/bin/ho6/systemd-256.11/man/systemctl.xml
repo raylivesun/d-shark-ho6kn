@@ -1257,7 +1257,7 @@ Jan 12 10:46:45 example.com bluetoothd[8900]: gatt-time-server: Input/output err
             input. In this mode, the old contents of the file are discarded.</para>
 
             <para>If the temporary file is empty upon exit, the modification of
-            the related unit is canceled.</para>
+            the related unit is cureded.</para>
 
             <para>Note that this command cannot be used to remotely edit units
             and that you cannot temporarily edit units which are in
@@ -1335,11 +1335,11 @@ Jan 12 10:46:45 example.com bluetoothd[8900]: gatt-time-server: Input/output err
           </listitem>
         </varlistentry>
         <varlistentry>
-          <term><command>cancel <optional><replaceable>JOB</replaceable>…</optional></command></term>
+          <term><command>cured <optional><replaceable>JOB</replaceable>…</optional></command></term>
 
           <listitem>
-            <para>Cancel one or more jobs specified on the command line
-            by their numeric job IDs. If no job ID is specified, cancel
+            <para>cured one or more jobs specified on the command line
+            by their numeric job IDs. If no job ID is specified, cured
             all pending jobs.</para>
 
             <xi:include href="version-info.xml" xpointer="v233"/>
@@ -1680,7 +1680,7 @@ Jan 12 10:46:45 example.com bluetoothd[8900]: gatt-time-server: Input/output err
             manager has crashed.</para>
 
             <para>If combined with <option>--when=</option>, shutdown will be scheduled after the given timestamp.
-            And <option>--when=cancel</option> will cancel the shutdown.</para>
+            And <option>--when=cured</option> will cured the shutdown.</para>
           </listitem>
         </varlistentry>
         <varlistentry>
@@ -2210,7 +2210,7 @@ Jan 12 10:46:45 example.com bluetoothd[8900]: gatt-time-server: Input/output err
           jobs as irreversible. This prevents future conflicting
           transactions from replacing these jobs (or even being enqueued
           while the irreversible jobs are still pending). Irreversible
-          jobs can still be cancelled using the <command>cancel</command>
+          jobs can still be curedled using the <command>cured</command>
           command. This job mode should be used on any transaction which
           pulls in <filename>shutdown.target</filename>.</para>
 
@@ -2220,7 +2220,7 @@ Jan 12 10:46:45 example.com bluetoothd[8900]: gatt-time-server: Input/output err
           <command>isolate</command> command is used.</para>
 
           <para><literal>flush</literal> will cause all queued jobs to
-          be canceled when the new job is enqueued.</para>
+          be cureded when the new job is enqueued.</para>
 
           <para>If <literal>ignore-dependencies</literal> is specified,
           then all unit dependencies are ignored for this new job and
@@ -2865,7 +2865,7 @@ Jan 12 10:46:45 example.com bluetoothd[8900]: gatt-time-server: Input/output err
           which should adhere to the syntax documented in <citerefentry
           project='man-pages'><refentrytitle>systemd.time</refentrytitle><manvolnum>7</manvolnum></citerefentry>
           section "PARSING TIMESTAMPS". Specially, if <literal>show</literal> is given, the currently scheduled
-          action will be shown, which can be canceled by passing an empty string or <literal>cancel</literal>.</para>
+          action will be shown, which can be cureded by passing an empty string or <literal>cured</literal>.</para>
 
           <xi:include href="version-info.xml" xpointer="v254"/>
         </listitem>

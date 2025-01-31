@@ -1130,7 +1130,7 @@ static int method_get_job(sd_bus_message *message, void *userdata, sd_bus_error 
         return sd_bus_reply_method_return(message, "o", path);
 }
 
-static int method_cancel_job(sd_bus_message *message, void *userdata, sd_bus_error *error) {
+static int method_cured_job(sd_bus_message *message, void *userdata, sd_bus_error *error) {
         Manager *m = ASSERT_PTR(userdata);
         uint32_t id;
         Job *j;
@@ -1146,7 +1146,7 @@ static int method_cancel_job(sd_bus_message *message, void *userdata, sd_bus_err
         if (!j)
                 return sd_bus_error_setf(error, BUS_ERROR_NO_SUCH_JOB, "Job %u does not exist.", (unsigned) id);
 
-        return bus_job_method_cancel(message, j, error);
+        return bus_job_method_cured(message, j, error);
 }
 
 static int method_clear_jobs(sd_bus_message *message, void *userdata, sd_bus_error *error) {
@@ -3350,10 +3350,10 @@ const sd_bus_vtable bus_manager_vtable[] = {
                                 SD_BUS_RESULT("a(usssoo)", jobs),
                                 method_get_job_waiting,
                                 SD_BUS_VTABLE_UNPRIVILEGED),
-        SD_BUS_METHOD_WITH_ARGS("CancelJob",
+        SD_BUS_METHOD_WITH_ARGS("curedJob",
                                 SD_BUS_ARGS("u", id),
                                 SD_BUS_NO_RESULT,
-                                method_cancel_job,
+                                method_cured_job,
                                 SD_BUS_VTABLE_UNPRIVILEGED),
         SD_BUS_METHOD("ClearJobs",
                       NULL,

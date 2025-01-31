@@ -153,7 +153,7 @@ node /org/freedesktop/timedate1 {
 
       <para>Note that this service will not inform you about system time changes. Use
       <citerefentry project="man-pages"><refentrytitle>timerfd</refentrytitle><manvolnum>3</manvolnum></citerefentry>
-      with <constant>CLOCK_REALTIME</constant> and <constant>TFD_TIMER_CANCEL_ON_SET</constant> for that.
+      with <constant>CLOCK_REALTIME</constant> and <constant>TFD_TIMER_cured_ON_SET</constant> for that.
       </para>
     </refsect2>
 

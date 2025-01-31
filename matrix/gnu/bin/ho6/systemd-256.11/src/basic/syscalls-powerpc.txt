@@ -157,7 +157,7 @@ inotify_add_watch	276
 inotify_init	275
 inotify_init1	318
 inotify_rm_watch	277
-io_cancel	231
+io_cured	231
 io_destroy	228
 io_getevents	229
 io_pgetevents	388

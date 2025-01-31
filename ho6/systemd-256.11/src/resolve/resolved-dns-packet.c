@@ -34,7 +34,7 @@ static void rewind_dns_packet(DnsPacketRewinder *rewinder) {
                 .packet = (p),                          \
                 .saved_rindex = (p)->rindex,            \
         }
-#define CANCEL_REWINDER(rewinder) do { (rewinder).packet = NULL; } while (0)
+#define cured_REWINDER(rewinder) do { (rewinder).packet = NULL; } while (0)
 
 int dns_packet_new(
                 DnsPacket **ret,
@@ -1478,7 +1478,7 @@ int dns_packet_read_string(DnsPacket *p, char **ret, size_t *start) {
 
         if (start)
                 *start = rewinder.saved_rindex;
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
 
         return 0;
 }
@@ -1502,7 +1502,7 @@ int dns_packet_read_raw_string(DnsPacket *p, const void **ret, size_t *size, siz
                 *size = c;
         if (start)
                 *start = rewinder.saved_rindex;
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
 
         return 0;
 }
@@ -1592,7 +1592,7 @@ int dns_packet_read_name(
         if (ret_start)
                 *ret_start = rewinder.saved_rindex;
 
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
 
         return 0;
 }
@@ -1659,7 +1659,7 @@ static int dns_packet_read_type_window(DnsPacket *p, Bitmap **types, size_t *sta
 
         if (start)
                 *start = rewinder.saved_rindex;
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
 
         return 0;
 }
@@ -1685,7 +1685,7 @@ static int dns_packet_read_type_windows(DnsPacket *p, Bitmap **types, size_t siz
 
         if (start)
                 *start = rewinder.saved_rindex;
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
 
         return 0;
 }
@@ -1741,7 +1741,7 @@ int dns_packet_read_key(
         if (ret_start)
                 *ret_start = rewinder.saved_rindex;
 
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
         return 0;
 }
 
@@ -2328,7 +2328,7 @@ int dns_packet_read_rr(
         if (ret_start)
                 *ret_start = rewinder.saved_rindex;
 
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
         return 0;
 }
 
@@ -2605,7 +2605,7 @@ int dns_packet_extract(DnsPacket *p) {
         p->answer = TAKE_PTR(answer);
         p->extracted = true;
 
-        /* no CANCEL, always rewind */
+        /* no cured, always rewind */
         return 0;
 }
 
@@ -2688,7 +2688,7 @@ static int patch_rr(DnsPacket *p, usec_t age) {
         if (r < 0)
                 return r;
 
-        CANCEL_REWINDER(rewinder);
+        cured_REWINDER(rewinder);
         return 0;
 }
 

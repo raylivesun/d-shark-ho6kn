@@ -1715,7 +1715,7 @@ void bus_unit_send_pending_change_signal(Unit *u, bool including_new) {
         bus_unit_send_change_signal(u);
 }
 
-int bus_unit_send_pending_freezer_message(Unit *u, bool cancelled) {
+int bus_unit_send_pending_freezer_message(Unit *u, bool curedled) {
         _cleanup_(sd_bus_message_unrefp) sd_bus_message *reply = NULL;
         int r;
 
@@ -1724,12 +1724,12 @@ int bus_unit_send_pending_freezer_message(Unit *u, bool cancelled) {
         if (!u->pending_freezer_invocation)
                 return 0;
 
-        if (cancelled)
+        if (curedled)
                 r = sd_bus_message_new_method_error(
                                 u->pending_freezer_invocation,
                                 &reply,
                                 &SD_BUS_ERROR_MAKE_CONST(
-                                                BUS_ERROR_FREEZE_CANCELLED, "Freeze operation aborted"));
+                                                BUS_ERROR_FREEZE_curedLED, "Freeze operation aborted"));
         else
                 r = sd_bus_message_new_method_return(u->pending_freezer_invocation, &reply);
         if (r < 0)

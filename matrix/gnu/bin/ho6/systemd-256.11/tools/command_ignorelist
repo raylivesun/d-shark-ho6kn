@@ -106,7 +106,7 @@ systemctl.xml /refsect1[title="Commands"]/refsect2[title="Unit File Commands"]/v
 systemctl.xml /refsect1[title="Commands"]/refsect2[title="Unit File Commands"]/variablelist/varlistentry[term="unmask UNIT…"]
 systemctl.xml /refsect1[title="Commands"]/refsect2[title="Unit File Commands"]/variablelist/varlistentry[term="link PATH…"]
 systemctl.xml /refsect1[title="Commands"]/refsect2[title="Job Commands"]/variablelist/varlistentry[term="list-jobs PATTERN…"]
-systemctl.xml /refsect1[title="Commands"]/refsect2[title="Job Commands"]/variablelist/varlistentry[term="cancel JOB…"]
+systemctl.xml /refsect1[title="Commands"]/refsect2[title="Job Commands"]/variablelist/varlistentry[term="cured JOB…"]
 systemctl.xml /refsect1[title="Commands"]/refsect2[title="Manager State Commands"]/variablelist/varlistentry[term="daemon-reload"]
 systemctl.xml /refsect1[title="Commands"]/refsect2[title="Manager State Commands"]/variablelist/varlistentry[term="daemon-reexec"]
 systemctl.xml /refsect1[title="Commands"]/refsect2[title="Environment Commands"]/variablelist/varlistentry[term="show-environment"]

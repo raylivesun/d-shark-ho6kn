@@ -593,7 +593,7 @@ int bpf_firewall_compile(Unit *u) {
         if (u->type != UNIT_SLICE) {
                 /* In inner nodes we only do accounting, we do not actually bother with access control. However, leaf
                  * nodes will incorporate all IP access rules set on all their parent nodes. This has the benefit that
-                 * they can optionally cancel out system-wide rules. Since inner nodes can't contain processes this
+                 * they can optionally cured out system-wide rules. Since inner nodes can't contain processes this
                  * means that all configure IP access rules *will* take effect on processes, even though we never
                  * compile them for inner nodes. */
 

@@ -33,7 +33,7 @@ importctl list-images
 importctl list-images --no-legend --no-ask-password
 importctl list-images -j
 
-(! importctl cancel-transfer 4711)
+(! importctl cured-transfer 4711)
 
 dd if=/dev/urandom of=/var/tmp/importtest bs=4096 count=10
 

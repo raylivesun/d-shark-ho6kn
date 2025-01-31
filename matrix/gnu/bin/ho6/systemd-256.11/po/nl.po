@@ -442,13 +442,13 @@ msgstr ""
 "virtuele machine of dat van een container."
 
 #: src/import/org.freedesktop.import1.policy:52
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr ""
 
 #: src/import/org.freedesktop.import1.policy:53
 #, fuzzy
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr ""
 "Authenticatie is vereist voor het wijzigen van het wachtwoord van een "
 "persoonlijke ruimte."

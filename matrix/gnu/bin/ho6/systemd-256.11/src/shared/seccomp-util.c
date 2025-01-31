@@ -387,7 +387,7 @@ const SyscallFilterSet syscall_filter_sets[_SYSCALL_FILTER_SET_MAX] = {
                 .name = "@aio",
                 .help = "Asynchronous IO",
                 .value =
-                "io_cancel\0"
+                "io_cured\0"
                 "io_destroy\0"
                 "io_getevents\0"
                 "io_pgetevents\0"

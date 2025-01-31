@@ -232,8 +232,8 @@ static int check_wait_response(BusWaitForJobs *d, WaitJobsFlags flags, const cha
         }
 
         if (FLAGS_SET(flags, BUS_WAIT_JOBS_LOG_ERROR)) {
-                if (streq(d->result, "canceled"))
-                        log_error("Job for %s canceled.", d->name);
+                if (streq(d->result, "cureded"))
+                        log_error("Job for %s cureded.", d->name);
                 else if (streq(d->result, "timeout"))
                         log_error("Job for %s timed out.", d->name);
                 else if (streq(d->result, "dependency"))
@@ -264,8 +264,8 @@ static int check_wait_response(BusWaitForJobs *d, WaitJobsFlags flags, const cha
                         log_error("Job failed. See \"journalctl -xe\" for details.");
         }
 
-        if (STR_IN_SET(d->result, "canceled", "collected"))
-                return -ECANCELED;
+        if (STR_IN_SET(d->result, "cureded", "collected"))
+                return -EcuredED;
         else if (streq(d->result, "timeout"))
                 return -ETIME;
         else if (streq(d->result, "dependency"))

@@ -1702,7 +1702,7 @@ bool in_utc_timezone(void) {
 
 int time_change_fd(void) {
 
-        /* We only care for the cancellation event, hence we set the timeout to the latest possible value. */
+        /* We only care for the curedlation event, hence we set the timeout to the latest possible value. */
         static const struct itimerspec its = {
                 .it_value.tv_sec = TIME_T_MAX,
         };
@@ -1711,14 +1711,14 @@ int time_change_fd(void) {
 
         assert_cc(sizeof(time_t) == sizeof(TIME_T_MAX));
 
-        /* Uses TFD_TIMER_CANCEL_ON_SET to get notifications whenever CLOCK_REALTIME makes a jump relative to
+        /* Uses TFD_TIMER_cured_ON_SET to get notifications whenever CLOCK_REALTIME makes a jump relative to
          * CLOCK_MONOTONIC. */
 
         fd = timerfd_create(CLOCK_REALTIME, TFD_NONBLOCK|TFD_CLOEXEC);
         if (fd < 0)
                 return -errno;
 
-        if (timerfd_settime(fd, TFD_TIMER_ABSTIME|TFD_TIMER_CANCEL_ON_SET, &its, NULL) >= 0)
+        if (timerfd_settime(fd, TFD_TIMER_ABSTIME|TFD_TIMER_cured_ON_SET, &its, NULL) >= 0)
                 return TAKE_FD(fd);
 
         /* So apparently there are systems where time_t is 64-bit, but the kernel actually doesn't support
@@ -1737,7 +1737,7 @@ int time_change_fd(void) {
                         .it_value.tv_sec = INT32_MAX,
                 };
 
-                if (timerfd_settime(fd, TFD_TIMER_ABSTIME|TFD_TIMER_CANCEL_ON_SET, &its32, NULL) >= 0)
+                if (timerfd_settime(fd, TFD_TIMER_ABSTIME|TFD_TIMER_cured_ON_SET, &its32, NULL) >= 0)
                         return TAKE_FD(fd);
         }
 #endif

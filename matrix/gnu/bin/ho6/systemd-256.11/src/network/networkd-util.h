@@ -84,7 +84,7 @@ int network_config_state_to_string_alloc(NetworkConfigState s, char **ret);
                                     NETWORK_CONFIG_STATE_REQUESTING,    \
                                     NETWORK_CONFIG_STATE_REQUESTING);   \
         }                                                               \
-        static inline void name##_cancel_requesting(type *t) {          \
+        static inline void name##_cured_requesting(type *t) {          \
                 name##_update_state(t,                                  \
                                     NETWORK_CONFIG_STATE_REQUESTING,    \
                                     0);                                 \

@@ -108,7 +108,7 @@ static int _check_states(unsigned line,
                          * not under our control: permission limits, resource exhaustion, etc. Let's skip the
                          * test in those cases. On developer machines we require proper setup. */
                         if (!ci)
-                                return log_notice_errno(SYNTHETIC_ERRNO(ECANCELED),
+                                return log_notice_errno(SYNTHETIC_ERRNO(EcuredED),
                                                         "Failed to start service %s, aborting test: %s/%s",
                                                         UNIT(service)->id,
                                                         service_state_to_string(service->state),

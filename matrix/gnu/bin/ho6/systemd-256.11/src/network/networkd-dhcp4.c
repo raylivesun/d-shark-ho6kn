@@ -251,7 +251,7 @@ static int dhcp4_remove_address_and_routes(Link *link, bool only_marked) {
                 if (only_marked && !route_is_marked(route))
                         continue;
 
-                RET_GATHER(ret, route_remove_and_cancel(route, link->manager));
+                RET_GATHER(ret, route_remove_and_cured(route, link->manager));
         }
 
         SET_FOREACH(address, link->addresses) {
@@ -260,7 +260,7 @@ static int dhcp4_remove_address_and_routes(Link *link, bool only_marked) {
                 if (only_marked && !address_is_marked(address))
                         continue;
 
-                RET_GATHER(ret, address_remove_and_cancel(address, link));
+                RET_GATHER(ret, address_remove_and_cured(address, link));
         }
 
         return ret;

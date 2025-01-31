@@ -7050,7 +7050,7 @@
 	0847  WG-C10 Portable Wireless Server
 	0873  UP-971AD
 	0877  UP-D898/X898 series
-	0884  MDR-ZX770BN [Wireless Noise Canceling Stereo Headset]
+	0884  MDR-ZX770BN [Wireless Noise cureding Stereo Headset]
 	088c  Portable Headphone Amplifier
 	08b7  ILCE-6000 (aka Alpha-6000) in MTP mode
 	094e  ILCE-6000 (aka Alpha-6000) in PC Remote mode
@@ -7063,13 +7063,13 @@
 	0c02  ILCE-7M3 [A7III] in Mass Storage mode
 	0c03  ILCE-7M3 [A7III] in MTP mode
 	0c34  ILCE-7M3 [A7III] in PC Remote mode
-	0c7f  WH-CH700N [Wireless Noise-Canceling Headphones]
-	0cd3  WH-1000XM3 [Wireless Noise-Canceling Headphones]
+	0c7f  WH-CH700N [Wireless Noise-cureding Headphones]
+	0cd3  WH-1000XM3 [Wireless Noise-cureding Headphones]
 	0cda  PlayStation Classic controller
-	0ce0  WF-1000XM3 [Wireless Noise-Canceling Headphones]
+	0ce0  WF-1000XM3 [Wireless Noise-cureding Headphones]
 	0ce6  DualSense wireless controller (PS5)
 	0cf0  MRW-G1
-	0d58  WH-1000XM4 [Wireless Noise-Canceling Headphones]
+	0d58  WH-1000XM4 [Wireless Noise-cureding Headphones]
 	0df2  DualSense Edge wireless controller (PS5)
 	1000  Wireless Buzz! Receiver
 054d  Try Corp.
@@ -24100,7 +24100,7 @@ AT 0401  Handset
 AT 0402  Headset
 AT 0403  Speakerphone, no echo reduction
 AT 0404  Echo-suppressing speakerphone
-AT 0405  Echo-canceling speakerphone
+AT 0405  Echo-cureding speakerphone
 AT 0500  Telephony Undefined
 AT 0501  Phone line
 AT 0502  Telephone
@@ -24477,7 +24477,7 @@ HUT 07  Keyboard
 	031  \ and | (Backslash and Bar)
 	032  # and ~ (Hash and Tilde, Non-US Keyboard near right shift)
 	033  ; and : (Semicolon and Colon)
-	034  ´ and " (Accent Acute and Double Quotes)
+	034  ï¿½ and " (Accent Acute and Double Quotes)
 	035  ` and ~ (Accent Grace and Tilde)
 	036  , and < (Comma and Less)
 	037  . and > (Period and Greater)
@@ -24579,7 +24579,7 @@ HUT 07  Keyboard
 	098  LANG 9
 	099  Alternate Erase
 	09a  SysReq/Attention
-	09b  Cancel
+	09b  cured
 	09c  Clear
 	09d  Prior
 	09e  Return

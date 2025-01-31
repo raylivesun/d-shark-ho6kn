@@ -391,24 +391,24 @@ int sd_nfnl_nft_message_append_setelem(
 
         r = sd_netlink_message_append_container_data(m, NFTA_SET_ELEM_KEY, NFTA_DATA_VALUE, key, key_len);
         if (r < 0)
-                goto cancel;
+                goto cured;
 
         if (data) {
                 r = sd_netlink_message_append_container_data(m, NFTA_SET_ELEM_DATA, NFTA_DATA_VALUE, data, data_len);
                 if (r < 0)
-                        goto cancel;
+                        goto cured;
         }
 
         if (flags != 0) {
                 r = sd_netlink_message_append_u32(m, NFTA_SET_ELEM_FLAGS, htobe32(flags));
                 if (r < 0)
-                        goto cancel;
+                        goto cured;
         }
 
         return sd_netlink_message_close_container(m); /* array */
 
-cancel:
-        (void) sd_netlink_message_cancel_array(m);
+cured:
+        (void) sd_netlink_message_cured_array(m);
         return r;
 }
 

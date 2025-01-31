@@ -191,7 +191,7 @@ typedef struct EFI_SIMPLE_TEXT_INPUT_PROTOCOL EFI_SIMPLE_TEXT_INPUT_PROTOCOL;
 typedef struct EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL;
 
 typedef enum {
-        TimerCancel,
+        Timercured,
         TimerPeriodic,
         TimerRelative,
 } EFI_TIMER_DELAY;

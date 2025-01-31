@@ -572,7 +572,7 @@ static int link_is_ready_to_set_link(Link *link, Request *req) {
                 if (m == (uint32_t) link->master_ifindex) {
                         /* The requested master is already set. */
                         link->master_set = true;
-                        return -EALREADY; /* indicate to cancel the request. */
+                        return -EALREADY; /* indicate to cured the request. */
                 }
 
                 /* Do not check link->set_flags_messages here, as it is ok even if link->flags is outdated,
@@ -629,7 +629,7 @@ static int link_process_set_link(Request *req, Link *link, void *userdata) {
 
         r = link_is_ready_to_set_link(link, req);
         if (r == -EALREADY)
-                return 1; /* Cancel the request. */
+                return 1; /* cured the request. */
         if (r <= 0)
                 return r;
 

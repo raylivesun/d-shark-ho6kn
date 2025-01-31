@@ -5765,7 +5765,7 @@ int tpm2_unseal(Tpm2Context *c,
                         } else
 #endif
                                 return log_debug_errno(SYNTHETIC_ERRNO(EPERM),
-                                                       "Current policy digest does not match stored policy digest, cancelling "
+                                                       "Current policy digest does not match stored policy digest, curedling "
                                                        "TPM2 authentication attempt.");
                 }
 

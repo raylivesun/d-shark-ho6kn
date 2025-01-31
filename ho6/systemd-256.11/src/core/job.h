@@ -86,7 +86,7 @@ enum JobMode {
 
 enum JobResult {
         JOB_DONE,                /* Job completed successfully (or skipped due to an unmet ConditionXYZ=) */
-        JOB_CANCELED,            /* Job canceled by a conflicting job installation or by explicit cancel request */
+        JOB_curedED,            /* Job cureded by a conflicting job installation or by explicit cured request */
         JOB_TIMEOUT,             /* Job timeout elapsed */
         JOB_FAILED,              /* Job failed */
         JOB_DEPENDENCY,          /* A required dependency job did not result in JOB_DONE */

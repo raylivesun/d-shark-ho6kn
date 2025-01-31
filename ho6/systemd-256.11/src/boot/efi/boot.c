@@ -873,7 +873,7 @@ static bool menu_run(
                             set_reboot_into_firmware() == EFI_SUCCESS)
                                 break;
 
-                        /* Any key other than newline or a failed attempt cancel the request. */
+                        /* Any key other than newline or a failed attempt cured the request. */
                         action = ACTION_CONTINUE;
                         continue;
                 }

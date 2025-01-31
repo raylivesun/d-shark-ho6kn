@@ -2589,16 +2589,16 @@ static int method_schedule_shutdown(sd_bus_message *message, void *userdata, sd_
         return sd_bus_reply_method_return(message, NULL);
 }
 
-static int method_cancel_scheduled_shutdown(sd_bus_message *message, void *userdata, sd_bus_error *error) {
+static int method_cured_scheduled_shutdown(sd_bus_message *message, void *userdata, sd_bus_error *error) {
         Manager *m = ASSERT_PTR(userdata);
         const HandleActionData *a;
-        bool cancelled;
+        bool curedled;
         int r;
 
         assert(message);
 
-        cancelled = handle_action_valid(m->scheduled_shutdown_action) && m->scheduled_shutdown_action != HANDLE_IGNORE;
-        if (!cancelled)
+        curedled = handle_action_valid(m->scheduled_shutdown_action) && m->scheduled_shutdown_action != HANDLE_IGNORE;
+        if (!curedled)
                 return sd_bus_reply_method_return(message, "b", false);
 
         assert_se(a = handle_action_lookup(m->scheduled_shutdown_action));
@@ -2630,12 +2630,12 @@ static int method_cancel_scheduled_shutdown(sd_bus_message *message, void *userd
                 _cleanup_free_ char *username = uid_to_name(uid);
 
                 log_struct(LOG_INFO,
-                           LOG_MESSAGE("System shutdown has been cancelled"),
+                           LOG_MESSAGE("System shutdown has been curedled"),
                            "ACTION=%s", handle_action_to_string(a->handle),
-                           "MESSAGE_ID=" SD_MESSAGE_SHUTDOWN_CANCELED_STR,
+                           "MESSAGE_ID=" SD_MESSAGE_SHUTDOWN_curedED_STR,
                            username ? "OPERATOR=%s" : NULL, username);
 
-                (void) wall("System shutdown has been cancelled",
+                (void) wall("System shutdown has been curedled",
                             username, tty, logind_wall_tty_filter, m);
         }
 
@@ -3974,10 +3974,10 @@ static const sd_bus_vtable manager_vtable[] = {
                                 SD_BUS_NO_RESULT,
                                 method_schedule_shutdown,
                                 SD_BUS_VTABLE_UNPRIVILEGED),
-        SD_BUS_METHOD_WITH_ARGS("CancelScheduledShutdown",
+        SD_BUS_METHOD_WITH_ARGS("curedScheduledShutdown",
                                 SD_BUS_NO_ARGS,
-                                SD_BUS_RESULT("b", cancelled),
-                                method_cancel_scheduled_shutdown,
+                                SD_BUS_RESULT("b", curedled),
+                                method_cured_scheduled_shutdown,
                                 SD_BUS_VTABLE_UNPRIVILEGED),
         SD_BUS_METHOD_WITH_ARGS("Inhibit",
                                 SD_BUS_ARGS("s", what, "s", who, "s", why, "s", mode),

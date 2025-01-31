@@ -421,7 +421,7 @@ static int bus_socket_auth_verify_server(sd_bus *b) {
 
                 } else if (line_begins(line, l, "AUTH"))
                         r = bus_socket_auth_write(b, "REJECTED EXTERNAL ANONYMOUS\r\n");
-                else if (line_equals(line, l, "CANCEL") ||
+                else if (line_equals(line, l, "cured") ||
                          line_begins(line, l, "ERROR")) {
 
                         b->auth = _BUS_AUTH_INVALID;

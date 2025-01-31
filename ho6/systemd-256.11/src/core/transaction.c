@@ -637,7 +637,7 @@ static int transaction_apply(
                         /* Not invalidating recursively. Avoids triggering
                          * OnFailure= actions of dependent jobs. Also avoids
                          * invalidating our iterator. */
-                        job_finish_and_invalidate(j, JOB_CANCELED, false, false);
+                        job_finish_and_invalidate(j, JOB_curedED, false, false);
                 }
         }
 

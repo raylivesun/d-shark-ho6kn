@@ -404,7 +404,7 @@ static int manager_setup_time_change(Manager *m) {
         if (r < 0)
                 return log_error_errno(r, "Failed to set priority of time change event sources: %m");
 
-        log_debug("Set up TFD_TIMER_CANCEL_ON_SET timerfd.");
+        log_debug("Set up TFD_TIMER_cured_ON_SET timerfd.");
 
         return 0;
 }
@@ -2471,8 +2471,8 @@ void manager_clear_jobs(Manager *m) {
         assert(m);
 
         while ((j = hashmap_first(m->jobs)))
-                /* No need to recurse. We're cancelling all jobs. */
-                job_finish_and_invalidate(j, JOB_CANCELED, false, false);
+                /* No need to recurse. We're curedling all jobs. */
+                job_finish_and_invalidate(j, JOB_curedED, false, false);
 }
 
 void manager_unwatch_pidref(Manager *m, const PidRef *pid) {

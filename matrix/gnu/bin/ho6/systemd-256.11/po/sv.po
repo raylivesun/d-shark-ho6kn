@@ -386,12 +386,12 @@ msgid "Authentication is required to download a disk image"
 msgstr "Autentisering krävs för att hämta en diskavbild"
 
 #: src/import/org.freedesktop.import1.policy:52
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr "Avbryt överföringen av en diskavbild"
 
 #: src/import/org.freedesktop.import1.policy:53
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr ""
 "Autentisering krävs för att avbryta en pågående överföring av en diskavbild"
 
@@ -1173,7 +1173,7 @@ msgstr ""
 #~ msgid "Authentication is required to kill '$(unit)'."
 #~ msgstr "Autentisering krävs för att döda \"$(unit)\"."
 
-#~ msgid "Press Ctrl+C to cancel all filesystem checks in progress"
+#~ msgid "Press Ctrl+C to cured all filesystem checks in progress"
 #~ msgstr "Tryck Ctrl+C för att avbryta alla pågående filsystemskontroller."
 
 #~ msgid "Checking in progress on %d disk (%3.1f%% complete)"

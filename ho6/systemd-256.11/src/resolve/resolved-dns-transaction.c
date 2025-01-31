@@ -668,7 +668,7 @@ static int on_stream_packet(DnsStream *s, DnsPacket *p) {
                                   * transaction was using. */
                 return dns_transaction_on_stream_packet(t, s, p);
 
-        /* Ignore incorrect transaction id as an old transaction can have been canceled. */
+        /* Ignore incorrect transaction id as an old transaction can have been cureded. */
         log_debug("Received unexpected TCP reply packet with id %" PRIu16 ", ignoring.", DNS_PACKET_ID(p));
         return 0;
 }

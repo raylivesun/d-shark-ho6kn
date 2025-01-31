@@ -400,13 +400,13 @@ msgstr ""
 "Pro stažení obrazu virtuálního stroje nebo kontejneru je vyžadováno ověření"
 
 #: src/import/org.freedesktop.import1.policy:52
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr ""
 
 #: src/import/org.freedesktop.import1.policy:53
 #, fuzzy
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr "Pro změnu hesla domovského adresáře uživatele je vyžadováno ověření."
 
 #: src/locale/org.freedesktop.locale1.policy:22

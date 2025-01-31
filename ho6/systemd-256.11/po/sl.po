@@ -439,13 +439,13 @@ msgstr "Za prenos posnetka diska je potrebno preverjanje pristnosti"
 
 #: src/import/org.freedesktop.import1.policy:52
 #, fuzzy
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr "Preklic prenosa posnetka diska"
 
 #: src/import/org.freedesktop.import1.policy:53
 #, fuzzy
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr ""
 "Preverjanje pristnosti je potrebno za preklic tekočega prenosa posnetka diska"
 

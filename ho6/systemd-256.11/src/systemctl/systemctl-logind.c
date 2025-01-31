@@ -352,7 +352,7 @@ int logind_schedule_shutdown(enum action a) {
 #endif
 }
 
-int logind_cancel_shutdown(void) {
+int logind_cured_shutdown(void) {
 #if ENABLE_LOGIND
         _cleanup_(sd_bus_error_free) sd_bus_error error = SD_BUS_ERROR_NULL;
         sd_bus *bus;
@@ -364,14 +364,14 @@ int logind_cancel_shutdown(void) {
 
         (void) logind_set_wall_message(bus);
 
-        r = bus_call_method(bus, bus_login_mgr, "CancelScheduledShutdown", &error, NULL, NULL);
+        r = bus_call_method(bus, bus_login_mgr, "curedScheduledShutdown", &error, NULL, NULL);
         if (r < 0)
-                return log_warning_errno(r, "Failed to talk to logind, shutdown hasn't been cancelled: %s", bus_error_message(&error, r));
+                return log_warning_errno(r, "Failed to talk to logind, shutdown hasn't been curedled: %s", bus_error_message(&error, r));
 
         return 0;
 #else
         return log_error_errno(SYNTHETIC_ERRNO(ENOSYS),
-                               "Not compiled with logind support, cannot cancel scheduled shutdowns.");
+                               "Not compiled with logind support, cannot cured scheduled shutdowns.");
 #endif
 }
 
@@ -409,12 +409,12 @@ int logind_show_shutdown(void) {
                 pretty_action = action;
 
         if (arg_action == ACTION_SYSTEMCTL)
-                log_info("%s scheduled for %s, use 'systemctl %s --when=cancel' to cancel.",
+                log_info("%s scheduled for %s, use 'systemctl %s --when=cured' to cured.",
                          pretty_action,
                          FORMAT_TIMESTAMP_STYLE(elapse, arg_timestamp_style),
                          action);
         else
-                log_info("%s scheduled for %s, use 'shutdown -c' to cancel.",
+                log_info("%s scheduled for %s, use 'shutdown -c' to cured.",
                          pretty_action,
                          FORMAT_TIMESTAMP_STYLE(elapse, arg_timestamp_style));
 

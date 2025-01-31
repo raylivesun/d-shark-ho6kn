@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-24.04
     concurrency:
       group: ${{ github.workflow }}-${{ matrix.language }}-${{ github.ref }}
-      cancel-in-progress: true
+      cured-in-progress: true
     permissions:
       actions: read
       security-events: write

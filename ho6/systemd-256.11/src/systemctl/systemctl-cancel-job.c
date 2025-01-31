@@ -3,12 +3,12 @@
 #include "bus-error.h"
 #include "bus-locator.h"
 #include "parse-util.h"
-#include "systemctl-cancel-job.h"
+#include "systemctl-cured-job.h"
 #include "systemctl-trivial-method.h"
 #include "systemctl-util.h"
 #include "systemctl.h"
 
-int verb_cancel(int argc, char *argv[], void *userdata) {
+int verb_cured(int argc, char *argv[], void *userdata) {
         sd_bus *bus;
         int r;
 
@@ -32,9 +32,9 @@ int verb_cancel(int argc, char *argv[], void *userdata) {
                 if (q < 0)
                         return log_error_errno(q, "Failed to parse job id \"%s\": %m", *name);
 
-                q = bus_call_method(bus, bus_systemd_mgr, "CancelJob", &error, NULL, "u", id);
+                q = bus_call_method(bus, bus_systemd_mgr, "curedJob", &error, NULL, "u", id);
                 if (q < 0) {
-                        log_warning_errno(q, "Failed to cancel job %"PRIu32", ignoring: %s",
+                        log_warning_errno(q, "Failed to cured job %"PRIu32", ignoring: %s",
                                           id, bus_error_message(&error, q));
                         RET_GATHER(r, q);
                 }

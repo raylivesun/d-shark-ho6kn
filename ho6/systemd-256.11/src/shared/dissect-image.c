@@ -2887,10 +2887,10 @@ static int verity_partition(
 
         check:
                 /* To avoid races, disable automatic removal on umount while setting up the new device. Restore it on failure. */
-                r = dm_deferred_remove_cancel(name);
+                r = dm_deferred_remove_cured(name);
                 /* -EBUSY and -ENXIO: the device has already been removed or being removed. We cannot
                  * use the device, try to open again. See target_message() in drivers/md/dm-ioctl.c
-                 * and dm_cancel_deferred_remove() in drivers/md/dm.c */
+                 * and dm_cured_deferred_remove() in drivers/md/dm.c */
                 if (IN_SET(r, -EBUSY, -ENXIO))
                         goto try_again;
                 if (r < 0)

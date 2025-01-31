@@ -220,31 +220,31 @@ static int journal_file_set_online(JournalFile *f) {
 
                 case OFFLINE_SYNCING: {
                                 OfflineState tmp_state = OFFLINE_SYNCING;
-                                if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_CANCEL,
+                                if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_cured,
                                     false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST))
                                         continue;
                         }
-                        /* Canceled syncing prior to offlining, no need to wait. */
+                        /* cureded syncing prior to offlining, no need to wait. */
                         wait = false;
                         break;
 
                 case OFFLINE_AGAIN_FROM_SYNCING: {
                                 OfflineState tmp_state = OFFLINE_AGAIN_FROM_SYNCING;
-                                if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_CANCEL,
+                                if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_cured,
                                     false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST))
                                         continue;
                         }
-                        /* Canceled restart from syncing, no need to wait. */
+                        /* cureded restart from syncing, no need to wait. */
                         wait = false;
                         break;
 
                 case OFFLINE_AGAIN_FROM_OFFLINING: {
                                 OfflineState tmp_state = OFFLINE_AGAIN_FROM_OFFLINING;
-                                if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_CANCEL,
+                                if (!__atomic_compare_exchange_n(&f->offline_state, &tmp_state, OFFLINE_cured,
                                     false, __ATOMIC_SEQ_CST, __ATOMIC_SEQ_CST))
                                         continue;
                         }
-                        /* Canceled restart from offlining, must wait for offlining to complete however. */
+                        /* cureded restart from offlining, must wait for offlining to complete however. */
                         _fallthrough_;
                 default: {
                         int r;

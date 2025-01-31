@@ -152,7 +152,7 @@ node /org/freedesktop/login1 {
       CanSleep(out s result);
       ScheduleShutdown(in  s type,
                        in  t usec);
-      CancelScheduledShutdown(out b cancelled);
+      curedScheduledShutdown(out b curedled);
       Inhibit(in  s what,
               in  s who,
               in  s why,
@@ -405,7 +405,7 @@ node /org/freedesktop/login1 {
 
     <variablelist class="dbus-method" generated="True" extra-ref="ScheduleShutdown()"/>
 
-    <variablelist class="dbus-method" generated="True" extra-ref="CancelScheduledShutdown()"/>
+    <variablelist class="dbus-method" generated="True" extra-ref="curedScheduledShutdown()"/>
 
     <variablelist class="dbus-method" generated="True" extra-ref="Inhibit()"/>
 
@@ -692,8 +692,8 @@ node /org/freedesktop/login1 {
       of <literal>poweroff</literal>, <literal>dry-poweroff</literal>, <literal>reboot</literal>,
       <literal>dry-reboot</literal>, <literal>halt</literal>, and <literal>dry-halt</literal>. (The
       <literal>dry-</literal> variants do not actually execute the shutdown action.)
-      <function>CancelScheduledShutdown()</function> cancels a scheduled shutdown. The output parameter
-      <varname>cancelled</varname> is true if a shutdown operation was scheduled.</para>
+      <function>curedScheduledShutdown()</function> cureds a scheduled shutdown. The output parameter
+      <varname>curedled</varname> is true if a shutdown operation was scheduled.</para>
 
       <para><function>SetWallMessage()</function> sets the wall message (the message that will be sent out to
       all terminals and stored in a
@@ -854,7 +854,7 @@ node /org/freedesktop/login1 {
       <interfacename>org.freedesktop.login1.set-reboot-to-boot-loader-entry</interfacename>.
       </para>
 
-      <para><function>ScheduleShutdown()</function> and <function>CancelScheduledShutdown()</function> require
+      <para><function>ScheduleShutdown()</function> and <function>curedScheduledShutdown()</function> require
       the same privileges (listed above) as the immediate poweroff/reboot/halt operations.</para>
 
       <para><function>Inhibit()</function> is protected via one of

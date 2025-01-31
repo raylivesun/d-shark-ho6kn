@@ -300,7 +300,7 @@ TEST(async_destroy_callback) {
 
         assert_se(!sd_netlink_message_unref(m));
 
-        /* destroy callback is called when asynchronous call is cancelled, that is, slot is freed. */
+        /* destroy callback is called when asynchronous call is curedled, that is, slot is freed. */
         assert_se(sd_rtnl_message_new_link(rtnl, &m, RTM_GETLINK, ifindex) >= 0);
         assert_se(sd_netlink_call_async(rtnl, &slot, m, link_handler2, test_async_object_destroy, t, 0, NULL) >= 0);
 

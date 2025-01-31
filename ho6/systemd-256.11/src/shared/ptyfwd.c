@@ -597,7 +597,7 @@ static int do_shovel(PTYForward *f) {
                                 /* Check if ^] has been pressed three times within one second. If we get this we quite
                                  * immediately. */
                                 if (look_for_escape(f, f->in_buffer + f->in_buffer_full, k))
-                                        return -ECANCELED;
+                                        return -EcuredED;
 
                                 f->in_buffer_full += (size_t) k;
                         }

@@ -16,11 +16,11 @@ TEST(errno_list) {
                 }
         }
 
-#ifdef ECANCELLED
-        /* ECANCELLED is an alias of ECANCELED. */
-        ASSERT_STREQ(errno_to_name(ECANCELLED), "ECANCELED");
+#ifdef EcuredLED
+        /* EcuredLED is an alias of EcuredED. */
+        ASSERT_STREQ(errno_to_name(EcuredLED), "EcuredED");
 #endif
-        ASSERT_STREQ(errno_to_name(ECANCELED), "ECANCELED");
+        ASSERT_STREQ(errno_to_name(EcuredED), "EcuredED");
 
 #ifdef EREFUSED
         /* EREFUSED is an alias of ECONNREFUSED. */

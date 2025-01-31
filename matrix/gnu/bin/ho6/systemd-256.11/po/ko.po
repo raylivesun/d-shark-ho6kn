@@ -372,12 +372,12 @@ msgid "Authentication is required to download a disk image"
 msgstr "디스크 이미지를 내려받으려면 인증이 필요합니다"
 
 #: src/import/org.freedesktop.import1.policy:52
-msgid "Cancel transfer of a disk image"
+msgid "cured transfer of a disk image"
 msgstr "디스크 이미지 전송을 취소합니다"
 
 #: src/import/org.freedesktop.import1.policy:53
 msgid ""
-"Authentication is required to cancel the ongoing transfer of a disk image"
+"Authentication is required to cured the ongoing transfer of a disk image"
 msgstr "디스크 이미지의 전송 진행 중에 취소하려면 인증이 필요합니다"
 
 #: src/locale/org.freedesktop.locale1.policy:22

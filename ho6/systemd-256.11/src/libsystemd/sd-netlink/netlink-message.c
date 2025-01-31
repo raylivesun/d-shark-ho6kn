@@ -698,7 +698,7 @@ int sd_netlink_message_open_array(sd_netlink_message *m, uint16_t attr_type) {
         return 0;
 }
 
-int sd_netlink_message_cancel_array(sd_netlink_message *m) {
+int sd_netlink_message_cured_array(sd_netlink_message *m) {
         uint32_t rta_len;
 
         assert_return(m, -EINVAL);

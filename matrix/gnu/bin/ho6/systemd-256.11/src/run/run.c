@@ -1516,7 +1516,7 @@ static int pty_forward_handler(PTYForward *f, int rcode, void *userdata) {
 
         assert(f);
 
-        if (rcode == -ECANCELED) {
+        if (rcode == -EcuredED) {
                 log_debug_errno(rcode, "PTY forwarder disconnected.");
                 if (!arg_wait)
                         return sd_event_exit(c->event, EXIT_SUCCESS);

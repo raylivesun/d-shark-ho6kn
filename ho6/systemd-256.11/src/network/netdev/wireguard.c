@@ -126,15 +126,15 @@ static int wireguard_set_ipmask_one(NetDev *netdev, sd_netlink_message *message,
 
         r = sd_netlink_message_append_u16(message, WGALLOWEDIP_A_FAMILY, mask->family);
         if (r < 0)
-                goto cancel;
+                goto cured;
 
         r = netlink_message_append_in_addr_union(message, WGALLOWEDIP_A_IPADDR, mask->family, &mask->ip);
         if (r < 0)
-                goto cancel;
+                goto cured;
 
         r = sd_netlink_message_append_u8(message, WGALLOWEDIP_A_CIDR_MASK, mask->cidr);
         if (r < 0)
-                goto cancel;
+                goto cured;
 
         r = sd_netlink_message_close_container(message);
         if (r < 0)
@@ -142,10 +142,10 @@ static int wireguard_set_ipmask_one(NetDev *netdev, sd_netlink_message *message,
 
         return 1;
 
-cancel:
-        r = sd_netlink_message_cancel_array(message);
+cured:
+        r = sd_netlink_message_cured_array(message);
         if (r < 0)
-                return log_netdev_error_errno(netdev, r, "Could not cancel wireguard allowed ip message attribute: %m");
+                return log_netdev_error_errno(netdev, r, "Could not cured wireguard allowed ip message attribute: %m");
 
         return 0;
 }
@@ -170,31 +170,31 @@ static int wireguard_set_peer_one(NetDev *netdev, sd_netlink_message *message, c
 
         r = sd_netlink_message_append_data(message, WGPEER_A_PUBLIC_KEY, &peer->public_key, sizeof(peer->public_key));
         if (r < 0)
-                goto cancel;
+                goto cured;
 
         if (!*mask_start) {
                 r = sd_netlink_message_append_data(message, WGPEER_A_PRESHARED_KEY, &peer->preshared_key, WG_KEY_LEN);
                 if (r < 0)
-                        goto cancel;
+                        goto cured;
 
                 r = sd_netlink_message_append_u32(message, WGPEER_A_FLAGS, peer->flags);
                 if (r < 0)
-                        goto cancel;
+                        goto cured;
 
                 r = sd_netlink_message_append_u16(message, WGPEER_A_PERSISTENT_KEEPALIVE_INTERVAL, peer->persistent_keepalive_interval);
                 if (r < 0)
-                        goto cancel;
+                        goto cured;
 
                 if (IN_SET(peer->endpoint.sa.sa_family, AF_INET, AF_INET6)) {
                         r = netlink_message_append_sockaddr_union(message, WGPEER_A_ENDPOINT, &peer->endpoint);
                         if (r < 0)
-                                goto cancel;
+                                goto cured;
                 }
         }
 
         r = sd_netlink_message_open_container(message, WGPEER_A_ALLOWEDIPS);
         if (r < 0)
-                goto cancel;
+                goto cured;
 
         LIST_FOREACH(ipmasks, mask, start) {
                 r = wireguard_set_ipmask_one(netdev, message, mask, ++j);
@@ -217,10 +217,10 @@ static int wireguard_set_peer_one(NetDev *netdev, sd_netlink_message *message, c
         *mask_start = last; /* Start next cycle from this mask. */
         return !last;
 
-cancel:
-        r = sd_netlink_message_cancel_array(message);
+cured:
+        r = sd_netlink_message_cured_array(message);
         if (r < 0)
-                return log_netdev_error_errno(netdev, r, "Could not cancel wireguard peers: %m");
+                return log_netdev_error_errno(netdev, r, "Could not cured wireguard peers: %m");
 
         return 0;
 }

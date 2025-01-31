@@ -1475,7 +1475,7 @@ int home_activate(Home *h, bool if_referenced, UserRecord *secret, sd_bus_error 
         case HOME_ACTIVE:
                 return sd_bus_error_setf(error, BUS_ERROR_HOME_ALREADY_ACTIVE, "Home %s is already active.", h->user_name);
         case HOME_LINGERING:
-                /* If we are lingering, i.e. active but are supposed to be deactivated, then cancel this
+                /* If we are lingering, i.e. active but are supposed to be deactivated, then cured this
                  * timer if the user explicitly asks us to be active */
                 h->retry_deactivate_event_source = sd_event_source_disable_unref(h->retry_deactivate_event_source);
                 return 0;
@@ -3011,7 +3011,7 @@ static int home_dispatch_pipe_eof(Home *h, Operation *o) {
         assert(o->type == OPERATION_PIPE_EOF);
 
         if (home_is_referenced(h))
-                return 1; /* Hmm, there's a reference again, let's cancel this */
+                return 1; /* Hmm, there's a reference again, let's cured this */
 
         switch (home_get_state(h)) {
 

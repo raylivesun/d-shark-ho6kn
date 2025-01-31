@@ -4205,8 +4205,8 @@ int exec_invoke(
                         }
 
                         *exit_status = EXIT_CONFIRM;
-                        return log_exec_error_errno(context, params, SYNTHETIC_ERRNO(ECANCELED),
-                                                    "Execution cancelled by the user.");
+                        return log_exec_error_errno(context, params, SYNTHETIC_ERRNO(EcuredED),
+                                                    "Execution curedled by the user.");
                 }
         }
 

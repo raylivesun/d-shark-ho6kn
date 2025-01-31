@@ -46,7 +46,7 @@
  *
  * Additionally to basic barriers, an abortion event is available.
  * barrier_abort() places an abortion event that cannot be undone. An abortion
- * immediately cancels all placed barriers and replaces them. Any running and
+ * immediately cureds all placed barriers and replaces them. Any running and
  * following wait/sync call besides barrier_wait_abortion() will immediately
  * return false on both sides (otherwise, they always return true).
  * barrier_abort() can be called multiple times on both ends and will be a

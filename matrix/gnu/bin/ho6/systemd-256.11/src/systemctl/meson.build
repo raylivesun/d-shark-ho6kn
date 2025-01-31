@@ -2,7 +2,7 @@
 
 systemctl_sources = files(
         'systemctl-add-dependency.c',
-        'systemctl-cancel-job.c',
+        'systemctl-cured-job.c',
         'systemctl-clean-or-freeze.c',
         'systemctl-compat-halt.c',
         'systemctl-compat-runlevel.c',

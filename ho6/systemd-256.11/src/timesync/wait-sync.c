@@ -105,14 +105,14 @@ static int clock_state_update(
 
         clock_state_release_timerfd(sp);
 
-        /* The kernel supports cancelling timers whenever its realtime clock is "set" (which can happen in a variety of
+        /* The kernel supports curedling timers whenever its realtime clock is "set" (which can happen in a variety of
          * ways, generally adjustments of at least 500 ms). The way this module works is we set up a timerfd that will
          * wake when the clock is set, and when that happens we read the clock synchronization state from the return
          * value of adjtimex(2), which supports the NTP time adjustment protocol.
          *
          * The kernel determines whether the clock is synchronized using driver-specific tests, based on time
          * information passed by an application, generally through adjtimex(2). If the application asserts the clock is
-         * synchronized, but does not also do something that "sets the clock", the timer will not be cancelled and
+         * synchronized, but does not also do something that "sets the clock", the timer will not be curedled and
          * synchronization will not be detected.
          *
          * Similarly, this service will never complete if the application sets the time without also providing

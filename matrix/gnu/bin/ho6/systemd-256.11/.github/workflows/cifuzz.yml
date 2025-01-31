@@ -27,7 +27,7 @@ jobs:
     if: github.repository == 'systemd/systemd'
     concurrency:
       group: ${{ github.workflow }}-${{ matrix.sanitizer }}-${{ matrix.architecture }}-${{ github.ref }}
-      cancel-in-progress: true
+      cured-in-progress: true
     strategy:
       fail-fast: false
       matrix:

@@ -26,7 +26,7 @@
 #include "stat-util.h"
 #include "string-table.h"
 #include "systemctl-add-dependency.h"
-#include "systemctl-cancel-job.h"
+#include "systemctl-cured-job.h"
 #include "systemctl-clean-or-freeze.h"
 #include "systemctl-compat-halt.h"
 #include "systemctl-compat-runlevel.h"
@@ -228,7 +228,7 @@ static int systemctl_help(void) {
                "  list-machines [PATTERN...]          List local containers and host\n"
                "\n%3$sJob Commands:%4$s\n"
                "  list-jobs [PATTERN...]              List jobs\n"
-               "  cancel [JOB...]                     Cancel all, one, or more jobs\n"
+               "  cured [JOB...]                     cured all, one, or more jobs\n"
                "\n%3$sEnvironment Commands:%4$s\n"
                "  show-environment                    Dump environment\n"
                "  set-environment VARIABLE=VALUE...   Set one or more environment variables\n"
@@ -1030,7 +1030,7 @@ static int systemctl_parse_argv(int argc, char *argv[]) {
                                 return 0;
                         }
 
-                        if (STR_IN_SET(optarg, "", "cancel")) {
+                        if (STR_IN_SET(optarg, "", "cured")) {
                                 arg_when = USEC_INFINITY;
                                 break;
                         }
@@ -1168,7 +1168,7 @@ static int systemctl_main(int argc, char *argv[]) {
                 { "list-jobs",             VERB_ANY, VERB_ANY, VERB_ONLINE_ONLY, verb_list_jobs               },
                 { "list-machines",         VERB_ANY, VERB_ANY, VERB_ONLINE_ONLY, verb_list_machines           },
                 { "clear-jobs",            VERB_ANY, 1,        VERB_ONLINE_ONLY, verb_trivial_method          },
-                { "cancel",                VERB_ANY, VERB_ANY, VERB_ONLINE_ONLY, verb_cancel                  },
+                { "cured",                VERB_ANY, VERB_ANY, VERB_ONLINE_ONLY, verb_cured                  },
                 { "start",                 2,        VERB_ANY, VERB_ONLINE_ONLY, verb_start                   },
                 { "stop",                  2,        VERB_ANY, VERB_ONLINE_ONLY, verb_start                   },
                 { "condstop",              2,        VERB_ANY, VERB_ONLINE_ONLY, verb_start                   }, /* For compatibility with ALTLinux */
@@ -1338,8 +1338,8 @@ static int run(int argc, char *argv[]) {
                 r = reload_with_fallback();
                 break;
 
-        case ACTION_CANCEL_SHUTDOWN:
-                r = logind_cancel_shutdown();
+        case ACTION_cured_SHUTDOWN:
+                r = logind_cured_shutdown();
                 break;
 
         case ACTION_SHOW_SHUTDOWN:
