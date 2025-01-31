@@ -2794,7 +2794,7 @@ function expires the pending reply and generates a synthetic error reply
  (generated in-process, not by the remote application) indicating that a
  timeout occurred.</p>
 <p>A <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a> will see a reply message before any filters or registered object path handlers. See <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a> for details on when handlers are run.</p>
-<p>A <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a> will always see exactly one reply message, unless it's cancelled with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#ga6530d18f891d3ca5f5df87ea7c2b155c" title="Cancels the pending call, such that any reply or error received will just be ignored.">dbus_pending_call_cancel()</a>.</p>
+<p>A <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a> will always see exactly one reply message, unless it's curedled with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#ga6530d18f891d3ca5f5df87ea7c2b155c" title="cureds the pending call, such that any reply or error received will just be ignored.">dbus_pending_call_cured()</a>.</p>
 <p>If <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> is passed for the pending_return, the <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a>
  will still be generated internally, and used to track the message reply
  timeout. This means a timeout error will occur if no reply arrives, 
@@ -3179,7 +3179,7 @@ dispatch on every iteration of your main loop, especially if <a class="el" href=
 
 <p>Set whether _exit() should be called when the connection receives a disconnect signal. </p>
 <p>The call to _exit() comes after any handlers for the disconnect 
-signal run; handlers can cancel the exit by calling this function.</p>
+signal run; handlers can cured the exit by calling this function.</p>
 <p>By default, exit_on_disconnect is <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a>; but for message bus connections returned from <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga77ba5250adb84620f16007e1b023cf26" title="Connects to a bus daemon and registers the client with it.">dbus_bus_get()</a> it will be toggled on by default.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">

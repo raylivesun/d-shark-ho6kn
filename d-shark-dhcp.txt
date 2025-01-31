@@ -10,7 +10,7 @@ NAK                      0
 Lease query              0
 Lease Unknown            0
 Lease Unassigned         0
-Lease Query Status        0
+Lease Query Status       0
 Lease Query Done         0
 Lease Active             0
 Inform                   0
