@@ -47,7 +47,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Connection to another application.  
+<p>Connection to another application.
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tbody><tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
@@ -100,12 +100,12 @@ Typedefs</h2></td></tr>
 <tr class="separator:gadbcbd64b9c8b0d40cf3f884e2ee2528c"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:gabe3c6a8f883cd280c58779080cef234c" id="r_gabe3c6a8f883cd280c58779080cef234c"><td class="memItemLeft" align="right" valign="top">typedef dbus_bool_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gabe3c6a8f883cd280c58779080cef234c">DBusAllowUnixUserFunction</a>) (<a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html">DBusConnection</a> *connection, unsigned long uid, void *data)</td></tr>
 <tr class="memdesc:gabe3c6a8f883cd280c58779080cef234c"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called
- during authentication to check whether the given UNIX user ID is 
+ during authentication to check whether the given UNIX user ID is
 allowed to connect, if the client tried to auth as a UNIX user ID.  <br></td></tr>
 <tr class="separator:gabe3c6a8f883cd280c58779080cef234c"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:gae92d8ad407e216c6b5c67c7efbf949dd" id="r_gae92d8ad407e216c6b5c67c7efbf949dd"><td class="memItemLeft" align="right" valign="top">typedef dbus_bool_t(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gae92d8ad407e216c6b5c67c7efbf949dd">DBusAllowWindowsUserFunction</a>) (<a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html">DBusConnection</a> *connection, const char *user_sid, void *data)</td></tr>
 <tr class="memdesc:gae92d8ad407e216c6b5c67c7efbf949dd"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Called
- during authentication to check whether the given Windows user ID is 
+ during authentication to check whether the given Windows user ID is
 allowed to connect, if the client tried to auth as a Windows user ID.  <br></td></tr>
 <tr class="separator:gae92d8ad407e216c6b5c67c7efbf949dd"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:ga8209089764f3df09ec6523a24983375d" id="r_ga8209089764f3df09ec6523a24983375d"><td class="memItemLeft" align="right" valign="top">typedef void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga8209089764f3df09ec6523a24983375d">DBusPendingCallNotifyFunction</a>) (<a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html">DBusPendingCall</a> *pending, void *user_data)</td></tr>
@@ -174,7 +174,7 @@ Functions</h2></td></tr>
 <tr class="separator:ga19091beb74f1504b0e862a7ad10e71cd"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:ga6136968eba30e8313e668a622fcfb08d" id="r_ga6136968eba30e8313e668a622fcfb08d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPreallocatedSend.html">DBusPreallocatedSend</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga6136968eba30e8313e668a622fcfb08d">dbus_connection_preallocate_send</a> (<a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html">DBusConnection</a> *connection)</td></tr>
 <tr class="memdesc:ga6136968eba30e8313e668a622fcfb08d"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Preallocates
- resources needed to send a message, allowing the message to be sent 
+ resources needed to send a message, allowing the message to be sent
 without the possibility of memory allocation failure.  <br></td></tr>
 <tr class="separator:ga6136968eba30e8313e668a622fcfb08d"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:gad0ea06307b418616711131ea7bdae8ac" id="r_gad0ea06307b418616711131ea7bdae8ac"><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gad0ea06307b418616711131ea7bdae8ac">dbus_connection_free_preallocated_send</a> (<a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html">DBusConnection</a> *connection, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPreallocatedSend.html">DBusPreallocatedSend</a> *preallocated)</td></tr>
@@ -303,7 +303,7 @@ without the possibility of memory allocation failure.  <br></td></tr>
 <tr class="separator:ga7dc8c73d8c3e733f5410d52be84239a0"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:ga845b4942399f43dd4ac644de7cb9e3ff" id="r_ga845b4942399f43dd4ac644de7cb9e3ff"><td class="memItemLeft" align="right" valign="top">dbus_bool_t&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga845b4942399f43dd4ac644de7cb9e3ff">dbus_connection_set_data</a> (<a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html">DBusConnection</a> *connection, dbus_int32_t slot, void *data, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMemory.html#ga061bcded226d76c7d7de35beaa165cb5">DBusFreeFunction</a> free_data_func)</td></tr>
 <tr class="memdesc:ga845b4942399f43dd4ac644de7cb9e3ff"><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Stores a pointer on a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>,
- along with an optional function to be used for freeing the data when 
+ along with an optional function to be used for freeing the data when
 the data is set again, or when the connection is finalized.  <br></td></tr>
 <tr class="separator:ga845b4942399f43dd4ac644de7cb9e3ff"><td class="memSeparator" colspan="2">&nbsp;</td></tr>
 <tr class="memitem:ga433fae9844a66d9d078d238e6c723b95" id="r_ga433fae9844a66d9d078d238e6c723b95"><td class="memItemLeft" align="right" valign="top">void *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga433fae9844a66d9d078d238e6c723b95">dbus_connection_get_data</a> (<a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html">DBusConnection</a> *connection, dbus_int32_t slot)</td></tr>
@@ -349,12 +349,12 @@ the data is set again, or when the connection is finalized.  <br></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Connection to another application. </p>
 <p>A <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>
- represents a connection to another application. Messages can be sent 
+ represents a connection to another application. Messages can be sent
 and received via this connection. The other application may be a message
  bus; for convenience, the function <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga77ba5250adb84620f16007e1b023cf26" title="Connects to a bus daemon and registers the client with it.">dbus_bus_get()</a> is provided to automatically open a connection to the well-known message buses.</p>
 <p>In brief a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>
- is a message queue associated with some message transport mechanism 
-such as a socket. The connection maintains a queue of incoming messages 
+ is a message queue associated with some message transport mechanism
+such as a socket. The connection maintains a queue of incoming messages
 and a queue of outgoing messages.</p>
 <p>Several functions use the following terms: </p><ul>
 <li>
@@ -369,32 +369,32 @@ and a queue of outgoing messages.</p>
 <p>The connection provides <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusWatch.html" title="Implementation of DBusWatch.">DBusWatch</a> and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusTimeout.html" title="Internals of DBusTimeout.">DBusTimeout</a> objects to the main loop. These are used to know when reading, writing, or dispatching should be performed.</p>
 <p>Incoming messages are processed by calling <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>. <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a> runs any handlers registered for the topmost message in the message queue, then discards the message, then returns.</p>
 <p><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga893d18d8b36ffb371f16d13645071289" title="Gets the current state of the incoming message queue.">dbus_connection_get_dispatch_status()</a> indicates whether messages are currently in the queue that need dispatching. <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga55ff88cd22c0672441c7deffbfb68fbf" title="Set a function to be invoked when the dispatch status changes.">dbus_connection_set_dispatch_status_function()</a> allows you to set a function to be used to monitor the dispatch status.</p>
-<p>If you're using GLib or Qt add-on libraries for D-Bus, there are 
+<p>If you're using GLib or Qt add-on libraries for D-Bus, there are
 special convenience APIs in those libraries that hide all the details of
- dispatch and watch/timeout monitoring. For example, 
+ dispatch and watch/timeout monitoring. For example,
 dbus_connection_setup_with_g_main().</p>
 <p>If you aren't using these add-on libraries, but want to process messages asynchronously, you must manually call <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga55ff88cd22c0672441c7deffbfb68fbf" title="Set a function to be invoked when the dispatch status changes.">dbus_connection_set_dispatch_status_function()</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gaebf031eb444b4f847606aa27daa3d8e6" title="Sets the watch functions for the connection.">dbus_connection_set_watch_functions()</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gab3cbc68eec427e9ce1783b25d44fe93c" title="Sets the timeout functions for the connection.">dbus_connection_set_timeout_functions()</a>
- providing appropriate functions to integrate the connection with your 
+ providing appropriate functions to integrate the connection with your
 application's main loop. This can be tricky to get right; main loops are
  not simple.</p>
 <p>If you don't need to be asynchronous, you can ignore <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusWatch.html" title="Implementation of DBusWatch.">DBusWatch</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusTimeout.html" title="Internals of DBusTimeout.">DBusTimeout</a>, and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>. Instead, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga580d8766c23fe5f49418bc7d87b67dc6" title="This function is intended for use with applications that don't want to write a main loop and deal wit...">dbus_connection_read_write_dispatch()</a> can be used.</p>
 <p>Or, in <em>very</em> simple applications, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga1e40d994ea162ce767e78de1c4988566" title="Returns the first-received message from the incoming message queue, removing it from the queue.">dbus_connection_pop_message()</a> may be all you need, allowing you to avoid setting up any handler functions (see <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gae00f581e5487408cb294bf71826aff86" title="Adds a message filter.">dbus_connection_add_filter()</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga24730ca6fd2e9132873962a32df7628c" title="Registers a handler for a given path in the object hierarchy.">dbus_connection_register_object_path()</a> for more on handlers).</p>
 <p>When you use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gae1cb64f4cf550949b23fd3a756b2f7d0" title="Adds a message to the outgoing message queue.">dbus_connection_send()</a>
- or one of its variants to send a message, the message is added to the 
+ or one of its variants to send a message, the message is added to the
 outgoing queue. It's actually written to the network later; either in <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gac2acdb1794450ac01a43ec4c3e07ebf7" title="Called to notify the D-Bus library when a previously-added watch is ready for reading or writing,...">dbus_watch_handle()</a> invoked by your main loop, or in <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga10e68d9d2f41d655a4151ddeb807ff54" title="Blocks until the outgoing message queue is empty.">dbus_connection_flush()</a>
- which blocks until it can write out the entire outgoing queue. The 
-GLib/Qt add-on libraries again handle the details here for you by 
+ which blocks until it can write out the entire outgoing queue. The
+GLib/Qt add-on libraries again handle the details here for you by
 setting up watch functions.</p>
 <p>When a connection is disconnected, you are guaranteed to get a signal "Disconnected" from the interface <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusShared.html#ga9ef6478aae637449ec0c5de1679f75ce" title="This is a special interface whose methods can only be invoked by the local implementation (messages f...">DBUS_INTERFACE_LOCAL</a>, path <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusShared.html#ga850990a54a46142ee7c5f8174cc932c1" title="The object path used in local/in-process-generated messages.">DBUS_PATH_LOCAL</a>.</p>
 <p>You may not drop the last reference to a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> until that connection has been disconnected.</p>
-<p>You may dispatch the unprocessed incoming message queue even if the 
-connection is disconnected. However, "Disconnected" will always be the 
-last message in the queue (obviously no messages are received after 
+<p>You may dispatch the unprocessed incoming message queue even if the
+connection is disconnected. However, "Disconnected" will always be the
+last message in the queue (obviously no messages are received after
 disconnection).</p>
 <p>After calling <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusThreads.html#gac7b8a7001befc3eaa8c6b043151008dc" title="Initializes threads, like dbus_threads_init_default().">dbus_threads_init()</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> has thread locks and drops them when invoking user callbacks, so in general is transparently threadsafe. However, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusMessage.html" title="Internals of DBusMessage.">DBusMessage</a> does NOT have thread locks; you must not send the same message to multiple <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> if those connections will be used from different threads, for example.</p>
-<p>Also, if you dispatch or pop messages from multiple threads, it may 
-work in the sense that it won't crash, but it's tough to imagine sane 
-results; it will be completely unpredictable which messages go to which 
+<p>Also, if you dispatch or pop messages from multiple threads, it may
+work in the sense that it won't crash, but it's tough to imagine sane
+results; it will be completely unpredictable which messages go to which
 threads.</p>
 <p>It's recommended to dispatch from a single thread.</p>
 <p>The most useful function to call from multiple threads at once is <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga8d6431f17a9e53c9446d87c2ba8409f0" title="Sends a message and blocks a certain time period while waiting for a reply.">dbus_connection_send_with_reply_and_block()</a>. That is, multiple threads can make method calls at the same time.</p>
@@ -450,7 +450,7 @@ threads.</p>
       </tbody></table>
 </div><div class="memdoc">
 
-<p>Called during authentication to check whether the given UNIX user ID 
+<p>Called during authentication to check whether the given UNIX user ID
 is allowed to connect, if the client tried to auth as a UNIX user ID. </p>
 <p>Normally on Windows this would never happen. Set with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga6b78379badb4c5804344f4f3d87a958a" title="Sets a predicate function used to determine whether a given user ID is allowed to connect.">dbus_connection_set_unix_user_function()</a>. </p>
 
@@ -470,8 +470,8 @@ is allowed to connect, if the client tried to auth as a UNIX user ID. </p>
       </tbody></table>
 </div><div class="memdoc">
 
-<p>Called during authentication to check whether the given Windows user 
-ID is allowed to connect, if the client tried to auth as a Windows user 
+<p>Called during authentication to check whether the given Windows user
+ID is allowed to connect, if the client tried to auth as a Windows user
 ID. </p>
 <p>Normally on UNIX this would never happen. Set with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gaa35ced9ccd29d3366749ae383b120f9c" title="Sets a predicate function used to determine whether a given user ID is allowed to connect.">dbus_connection_set_windows_user_function()</a>. </p>
 
@@ -921,8 +921,8 @@ ID. </p>
 <p>Adds a message filter. </p>
 <p>Filters are handlers that are run on all incoming messages, prior to the objects registered with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga24730ca6fd2e9132873962a32df7628c" title="Registers a handler for a given path in the object hierarchy.">dbus_connection_register_object_path()</a>.
  Filters are run in the order that they were added. The same handler can
- be added as a filter more than once, in which case it will be run more 
-than once. Filters added during a filter callback won't be run on the 
+ be added as a filter more than once, in which case it will be run more
+than once. Filters added during a filter callback won't be run on the
 message being processed.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -960,7 +960,7 @@ message being processed.</p>
 <p>Allocates an integer ID to be used for storing application-specific data on any <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>. </p>
 <p>The allocated ID may then be used with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga845b4942399f43dd4ac644de7cb9e3ff" title="Stores a pointer on a DBusConnection, along with an optional function to be used for freeing the data...">dbus_connection_set_data()</a> and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga433fae9844a66d9d078d238e6c723b95" title="Retrieves data previously set with dbus_connection_set_data().">dbus_connection_get_data()</a>.
  The passed-in slot must be initialized to -1, and is filled in with the
- slot ID. If the passed-in slot is not -1, it's assumed to be already 
+ slot ID. If the passed-in slot is not -1, it's assumed to be already
 allocated, and its refcount is incremented.</p>
 <p>The allocated slot is global, i.e. all <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> objects will have a slot with the given integer ID reserved.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -996,12 +996,12 @@ allocated, and its refcount is incremented.</p>
 <p>Returns the first-received message from the incoming message queue, leaving it in the queue. </p>
 <p>If the queue is empty, returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a>.</p>
 <p>The caller does not own a reference to the returned message, and must either return it using <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga0586da03a01c9c6f332fbea900ef55e3" title="Used to return a message after peeking at it using dbus_connection_borrow_message().">dbus_connection_return_message()</a> or keep it after calling <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga7125d747575b2f596aceaf7be53eae68" title="Used to keep a message after peeking at it using dbus_connection_borrow_message().">dbus_connection_steal_borrowed_message()</a>.
- No one can get at the message while its borrowed, so return it as 
+ No one can get at the message while its borrowed, so return it as
 quickly as possible and don't keep a reference to it after returning it.
  If you need to keep the message, make a copy of it.</p>
 <p><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>
- will block if called while a borrowed message is outstanding; only one 
-piece of code can be playing with the incoming queue at a time. This 
+ will block if called while a borrowed message is outstanding; only one
+piece of code can be playing with the incoming queue at a time. This
 function will block if called during a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1044,13 +1044,13 @@ function will block if called during a <a class="el" href="https://dbus.freedesk
 </div><div class="memdoc">
 
 <p>Tests whether a certain type can be send via the connection. </p>
-<p>This will always return TRUE for all types, with the exception of 
-DBUS_TYPE_UNIX_FD. The function will return TRUE for DBUS_TYPE_UNIX_FD 
-only on systems that know Unix file descriptors and can send them via 
+<p>This will always return TRUE for all types, with the exception of
+DBUS_TYPE_UNIX_FD. The function will return TRUE for DBUS_TYPE_UNIX_FD
+only on systems that know Unix file descriptors and can send them via
 the chosen transport and when the remote side supports this.</p>
 <p>This function can be used to do runtime checking for types that might
  be unknown to the specific D-Bus client implementation version, i.e. it
- will return FALSE for all types this implementation does not know, 
+ will return FALSE for all types this implementation does not know,
 including invalid or reserved types.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1086,20 +1086,20 @@ including invalid or reserved types.</p>
 <p>Closes a private connection, so no further data can be sent or received. </p>
 <p>This disconnects the transport (such as a socket) underlying the connection.</p>
 <p>Attempts to send messages after closing a connection are safe, but will result in error replies generated locally in libdbus.</p>
-<p>This function does not affect the connection's reference count. It's 
-safe to close a connection more than once; all calls after the first do 
+<p>This function does not affect the connection's reference count. It's
+safe to close a connection more than once; all calls after the first do
 nothing. It's impossible to "reopen" a connection, a new connection must
- be created. This function may result in a call to the 
+ be created. This function may result in a call to the
 DBusDispatchStatusFunction set with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga55ff88cd22c0672441c7deffbfb68fbf" title="Set a function to be invoked when the dispatch status changes.">dbus_connection_set_dispatch_status_function()</a>, as the disconnect message it generates needs to be dispatched.</p>
 <p>If a connection is dropped by the remote application, it will close itself.</p>
 <p>You must close a connection prior to releasing the last reference to the connection. If you <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga6385ff09bc108238c4429e7c195dab25" title="Decrements the reference count of a DBusConnection, and finalizes it if the count reaches zero.">dbus_connection_unref()</a>
- for the last time without closing the connection, the results are 
-undefined; it is a bug in your program and libdbus will try to print a 
+ for the last time without closing the connection, the results are
+undefined; it is a bug in your program and libdbus will try to print a
 warning.</p>
 <p>You may not close a shared connection. Connections created with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gacd32f819820266598c6b6847dfddaf9c" title="Gets a connection to a remote address.">dbus_connection_open()</a> or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga77ba5250adb84620f16007e1b023cf26" title="Connects to a bus daemon and registers the client with it.">dbus_bus_get()</a>
- are shared. These connections are owned by libdbus, and applications 
-should only unref them, never close them. Applications can know it is 
-safe to unref these connections because libdbus will be holding a 
+ are shared. These connections are owned by libdbus, and applications
+should only unref them, never close them. Applications can know it is
+safe to unref these connections because libdbus will be holding a
 reference as long as the connection is open. Thus, either the connection
  is closed and it is OK to drop the last reference, or the connection is
  open and the app knows it does not have the last reference.</p>
@@ -1134,8 +1134,8 @@ reference as long as the connection is open. Thus, either the connection
 </div><div class="memdoc">
 
 <p>Processes any incoming data. </p>
-<p>If there's incoming raw data that has not yet been parsed, it is 
-parsed, which may or may not result in adding messages to the incoming 
+<p>If there's incoming raw data that has not yet been parsed, it is
+parsed, which may or may not result in adding messages to the incoming
 queue.</p>
 <p>The incoming data buffer is filled when the connection reads from its
  underlying transport (such as a socket). Reading usually happens in <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gac2acdb1794450ac01a43ec4c3e07ebf7" title="Called to notify the D-Bus library when a previously-added watch is ready for reading or writing,...">dbus_watch_handle()</a> or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga371163b4955a6e0bf0f1f70f38390c14" title="This function is intended for use with applications that don't want to write a main loop and deal wit...">dbus_connection_read_write()</a>.</p>
@@ -1145,7 +1145,7 @@ queue.</p>
 <p>Third, if the message is a method call it is forwarded to any registered object path handlers added with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga24730ca6fd2e9132873962a32df7628c" title="Registers a handler for a given path in the object hierarchy.">dbus_connection_register_object_path()</a> or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gac4473b37bfa74ccf7459959d27e7bc59" title="Registers a fallback handler for a given subsection of the object hierarchy.">dbus_connection_register_fallback()</a>.</p>
 <p>A single call to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a> will process at most one message; it will not clear the entire message queue.</p>
 <p>Be careful about calling <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a> from inside a message handler, i.e. calling <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>
- recursively. If threads have been initialized with a recursive mutex 
+ recursively. If threads have been initialized with a recursive mutex
 function, then this will not deadlock; however, it can certainly confuse
  your application.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1210,9 +1210,9 @@ function, then this will not deadlock; however, it can certainly confuse
 
 <p>Deallocates a global ID for connection data slots. </p>
 <p><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga433fae9844a66d9d078d238e6c723b95" title="Retrieves data previously set with dbus_connection_set_data().">dbus_connection_get_data()</a> and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga845b4942399f43dd4ac644de7cb9e3ff" title="Stores a pointer on a DBusConnection, along with an optional function to be used for freeing the data...">dbus_connection_set_data()</a> may no longer be used with this slot. Existing data stored on existing <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>
- objects will be freed when the connection is finalized, but may not be 
-retrieved (and may only be replaced if someone else reallocates the 
-slot). When the refcount on the passed-in slot reaches 0, it is set to 
+ objects will be freed when the connection is finalized, but may not be
+retrieved (and may only be replaced if someone else reallocates the
+slot). When the refcount on the passed-in slot reaches 0, it is set to
 -1.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1383,12 +1383,12 @@ slot). When the refcount on the passed-in slot reaches 0, it is set to
 <p><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ggabf250a32ff740b2a8c99136e0142d8d2adf8e8a594ab338cb9cf7855b19e37e93" title="There is more data to potentially convert to messages.">DBUS_DISPATCH_DATA_REMAINS</a> indicates that the message queue may contain messages. <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ggabf250a32ff740b2a8c99136e0142d8d2acb9bb9daa90f520d5fc9e84de3c5f017" title="All currently available data has been processed.">DBUS_DISPATCH_COMPLETE</a> indicates that the incoming queue is empty. <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ggabf250a32ff740b2a8c99136e0142d8d2a5af20a035f29cfa67fb8d69fb693b685" title="More memory is needed to continue.">DBUS_DISPATCH_NEED_MEMORY</a> indicates that there could be data, but we can't know for sure without more memory.</p>
 <p>To process the incoming message queue, use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a> or (in rare cases) <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga1e40d994ea162ce767e78de1c4988566" title="Returns the first-received message from the incoming message queue, removing it from the queue.">dbus_connection_pop_message()</a>.</p>
 <p>Note, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ggabf250a32ff740b2a8c99136e0142d8d2adf8e8a594ab338cb9cf7855b19e37e93" title="There is more data to potentially convert to messages.">DBUS_DISPATCH_DATA_REMAINS</a>
- really means that either we have messages in the queue, or we have raw 
-bytes buffered up that need to be parsed. When these bytes are parsed, 
-they may not add up to an entire message. Thus, it's possible to see a 
+ really means that either we have messages in the queue, or we have raw
+bytes buffered up that need to be parsed. When these bytes are parsed,
+they may not add up to an entire message. Thus, it's possible to see a
 status of <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ggabf250a32ff740b2a8c99136e0142d8d2adf8e8a594ab338cb9cf7855b19e37e93" title="There is more data to potentially convert to messages.">DBUS_DISPATCH_DATA_REMAINS</a> but not have a message yet.</p>
-<p>In particular this happens on initial connection, because all sorts 
-of authentication protocol stuff has to be parsed before the first 
+<p>In particular this happens on initial connection, because all sorts
+of authentication protocol stuff has to be parsed before the first
 message arrives.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1489,10 +1489,10 @@ message arrives.</p>
 </div><div class="memdoc">
 
 <p>Gets whether the connection is currently open. </p>
-<p>A connection may become disconnected when the remote application 
+<p>A connection may become disconnected when the remote application
 closes its end, or exits; a connection may also be disconnected with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga2522ac5075dfe0a1535471f6e045e1ee" title="Closes a private connection, so no further data can be sent or received.">dbus_connection_close()</a>.</p>
-<p>There are not separate states for "closed" and "disconnected," the 
-two terms are synonymous. This function should really be called 
+<p>There are not separate states for "closed" and "disconnected," the
+two terms are synonymous. This function should really be called
 get_is_open() but for historical reasons is not.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1699,9 +1699,9 @@ get_is_open() but for historical reasons is not.</p>
 </div><div class="memdoc">
 
 <p>Gets the approximate size in bytes of all messages in the outgoing message queue. </p>
-<p>The size is approximate in that you shouldn't use it to decide how 
-many bytes to read off the network or anything of that nature, as 
-optimizations may choose to tell small white lies to avoid performance 
+<p>The size is approximate in that you shouldn't use it to decide how
+many bytes to read off the network or anything of that nature, as
+optimizations may choose to tell small white lies to avoid performance
 overhead.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1766,17 +1766,17 @@ overhead.</p>
 
 <p>Gets the ID of the server address we are authenticated to, if this connection is on the client side. </p>
 <p>If the connection is on the server side, this will always return <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> - use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusServer.html#ga3b2920b3c65836113781d9dd00d1e139" title="Returns the unique ID of the server, as a newly-allocated string which must be freed by the caller.">dbus_server_get_id()</a> to get the ID of your own server, if you are the server side.</p>
-<p>If a client-side connection is not authenticated yet, the ID may be 
-available if it was included in the server address, but may not be 
+<p>If a client-side connection is not authenticated yet, the ID may be
+available if it was included in the server address, but may not be
 available. The only way to be sure the server ID is available is to wait
  for authentication to complete.</p>
-<p>In general, each mode of connecting to a given server will have its 
-own ID. So for example, if the session bus daemon is listening on UNIX 
-domain sockets and on TCP, then each of those modalities will have its 
+<p>In general, each mode of connecting to a given server will have its
+own ID. So for example, if the session bus daemon is listening on UNIX
+domain sockets and on TCP, then each of those modalities will have its
 own server ID.</p>
 <p>If you want an ID that identifies an entire session bus, look at <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga18314500e7f6890a79bddbeace5df5f9" title="Asks the bus to return its globally unique ID, as described in the D-Bus specification.">dbus_bus_get_id()</a> instead (which is just a convenience wrapper around the org.freedesktop.DBus.GetId method invoked on the bus).</p>
 <p>You can also get a machine ID; see <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMisc.html#ga699a239bc42fd16cca3a17090e49cad8" title="Obtains the machine UUID of the machine this process is running on.">dbus_try_get_local_machine_id()</a>
- to get the machine you are on. There isn't a convenience wrapper, but 
+ to get the machine you are on. There isn't a convenience wrapper, but
 you can invoke org.freedesktop.DBus.Peer.GetMachineId on any peer to get
  the machine ID on the other end.</p>
 <p>The D-Bus specification describes the server ID and other IDs in a bit more detail.</p>
@@ -1822,8 +1822,8 @@ you can invoke org.freedesktop.DBus.Peer.GetMachineId on any peer to get
 
 <p>Gets the underlying Windows or UNIX socket file descriptor of the connection, if any. </p>
 <p>DO NOT read or write to the file descriptor, or try to select() on it; use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusWatch.html" title="Implementation of DBusWatch.">DBusWatch</a> for main loop integration. Not all connections will have a socket. So for adding descriptors to the main loop, use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#ga91308f393d41b31babda17c83833517f" title="Returns a socket to be watched, on UNIX this will return -1 if our transport is not socket-based so d...">dbus_watch_get_socket()</a> and so forth.</p>
-<p>If the connection is not socket-based, this function will return 
-FALSE, even if the connection does have a file descriptor of some kind. 
+<p>If the connection is not socket-based, this function will return
+FALSE, even if the connection does have a file descriptor of some kind.
 i.e. this function always returns specifically a socket file descriptor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1869,8 +1869,8 @@ i.e. this function always returns specifically a socket file descriptor.</p>
 </div><div class="memdoc">
 
 <p>Get the UNIX file descriptor of the connection, if any. </p>
-<p>This can be used for SELinux access control checks with getpeercon() 
-for example. DO NOT read or write to the file descriptor, or try to 
+<p>This can be used for SELinux access control checks with getpeercon()
+for example. DO NOT read or write to the file descriptor, or try to
 select() on it; use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusWatch.html" title="Implementation of DBusWatch.">DBusWatch</a> for main loop integration. Not all connections will have a file descriptor. So for adding descriptors to the main loop, use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#ga15df7f6120ead3e09bec8a70d3c43c0d" title="Returns a UNIX file descriptor to be watched, which may be a pipe, socket, or other type of descripto...">dbus_watch_get_unix_fd()</a> and so forth.</p>
 <p>If the connection is socket-based, you can also use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga1c14590d77b148390bde9e82a7544434" title="Gets the underlying Windows or UNIX socket file descriptor of the connection, if any.">dbus_connection_get_socket()</a>, which will work on Windows too. This function always fails on Windows.</p>
 <p>Right now the returned descriptor is always a socket, but that is not guaranteed.</p>
@@ -1960,8 +1960,8 @@ select() on it; use <a class="el" href="https://dbus.freedesktop.org/doc/api/htm
 
 <p>Gets the UNIX user ID of the connection if known. </p>
 <p>Returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa8cecfc5c5c054d2875c03e77b7be15d" title="Expands to &quot;1&quot;.">TRUE</a> if the uid is filled in. Always returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a> on non-UNIX platforms for now, though in theory someone could hook Windows to NIS or something. Always returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a> prior to authenticating the connection.</p>
-<p>The UID is only read by servers from clients; clients can't usually 
-get the UID of servers, because servers do not authenticate to clients. 
+<p>The UID is only read by servers from clients; clients can't usually
+get the UID of servers, because servers do not authenticate to clients.
 The returned UID is the UID the connection authenticated as.</p>
 <p>The message bus is a server and the apps connecting to the bus are clients.</p>
 <p>You can ask the bus to tell you the UID of another connection though if you like; this is done with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga24d782c710f3d82caf1b1ed582dcf474" title="Asks the bus to return the UID the named connection authenticated as, if any.">dbus_bus_get_unix_user()</a>.</p>
@@ -2008,13 +2008,13 @@ The returned UID is the UID the connection authenticated as.</p>
 
 <p>Gets the Windows user SID of the connection if known. </p>
 <p>Returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa8cecfc5c5c054d2875c03e77b7be15d" title="Expands to &quot;1&quot;.">TRUE</a> if the ID is filled in. Always returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a> on non-Windows platforms for now, though in theory someone could hook UNIX to Active Directory or something. Always returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a> prior to authenticating the connection.</p>
-<p>The user is only read by servers from clients; clients can't usually 
+<p>The user is only read by servers from clients; clients can't usually
 get the user of servers, because servers do not authenticate to clients.
  The returned user is the user the connection authenticated as.</p>
 <p>The message bus is a server and the apps connecting to the bus are clients.</p>
 <p>The returned user string has to be freed with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMemory.html#ga34e666b19b015035a9a31e53da84b39a" title="Frees a block of memory previously allocated by dbus_malloc() or dbus_malloc0().">dbus_free()</a>.</p>
 <p>The return value indicates whether the user SID is available; if it's
- available but we don't have the memory to copy it, then the return 
+ available but we don't have the memory to copy it, then the return
 value is <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa8cecfc5c5c054d2875c03e77b7be15d" title="Expands to &quot;1&quot;.">TRUE</a> and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> is given as the SID.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2140,9 +2140,9 @@ value is <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DB
 </div><div class="memdoc">
 
 <p>Gets a connection to a remote address. </p>
-<p>If a connection to the given address already exists, returns the 
-existing connection with its reference count incremented. Otherwise, 
-returns a new connection and saves the new connection for possible 
+<p>If a connection to the given address already exists, returns the
+existing connection with its reference count incremented. Otherwise,
+returns a new connection and saves the new connection for possible
 re-use if a future call to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gacd32f819820266598c6b6847dfddaf9c" title="Gets a connection to a remote address.">dbus_connection_open()</a> asks to connect to the same server.</p>
 <p>Use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga434e3fc7ee420fd30e2f05e57ff26b1d" title="Opens a new, dedicated connection to a remote address.">dbus_connection_open_private()</a> to get a dedicated connection not shared with other callers of <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gacd32f819820266598c6b6847dfddaf9c" title="Gets a connection to a remote address.">dbus_connection_open()</a>.</p>
 <p>If the open fails, the function returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a>, and provides a reason for the failure in the error parameter. Pass <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> for the error parameter if you aren't interested in the reason for failure.</p>
@@ -2196,7 +2196,7 @@ re-use if a future call to <a class="el" href="https://dbus.freedesktop.org/doc/
 <p>If the open fails, the function returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a>, and provides a reason for the failure in the error parameter. Pass <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> for the error parameter if you aren't interested in the reason for failure.</p>
 <p>When you are done with this connection, you must <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga2522ac5075dfe0a1535471f6e045e1ee" title="Closes a private connection, so no further data can be sent or received.">dbus_connection_close()</a> to disconnect it, and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga6385ff09bc108238c4429e7c195dab25" title="Decrements the reference count of a DBusConnection, and finalizes it if the count reaches zero.">dbus_connection_unref()</a> to free the connection object.</p>
 <p>(The <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga2522ac5075dfe0a1535471f6e045e1ee" title="Closes a private connection, so no further data can be sent or received.">dbus_connection_close()</a>
- can be skipped if the connection is already known to be disconnected, 
+ can be skipped if the connection is already known to be disconnected,
 for example if you are inside a handler for the Disconnected signal.)</p>
 <dl class="section note"><dt>Note</dt><dd>Prefer <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gacd32f819820266598c6b6847dfddaf9c" title="Gets a connection to a remote address.">dbus_connection_open()</a> to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga434e3fc7ee420fd30e2f05e57ff26b1d" title="Opens a new, dedicated connection to a remote address.">dbus_connection_open_private()</a>
  unless you have good reason; connections are expensive enough that it's
@@ -2234,7 +2234,7 @@ for example if you are inside a handler for the Disconnected signal.)</p>
 
 <p>Returns the first-received message from the incoming message queue, removing it from the queue. </p>
 <p>The caller owns a reference to the returned message. If the queue is empty, returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a>.</p>
-<p>This function bypasses any message handlers that are registered, and 
+<p>This function bypasses any message handlers that are registered, and
 so using it is usually wrong. Instead, let the main loop invoke <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>. Popping messages manually is only useful in very simple programs that don't share a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> with any libraries or other modules.</p>
 <p>There is a lock that covers all ways of accessing the incoming message queue, so <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga1e40d994ea162ce767e78de1c4988566" title="Returns the first-received message from the incoming message queue, removing it from the queue.">dbus_connection_pop_message()</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga9d07083c520e291591a68adb78f64094" title="Returns the first-received message from the incoming message queue, leaving it in the queue.">dbus_connection_borrow_message()</a>, etc. will all block while one of the others in the group is running.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2363,20 +2363,20 @@ so using it is usually wrong. Instead, let the main loop invoke <a class="el" hr
 <div class="line">  ; <span class="comment">// empty loop body</span></div>
 <div class="ttc" id="agroup__DBusConnection_html_ga580d8766c23fe5f49418bc7d87b67dc6"><div class="ttname"><a href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga580d8766c23fe5f49418bc7d87b67dc6">dbus_connection_read_write_dispatch</a></div><div class="ttdeci">dbus_bool_t dbus_connection_read_write_dispatch(DBusConnection *connection, int timeout_milliseconds)</div><div class="ttdoc">This function is intended for use with applications that don't want to write a main loop and deal wit...</div><div class="ttdef"><b>Definition</b> <a href="https://dbus.freedesktop.org/doc/api/html/dbus-connection_8c_source.html#l03785">dbus-connection.c:3785</a></div></div>
 </div><!-- fragment --><p>In this usage you would normally have set up a
- filter function to look at each message as it is dispatched. The loop 
-terminates when the last message from the connection (the disconnected 
+ filter function to look at each message as it is dispatched. The loop
+terminates when the last message from the connection (the disconnected
 signal) is processed.</p>
 <p>If there are messages to dispatch, this function will <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>
- once, and return. If there are no messages to dispatch, this function 
+ once, and return. If there are no messages to dispatch, this function
 will block until it can read or write, then read or write, then return.</p>
-<p>The way to think of this function is that it either makes some sort 
-of progress, or it blocks. Note that, while it is blocked on I/O, it 
+<p>The way to think of this function is that it either makes some sort
+of progress, or it blocks. Note that, while it is blocked on I/O, it
 cannot be interrupted (even by other threads), which makes this function
- unsuitable for applications that do more than just react to received 
+ unsuitable for applications that do more than just react to received
 messages.</p>
-<p>The return value indicates whether the disconnect message has been 
-processed, NOT whether the connection is connected. This is important 
-because even after disconnecting, you want to process any messages you 
+<p>The return value indicates whether the disconnect message has been
+processed, NOT whether the connection is connected. This is important
+because even after disconnecting, you want to process any messages you
 received prior to the disconnect.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2464,7 +2464,7 @@ received prior to the disconnect.</p>
 
 <p>Registers a fallback handler for a given subsection of the object hierarchy. </p>
 <p>The given vtable handles messages at or below the given path. You can
- use this to establish a default message handling policy for a whole 
+ use this to establish a default message handling policy for a whole
 "subdirectory."</p>
 <p>It is a bug to call this function for object paths which already have a handler. Use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga8e9d2d4ff17c3071124e4993d1536ed4" title="Registers a fallback handler for a given subsection of the object hierarchy.">dbus_connection_try_register_fallback()</a> if this might be the case.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2575,9 +2575,9 @@ received prior to the disconnect.</p>
 </div><div class="memdoc">
 
 <p>Removes a previously-added message filter. </p>
-<p>It is a programming error to call this function for a handler that 
+<p>It is a programming error to call this function for a handler that
 has not been added as a filter. If the given handler was added more than
- once, only one instance of it will be removed (the most recently-added 
+ once, only one instance of it will be removed (the most recently-added
 instance).</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2670,11 +2670,11 @@ instance).</p>
 
 <p>Adds a message to the outgoing message queue. </p>
 <p>Does not block to write the message to the network; that happens asynchronously. To force the message to be written, call <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga10e68d9d2f41d655a4151ddeb807ff54" title="Blocks until the outgoing message queue is empty.">dbus_connection_flush()</a> however it is not necessary to call <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga10e68d9d2f41d655a4151ddeb807ff54" title="Blocks until the outgoing message queue is empty.">dbus_connection_flush()</a> by hand; the message will be sent the next time the main loop is run. <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga10e68d9d2f41d655a4151ddeb807ff54" title="Blocks until the outgoing message queue is empty.">dbus_connection_flush()</a> should only be used, for example, if the application was expected to exit before running the main loop.</p>
-<p>Because this only queues the message, the only reason it can fail is 
+<p>Because this only queues the message, the only reason it can fail is
 lack of memory. Even if the connection is disconnected, no error will be
  returned. If the function fails due to lack of memory, it returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a>.
- The function will never fail for other reasons; even if the connection 
-is disconnected, you can queue an outgoing message, though obviously it 
+ The function will never fail for other reasons; even if the connection
+is disconnected, you can queue an outgoing message, though obviously it
 won't be sent.</p>
 <p>The message serial is used by the remote application to send a reply; see <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMessage.html#ga390710c25564c80025a006c376da2030" title="Returns the serial of a message or 0 if none has been specified.">dbus_message_get_serial()</a> or the D-Bus specification.</p>
 <p><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMessage.html#gab69441efe683918f6a82469c8763f464" title="Decrements the reference count of a DBusMessage, freeing the message if the count reaches 0.">dbus_message_unref()</a> can be called as soon as this method returns as the message queue will hold its own ref until the message is sent.</p>
@@ -2789,7 +2789,7 @@ won't be sent.</p>
 </div><div class="memdoc">
 
 <p>Queues a message to send, as with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gae1cb64f4cf550949b23fd3a756b2f7d0" title="Adds a message to the outgoing message queue.">dbus_connection_send()</a>, but also returns a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a> used to receive a reply to the message. </p>
-<p>If no reply is received in the given timeout_milliseconds, this 
+<p>If no reply is received in the given timeout_milliseconds, this
 function expires the pending reply and generates a synthetic error reply
  (generated in-process, not by the remote application) indicating that a
  timeout occurred.</p>
@@ -2797,10 +2797,10 @@ function expires the pending reply and generates a synthetic error reply
 <p>A <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a> will always see exactly one reply message, unless it's curedled with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#ga6530d18f891d3ca5f5df87ea7c2b155c" title="cureds the pending call, such that any reply or error received will just be ignored.">dbus_pending_call_cured()</a>.</p>
 <p>If <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> is passed for the pending_return, the <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a>
  will still be generated internally, and used to track the message reply
- timeout. This means a timeout error will occur if no reply arrives, 
+ timeout. This means a timeout error will occur if no reply arrives,
 unlike with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gae1cb64f4cf550949b23fd3a756b2f7d0" title="Adds a message to the outgoing message queue.">dbus_connection_send()</a>.</p>
-<p>If -1 is passed for the timeout, a sane default timeout is used. -1 
-is typically the best value for the timeout for this reason, unless you 
+<p>If -1 is passed for the timeout, a sane default timeout is used. -1
+is typically the best value for the timeout for this reason, unless you
 want a very short or very long timeout. If <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#ga21384c9c5b0da54f7d0a92012522f213" title="An integer constant representing an infinite timeout.">DBUS_TIMEOUT_INFINITE</a> is passed for the timeout, no timeout will be set and the call will block forever.</p>
 <dl class="section warning"><dt>Warning</dt><dd>if the connection is disconnected or you try to send Unix file descriptors on a connection that does not support them, the <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a> will be set to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a>, so be careful with this.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2808,8 +2808,8 @@ want a very short or very long timeout. If <a class="el" href="https://dbus.free
     <tbody><tr><td class="paramname">connection</td><td>the connection </td></tr>
     <tr><td class="paramname">message</td><td>the message to send </td></tr>
     <tr><td class="paramname">pending_return</td><td>return location for a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusPendingCall.html" title="Implementation details of DBusPendingCall - all fields are private.">DBusPendingCall</a> object, or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a>
- if connection is disconnected or when you try to send Unix file 
-descriptors on a connection that does not support them. The caller owns 
+ if connection is disconnected or when you try to send Unix file
+descriptors on a connection that does not support them. The caller owns
 this reference, and is responsible for calling <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#gadaba15a74ba4925cdef52d4791cd3147" title="Decrements the reference count on a pending call, freeing it if the count reaches 0.">dbus_pending_call_unref()</a> when it is no longer needed. </td></tr>
     <tr><td class="paramname">timeout_milliseconds</td><td>timeout in milliseconds, -1 (or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#gabdc138a303699e88756d6c5988a16b05" title="An integer constant representing a request to use the default timeout.">DBUS_TIMEOUT_USE_DEFAULT</a>) for default or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#ga21384c9c5b0da54f7d0a92012522f213" title="An integer constant representing an infinite timeout.">DBUS_TIMEOUT_INFINITE</a> for no timeout </td></tr>
   </tbody></table>
@@ -2864,15 +2864,15 @@ this reference, and is responsible for calling <a class="el" href="https://dbus.
 </div><div class="memdoc">
 
 <p>Sends a message and blocks a certain time period while waiting for a reply. </p>
-<p>This function does not reenter the main loop, i.e. messages other 
+<p>This function does not reenter the main loop, i.e. messages other
 than the reply are queued up but not processed. This function is used to
  invoke method calls on a remote object.</p>
 <p>If a normal reply is received, it is returned, and removed from the incoming message queue. If it is not received, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> is returned and the error is set to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusProtocol.html#gade2cb1c5a6adf47af18672865f233b6d" title="No reply to a message expecting one, usually means a timeout occurred.">DBUS_ERROR_NO_REPLY</a>. If an error reply is received, it is converted to a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusError.html" title="Object representing an exception.">DBusError</a> and returned as an error, then the reply message is deleted and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> is returned. If something else goes wrong, result is set to whatever is appropriate, such as <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusProtocol.html#gac32eaf0b92f798307853cd4fe0cf11c2" title="There was not enough memory to complete an operation.">DBUS_ERROR_NO_MEMORY</a> or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusProtocol.html#gaef6443e0bd8cdcc1606d985a775d07a7" title="The connection is disconnected and you're trying to use it.">DBUS_ERROR_DISCONNECTED</a>.</p>
-<dl class="section warning"><dt>Warning</dt><dd>While this function 
-blocks the calling thread will not be processing the incoming message 
-queue. This means you can end up deadlocked if the application you're 
-talking to needs you to reply to a method. To solve this, either avoid 
-the situation, block in a separate thread from the main 
+<dl class="section warning"><dt>Warning</dt><dd>While this function
+blocks the calling thread will not be processing the incoming message
+queue. This means you can end up deadlocked if the application you're
+talking to needs you to reply to a method. To solve this, either avoid
+the situation, block in a separate thread from the main
 connection-dispatching thread, or use <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusPendingCall.html#ga16b67b418b1dc27cfdda6b20f7447670" title="Sets a notification function to be called when the reply is received or the pending call times out.">dbus_pending_call_set_notify()</a> to avoid blocking.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2921,17 +2921,17 @@ connection-dispatching thread, or use <a class="el" href="https://dbus.freedeskt
 
 <p>This function must be called on the server side of a connection when the connection is first seen in the <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusServer.html#gaf32eebe096bf1d0771cc3fd1d18718c3" title="Called when a new connection to the server is available.">DBusNewConnectionFunction</a>. </p>
 <p>If set to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa8cecfc5c5c054d2875c03e77b7be15d" title="Expands to &quot;1&quot;.">TRUE</a> (the default is <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a>),
- then the connection can proceed even if the client does not 
-authenticate as some user identity, i.e. clients can connect 
+ then the connection can proceed even if the client does not
+authenticate as some user identity, i.e. clients can connect
 anonymously.</p>
 <p>This setting interacts with the available authorization mechanisms (see <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusServer.html#ga309e5f1510c74c4b221d12d874d53341" title="Sets the authentication mechanisms that this server offers to clients, as a NULL-terminated array of ...">dbus_server_set_auth_mechanisms()</a>).
- Namely, an auth mechanism such as ANONYMOUS that supports anonymous 
-auth must be included in the list of available mechanisms for anonymous 
+ Namely, an auth mechanism such as ANONYMOUS that supports anonymous
+auth must be included in the list of available mechanisms for anonymous
 login to work.</p>
 <p>This setting also changes the default rule for connections authorized
- as a user; normally, if a connection authorizes as a user identity, it 
-is permitted if the user identity is root or the user identity matches 
-the user identity of the server process. If anonymous connections are 
+ as a user; normally, if a connection authorizes as a user identity, it
+is permitted if the user identity is root or the user identity matches
+the user identity of the server process. If anonymous connections are
 allowed, however, then any user identity is allowed.</p>
 <p>You can override the rules for connections authorized as a user identity with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga6b78379badb4c5804344f4f3d87a958a" title="Sets a predicate function used to determine whether a given user ID is allowed to connect.">dbus_connection_set_unix_user_function()</a> and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gaa35ced9ccd29d3366749ae383b120f9c" title="Sets a predicate function used to determine whether a given user ID is allowed to connect.">dbus_connection_set_windows_user_function()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -2977,12 +2977,12 @@ allowed, however, then any user identity is allowed.</p>
 <p>Enables the builtin filtering of messages. </p>
 <p>Currently the only filtering implemented by libdbus and mandated by the spec is that of peer messages.</p>
 <p>If <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa8cecfc5c5c054d2875c03e77b7be15d" title="Expands to &quot;1&quot;.">TRUE</a>, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>
- automatically handles all messages to the org.freedesktop.DBus.Peer 
+ automatically handles all messages to the org.freedesktop.DBus.Peer
 interface. For monitors this can break the specification if the response
  is sending a message.</p>
 <p>If <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a>, the result is similar to calling <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gaf58e8cc7b8717db1581459c0c3d34b08" title="Normally DBusConnection automatically handles all messages to the org.freedesktop....">dbus_connection_set_route_peer_messages()</a>
- with argument TRUE, but messages with a NULL destination are also 
-dispatched to the application instead of being passed to the built-in 
+ with argument TRUE, but messages with a NULL destination are also
+dispatched to the application instead of being passed to the built-in
 filters.</p>
 <p>If a normal application disables this flag, it can break things badly. So only unset this if you are a monitor.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -3068,7 +3068,7 @@ filters.</p>
 </div><div class="memdoc">
 
 <p>Stores a pointer on a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>,
- along with an optional function to be used for freeing the data when 
+ along with an optional function to be used for freeing the data when
 the data is set again, or when the connection is finalized. </p>
 <p>The slot number must have been allocated with <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga728b15c71a492ad244e5a480f1156088" title="Allocates an integer ID to be used for storing application-specific data on any DBusConnection.">dbus_connection_allocate_data_slot()</a>.</p>
 <dl class="section note"><dt>Note</dt><dd>This function does not take the main thread lock on <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>, which allows it to be used from inside watch and timeout functions. (See the note in docs for <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gaebf031eb444b4f847606aa27daa3d8e6" title="Sets the watch functions for the connection.">dbus_connection_set_watch_functions()</a>.) A side effect of this is that you need to know there's a reference held on the connection while invoking <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga845b4942399f43dd4ac644de7cb9e3ff" title="Stores a pointer on a DBusConnection, along with an optional function to be used for freeing the data...">dbus_connection_set_data()</a>, or the connection could be finalized during <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga845b4942399f43dd4ac644de7cb9e3ff" title="Stores a pointer on a DBusConnection, along with an optional function to be used for freeing the data...">dbus_connection_set_data()</a>.</dd></dl>
@@ -3129,11 +3129,11 @@ the data is set again, or when the connection is finalized. </p>
 
 <p>Set a function to be invoked when the dispatch status changes. </p>
 <p>If the dispatch status is <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ggabf250a32ff740b2a8c99136e0142d8d2adf8e8a594ab338cb9cf7855b19e37e93" title="There is more data to potentially convert to messages.">DBUS_DISPATCH_DATA_REMAINS</a>, then <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a> needs to be called to process incoming messages. However, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga66ba7df50d75f4bda6b6e942430b81c7" title="Processes any incoming data.">dbus_connection_dispatch()</a>
- MUST NOT BE CALLED from inside the DBusDispatchStatusFunction. Indeed, 
-almost any reentrancy in this function is a bad idea. Instead, the 
-DBusDispatchStatusFunction should simply save an indication that 
+ MUST NOT BE CALLED from inside the DBusDispatchStatusFunction. Indeed,
+almost any reentrancy in this function is a bad idea. Instead, the
+DBusDispatchStatusFunction should simply save an indication that
 messages should be dispatched later, when the main loop is re-entered.</p>
-<p>If you don't set a dispatch status function, you have to be sure to 
+<p>If you don't set a dispatch status function, you have to be sure to
 dispatch on every iteration of your main loop, especially if <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gac2acdb1794450ac01a43ec4c3e07ebf7" title="Called to notify the D-Bus library when a previously-added watch is ready for reading or writing,...">dbus_watch_handle()</a> or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusTimeout.html#ga038b67c8d3db2624a1e4a8bc45f25d12" title="Calls the timeout handler for this timeout.">dbus_timeout_handle()</a> were called.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3178,7 +3178,7 @@ dispatch on every iteration of your main loop, especially if <a class="el" href=
 </div><div class="memdoc">
 
 <p>Set whether _exit() should be called when the connection receives a disconnect signal. </p>
-<p>The call to _exit() comes after any handlers for the disconnect 
+<p>The call to _exit() comes after any handlers for the disconnect
 signal run; handlers can cured the exit by calling this function.</p>
 <p>By default, exit_on_disconnect is <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a>; but for message bus connections returned from <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga77ba5250adb84620f16007e1b023cf26" title="Connects to a bus daemon and registers the client with it.">dbus_bus_get()</a> it will be toggled on by default.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -3306,16 +3306,16 @@ signal run; handlers can cured the exit by calling this function.</p>
 </div><div class="memdoc">
 
 <p>Sets the maximum total number of bytes that can be used for all messages received on this connection. </p>
-<p>Messages count toward the maximum until they are finalized. When the 
-maximum is reached, the connection will not read more data until some 
+<p>Messages count toward the maximum until they are finalized. When the
+maximum is reached, the connection will not read more data until some
 messages are finalized.</p>
 <p>The semantics of the maximum are: if outstanding messages are already
- above the maximum, additional messages will not be read. The semantics 
-are not: if the next message would cause us to exceed the maximum, we 
-don't read it. The reason is that we don't know the size of a message 
+ above the maximum, additional messages will not be read. The semantics
+are not: if the next message would cause us to exceed the maximum, we
+don't read it. The reason is that we don't know the size of a message
 until after we read it.</p>
 <p>Thus, the max live messages size can actually be exceeded by up to the maximum size of a single message.</p>
-<p>Also, if we read say 1024 bytes off the wire in a single read(), and 
+<p>Also, if we read say 1024 bytes off the wire in a single read(), and
 that contains a half-dozen small messages, we may exceed the size max by
  that amount. But this should be inconsequential.</p>
 <p>This does imply that we can't call read() with a buffer larger than we're willing to exceed this limit by.</p>
@@ -3360,8 +3360,8 @@ that contains a half-dozen small messages, we may exceed the size max by
 </div><div class="memdoc">
 
 <p>Sets the maximum total number of unix fds that can be used for all messages received on this connection. </p>
-<p>Messages count toward the maximum until they are finalized. When the 
-maximum is reached, the connection will not read more data until some 
+<p>Messages count toward the maximum until they are finalized. When the
+maximum is reached, the connection will not read more data until some
 messages are finalized.</p>
 <p>The semantics are analogous to those of <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga6565d75f16e6e803372b2ae3d94d991b" title="Sets the maximum total number of bytes that can be used for all messages received on this connection.">dbus_connection_set_max_received_size()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -3405,10 +3405,10 @@ messages are finalized.</p>
 </div><div class="memdoc">
 
 <p>Normally <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> automatically handles all messages to the org.freedesktop.DBus.Peer interface. </p>
-<p>However, the message bus wants to be able to route methods on that 
-interface through the bus and to other applications. If routing peer 
-messages is enabled, then messages with the org.freedesktop.DBus.Peer 
-interface that also have a bus destination name set will not be 
+<p>However, the message bus wants to be able to route methods on that
+interface through the bus and to other applications. If routing peer
+messages is enabled, then messages with the org.freedesktop.DBus.Peer
+interface that also have a bus destination name set will not be
 automatically handled by the <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> and instead will be dispatched normally to the application.</p>
 <p>If a normal application sets this flag, it can break things badly. So don't set this unless you are the message bus.</p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -3476,21 +3476,21 @@ automatically handled by the <a class="el" href="https://dbus.freedesktop.org/do
 </div><div class="memdoc">
 
 <p>Sets the timeout functions for the connection. </p>
-<p>These functions are responsible for making the application's main 
-loop aware of timeouts. When using Qt, typically the 
-DBusAddTimeoutFunction would create a QTimer. When using GLib, the 
+<p>These functions are responsible for making the application's main
+loop aware of timeouts. When using Qt, typically the
+DBusAddTimeoutFunction would create a QTimer. When using GLib, the
 DBusAddTimeoutFunction would call g_timeout_add.</p>
 <p>The DBusTimeoutToggledFunction notifies the application that the timeout has been enabled or disabled. Call <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusTimeout.html#ga58954b2edb45ec1632529d35525ea45c" title="Returns whether a timeout is enabled or not.">dbus_timeout_get_enabled()</a>
- to check this. A disabled timeout should have no effect, and enabled 
-timeout should be added to the main loop. This feature is used instead 
-of simply adding/removing the timeout because enabling/disabling can be 
-done without memory allocation. With Qt, QTimer::start() and 
-QTimer::stop() can be used to enable and disable. The toggled function 
+ to check this. A disabled timeout should have no effect, and enabled
+timeout should be added to the main loop. This feature is used instead
+of simply adding/removing the timeout because enabling/disabling can be
+done without memory allocation. With Qt, QTimer::start() and
+QTimer::stop() can be used to enable and disable. The toggled function
 may be NULL if a main loop re-queries <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusTimeout.html#ga58954b2edb45ec1632529d35525ea45c" title="Returns whether a timeout is enabled or not.">dbus_timeout_get_enabled()</a> every time anyway. Whenever a timeout is toggled, its interval may change.</p>
 <p>The <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusTimeout.html" title="Internals of DBusTimeout.">DBusTimeout</a> can be queried for the timer interval using <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusTimeout.html#ga67ba21b6189438875c6007ee79da5e37" title="Gets the timeout interval.">dbus_timeout_get_interval()</a>. <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusTimeout.html#ga038b67c8d3db2624a1e4a8bc45f25d12" title="Calls the timeout handler for this timeout.">dbus_timeout_handle()</a>
- should be called repeatedly, each time the interval elapses, starting 
-after it has elapsed once. The timeout stops firing when it is removed 
-with the given remove_function. The timer interval may change whenever 
+ should be called repeatedly, each time the interval elapses, starting
+after it has elapsed once. The timeout stops firing when it is removed
+with the given remove_function. The timer interval may change whenever
 the timeout is added, removed, or toggled.</p>
 <dl class="section note"><dt>Note</dt><dd>The thread lock on <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> is held while timeout functions are invoked, so inside these functions you may not invoke any methods on <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> or it will deadlock. See the comments in the code or <a href="http://lists.freedesktop.org/archives/dbus/2007-July/thread.html#8144">http://lists.freedesktop.org/archives/dbus/2007-July/thread.html#8144</a> if you encounter this issue and want to attempt writing a patch.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -3553,12 +3553,12 @@ the timeout is added, removed, or toggled.</p>
 <p>Sets a predicate function used to determine whether a given user ID is allowed to connect. </p>
 <p>When an incoming connection has authenticated with a particular user ID, this function is called; if it returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa8cecfc5c5c054d2875c03e77b7be15d" title="Expands to &quot;1&quot;.">TRUE</a>, the connection is allowed to proceed, otherwise the connection is disconnected.</p>
 <p>If the function is set to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a>
- (as it is by default), then only the same UID as the server process 
+ (as it is by default), then only the same UID as the server process
 will be allowed to connect. Also, root is always allowed to connect.</p>
-<p>On Windows, the function will be set and its free_data_function will 
-be invoked when the connection is freed or a new function is set. 
-However, the function will never be called, because there are no UNIX 
-user ids to pass to it, or at least none of the existing auth protocols 
+<p>On Windows, the function will be set and its free_data_function will
+be invoked when the connection is freed or a new function is set.
+However, the function will never be called, because there are no UNIX
+user ids to pass to it, or at least none of the existing auth protocols
 would allow authenticating as a UNIX user on Windows.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3615,11 +3615,11 @@ would allow authenticating as a UNIX user on Windows.</p>
 </div><div class="memdoc">
 
 <p>Sets the mainloop wakeup function for the connection. </p>
-<p>This function is responsible for waking up the main loop (if its 
-sleeping in another thread) when some some change has happened to the 
-connection that the mainloop needs to reconsider (e.g. a message has 
-been queued for writing). When using Qt, this typically results in a 
-call to QEventLoop::wakeUp(). When using GLib, it would call 
+<p>This function is responsible for waking up the main loop (if its
+sleeping in another thread) when some some change has happened to the
+connection that the mainloop needs to reconsider (e.g. a message has
+been queued for writing). When using Qt, this typically results in a
+call to QEventLoop::wakeUp(). When using GLib, it would call
 g_main_context_wakeup().</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3688,29 +3688,29 @@ g_main_context_wakeup().</p>
 </div><div class="memdoc">
 
 <p>Sets the watch functions for the connection. </p>
-<p>These functions are responsible for making the application's main 
-loop aware of file descriptors that need to be monitored for events, 
-using select() or poll(). When using Qt, typically the 
-DBusAddWatchFunction would create a QSocketNotifier. When using GLib, 
-the DBusAddWatchFunction could call g_io_add_watch(), or could be used 
+<p>These functions are responsible for making the application's main
+loop aware of file descriptors that need to be monitored for events,
+using select() or poll(). When using Qt, typically the
+DBusAddWatchFunction would create a QSocketNotifier. When using GLib,
+the DBusAddWatchFunction could call g_io_add_watch(), or could be used
 as part of a more elaborate GSource. Note that when a watch is added, it
  may not be enabled.</p>
 <p>The DBusWatchToggledFunction notifies the application that the watch has been enabled or disabled. Call <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gae7a91e6d4d1bc187419c47c522e33a8f" title="Returns whether a watch is enabled or not.">dbus_watch_get_enabled()</a>
- to check this. A disabled watch should have no effect, and enabled 
-watch should be added to the main loop. This feature is used instead of 
-simply adding/removing the watch because enabling/disabling can be done 
-without memory allocation. The toggled function may be NULL if a main 
+ to check this. A disabled watch should have no effect, and enabled
+watch should be added to the main loop. This feature is used instead of
+simply adding/removing the watch because enabling/disabling can be done
+without memory allocation. The toggled function may be NULL if a main
 loop re-queries <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gae7a91e6d4d1bc187419c47c522e33a8f" title="Returns whether a watch is enabled or not.">dbus_watch_get_enabled()</a> every time anyway.</p>
 <p>The <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusWatch.html" title="Implementation of DBusWatch.">DBusWatch</a> can be queried for the file descriptor to watch using <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#ga15df7f6120ead3e09bec8a70d3c43c0d" title="Returns a UNIX file descriptor to be watched, which may be a pipe, socket, or other type of descripto...">dbus_watch_get_unix_fd()</a> or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#ga91308f393d41b31babda17c83833517f" title="Returns a socket to be watched, on UNIX this will return -1 if our transport is not socket-based so d...">dbus_watch_get_socket()</a>, and for the events to watch for using <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gaf172a2b1d1f82333e67cec8d99c9204a" title="Gets flags from DBusWatchFlags indicating what conditions should be monitored on the file descriptor.">dbus_watch_get_flags()</a>. The flags returned by <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gaf172a2b1d1f82333e67cec8d99c9204a" title="Gets flags from DBusWatchFlags indicating what conditions should be monitored on the file descriptor.">dbus_watch_get_flags()</a>
- will only contain DBUS_WATCH_READABLE and DBUS_WATCH_WRITABLE, never 
-DBUS_WATCH_HANGUP or DBUS_WATCH_ERROR; all watches implicitly include a 
+ will only contain DBUS_WATCH_READABLE and DBUS_WATCH_WRITABLE, never
+DBUS_WATCH_HANGUP or DBUS_WATCH_ERROR; all watches implicitly include a
 watch for hangups, errors, and other exceptional conditions.</p>
 <p>Once a file descriptor becomes readable or writable, or an exception occurs, <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gac2acdb1794450ac01a43ec4c3e07ebf7" title="Called to notify the D-Bus library when a previously-added watch is ready for reading or writing,...">dbus_watch_handle()</a> should be called to notify the connection of the file descriptor's condition.</p>
 <p><a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusWatch.html#gac2acdb1794450ac01a43ec4c3e07ebf7" title="Called to notify the D-Bus library when a previously-added watch is ready for reading or writing,...">dbus_watch_handle()</a> cannot be called during the DBusAddWatchFunction, as the connection will not be ready to handle that watch yet.</p>
 <p>It is not allowed to reference a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusWatch.html" title="Implementation of DBusWatch.">DBusWatch</a> after it has been passed to remove_function.</p>
 <p>If <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a> is returned due to lack of memory, the failure may be due to a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a>
  return from the new add_function. If so, the add_function may have been
- called successfully one or more times, but the remove_function will 
+ called successfully one or more times, but the remove_function will
 also have been called to remove any successful adds. i.e. if <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa93f0eb578d23995850d61f7d61c55c1" title="Expands to &quot;0&quot;.">FALSE</a> is returned the net result should be that <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gaebf031eb444b4f847606aa27daa3d8e6" title="Sets the watch functions for the connection.">dbus_connection_set_watch_functions()</a> has no effect, but the add_function and remove_function may have been called.</p>
 <dl class="section note"><dt>Note</dt><dd>The thread lock on <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> is held while watch functions are invoked, so inside these functions you may not invoke any methods on <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a> or it will deadlock. See the comments in the code or <a href="http://lists.freedesktop.org/archives/dbus/2007-July/tread.html#8144">http://lists.freedesktop.org/archives/dbus/2007-July/tread.html#8144</a> if you encounter this issue and want to attempt writing a patch.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -3773,9 +3773,9 @@ also have been called to remove any successful adds. i.e. if <a class="el" href=
 <p>Sets a predicate function used to determine whether a given user ID is allowed to connect. </p>
 <p>When an incoming connection has authenticated with a particular user ID, this function is called; if it returns <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#gaa8cecfc5c5c054d2875c03e77b7be15d" title="Expands to &quot;1&quot;.">TRUE</a>, the connection is allowed to proceed, otherwise the connection is disconnected.</p>
 <p>If the function is set to <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusMacros.html#ga070d2ce7b6bb7e5c05602aa8c308d0c4" title="A null pointer, defined appropriately for C or C++.">NULL</a> (as it is by default), then only the same user owning the server process will be allowed to connect.</p>
-<p>On UNIX, the function will be set and its free_data_function will be 
-invoked when the connection is freed or a new function is set. However, 
-the function will never be called, because there is no way right now to 
+<p>On UNIX, the function will be set and its free_data_function will be
+invoked when the connection is freed or a new function is set. However,
+the function will never be called, because there is no way right now to
 authenticate as a Windows user on UNIX.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3881,7 +3881,7 @@ authenticate as a Windows user on UNIX.</p>
 
 <p>Registers a fallback handler for a given subsection of the object hierarchy. </p>
 <p>The given vtable handles messages at or below the given path. You can
- use this to establish a default message handling policy for a whole 
+ use this to establish a default message handling policy for a whole
 "subdirectory."</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -3983,9 +3983,9 @@ authenticate as a Windows user on UNIX.</p>
 
 <p>Decrements the reference count of a <a class="el" href="https://dbus.freedesktop.org/doc/api/html/structDBusConnection.html" title="Implementation details of DBusConnection.">DBusConnection</a>, and finalizes it if the count reaches zero. </p>
 <p>Note: it is a bug to drop the last reference to a connection that is still connected.</p>
-<p>For shared connections, libdbus will own a reference as long as the 
-connection is connected, so you can know that either you don't have the 
-last reference, or it's OK to drop the last reference. Most connections 
+<p>For shared connections, libdbus will own a reference as long as the
+connection is connected, so you can know that either you don't have the
+last reference, or it's OK to drop the last reference. Most connections
 are shared. <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#gacd32f819820266598c6b6847dfddaf9c" title="Gets a connection to a remote address.">dbus_connection_open()</a> and <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga77ba5250adb84620f16007e1b023cf26" title="Connects to a bus daemon and registers the client with it.">dbus_bus_get()</a> return shared connections.</p>
 <p>For private connections, the creator of the connection must arrange for <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga2522ac5075dfe0a1535471f6e045e1ee" title="Closes a private connection, so no further data can be sent or received.">dbus_connection_close()</a> to be called prior to dropping the last reference. Private connections come from <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusConnection.html#ga434e3fc7ee420fd30e2f05e57ff26b1d" title="Opens a new, dedicated connection to a remote address.">dbus_connection_open_private()</a> or <a class="el" href="https://dbus.freedesktop.org/doc/api/html/group__DBusBus.html#ga9c62186f19cf3bd3c7c604bdcefb4e09" title="Connects to a bus daemon and registers the client with it as with dbus_bus_register().">dbus_bus_get_private()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
